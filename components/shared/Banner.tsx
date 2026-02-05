@@ -7,7 +7,7 @@ import { bannerData } from "@/data/homepagedata";
 const Banner = () => {
   return (
     <>
-      <section className="relative min-h-[600px] flex items-center overflow-hidden">
+      <section className="relative min-h-150 flex items-center overflow-hidden">
         {/* Background with animation */}
         <div className="absolute inset-0 opacity-90 animate-zoomIn">
           <div className="w-full h-full bg-[url('/images/bannerbg.jpg')] bg-cover bg-center" />

@@ -1,21 +1,30 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
-    { name: "TEAMWORK", href: "/teamwork" },
+    { name: "TECHNOLOGY", href: "/technology" },
     { name: "PROGRAMS", href: "/programs" },
     { name: "INNOVATION", href: "/innovation" },
     { name: "NEWS", href: "/news" },
     { name: "CONTACT", href: "/contact" },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -42,13 +51,21 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-gray-700 hover:text-cyan-500 transition-all duration-300 relative group"
+                  className={`text-sm font-medium transition-all duration-300 relative group ${
+                    isActive(item.href)
+                      ? "text-cyan-500"
+                      : "text-gray-700 hover:text-cyan-500"
+                  }`}
                   style={{
                     animation: `slideInDown 0.6s ease-out ${index * 0.1}s both`,
                   }}
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-500 group-hover:w-full transition-all duration-300" />
+                  <span
+                    className={`absolute bottom-0 left-0 h-0.5 bg-cyan-500 transition-all duration-300 ${
+                      isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
                 </Link>
               ))}
             </div>
@@ -107,7 +124,11 @@ const Navbar = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="px-4 py-4 text-base font-medium text-gray-700 hover:text-cyan-500 hover:bg-gray-50 rounded-lg transition-all duration-300 border-l-4 border-transparent hover:border-cyan-500"
+              className={`px-4 py-4 text-base font-medium rounded-lg transition-all duration-300 border-l-4 ${
+                isActive(item.href)
+                  ? "text-cyan-500 bg-cyan-50 border-cyan-500"
+                  : "text-gray-700 hover:text-cyan-500 hover:bg-gray-50 border-transparent hover:border-cyan-500"
+              }`}
               onClick={() => setIsOpen(false)}
               style={{
                 animation: isOpen

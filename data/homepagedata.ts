@@ -172,18 +172,18 @@ export const footerData = {
   investedBy: {
     title: "Invested By",
     logos: [
-      { name: "MIT", image: "/images/mit-logo.png" },
-      { name: "Harvard", image: "/images/harvard-logo.png" },
-      { name: "Stanford", image: "/images/stanford-logo.png" },
+      { name: "MIT", image: "/images/mit.png" },
+      { name: "Harvard", image: "/images/harvard.png" },
+      // { name: "Stanford", image: "/images/stanford-logo.png" },
     ],
   },
   newsCoverage: {
     title: "News Coverage",
 
     logos: [
-      { name: "EuroNews", image: "/images/euronews-logo.png" },
-      { name: "CNN", image: "/images/cnn-logo.png" },
-      { name: "BBC", image: "/images/bbc-logo.png" },
+      { name: "EuroNews", image: "/images/eurekalert.png" },
+      { name: "CNN", image: "/images/nih.png" },
+      { name: "BBC", image: "/images/scientific.png" },
     ],
   },
   getInTouch: {

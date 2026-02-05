@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { footerData } from "@/data/homepagedata";
+import { BriefcaseBusiness, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -15,12 +16,12 @@ const Footer = () => {
             <p className="text-sm text-white/90 mb-4">
               {footerData.publications.description}
             </p>
-            <a
-              href={footerData.publications.link}
-              className="text-sm font-semibold hover:underline"
-            >
-              Read More →
-            </a>
+           <p>
+            Robotically handled whole-tissue culture system for the screening of oral drug formulations
+           </p>
+           <p>
+            Robotic screening of intestinal drug absorption
+           </p>
           </div>
 
           {/* Invested By */}
@@ -28,18 +29,18 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">
               {footerData.investedBy.title}
             </h3>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col gap-2">
               {footerData.investedBy.logos.map((logo, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-full w-16 h-16 flex items-center justify-center relative"
+                  className=" w-full flex items-center justify-center relative"
                 >
                   <Image
                     src={logo.image}
                     alt={logo.name}
-                    width={48}
-                    height={48}
-                    className="object-contain"
+                    width={228}
+                    height={58}
+                    className="object-cover"
                   />
                 </div>
               ))}
@@ -51,21 +52,43 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">
               {footerData.newsCoverage.title}
             </h3>
-            <div className="space-y-3">
+            <div>
+           <div className="flex gap-5 items-center">
+               <div>
+                        <Image
+                    src={'/images/nature.png'}
+                    alt={'Nature'}
+                    width={78}
+                    height={40}
+                    className="object-cover"
+                  />
+               </div>
+               <div>
+                        <Image
+                    src={'/images/stat.png'}
+                    alt={'Stat'}
+                    width={87}
+                    height={22}
+                    className="object-cover"
+                  />
+               </div>
+           </div>
+            <div className="space-y-6 mt-3">
               {footerData.newsCoverage.logos.map((logo, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded px-4 py-2 relative h-12 flex items-center"
+                  className=" rounded   relative  flex items-center"
                 >
                   <Image
                     src={logo.image}
                     alt={logo.name}
-                    width={120}
-                    height={32}
-                    className="object-contain"
+                    width={197}
+                    height={120}
+                    className="object-cover"
                   />
                 </div>
               ))}
+            </div>
             </div>
           </div>
 
@@ -75,24 +98,27 @@ const Footer = () => {
               {footerData.getInTouch.title}
             </h3>
             <div className="space-y-2 text-sm text-white/90">
-              <p>{footerData.getInTouch.address}</p>
-              <p>{footerData.getInTouch.city}</p>
-              <p className="mt-4">
-                <a
-                  href={`mailto:${footerData.getInTouch.email}`}
-                  className="hover:underline"
-                >
-                  {footerData.getInTouch.email}
-                </a>
+              <p className="flex items-center gap-2">
+               <BriefcaseBusiness />  {footerData.getInTouch.address}
               </p>
-              <p>
+              <p className="flex items-center gap-2"    >
+              <Mail /> {footerData.getInTouch.email} 
+              </p>
+              <p className=" flex items-center gap-2">
+              
+            
+         
+                 <MapPin /> {footerData.getInTouch.city}
+        
+              </p>
+              {/* <p className="flex items-center gap-2">
                 <a
                   href={`tel:${footerData.getInTouch.phone}`}
                   className="hover:underline"
                 >
                   {footerData.getInTouch.phone}
                 </a>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
