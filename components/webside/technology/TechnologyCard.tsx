@@ -45,7 +45,7 @@ export default function TechnologyCard({ item }: TechnologyCardProps) {
         {/* Button */}
         <div className="mt-auto">
           <TechnologyCardDialog item={item}>
-            <button className="w-full inline-flex items-center justify-center px-4 py-2 rounded-lg text-primary font-medium text-sm  transition-colors duration-200 group">
+            <button className="w-full cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded-lg text-primary font-medium text-sm  transition-colors duration-200 group">
               View Paper
             </button>
           </TechnologyCardDialog>

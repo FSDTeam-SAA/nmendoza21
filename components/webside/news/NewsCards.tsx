@@ -23,7 +23,7 @@ const NewsCards = () => {
   };
 
   return (
-    <section className="py-12">
+    <section  className="py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {pagedItems.map((item, index) => (
@@ -49,7 +49,7 @@ const NewsCards = () => {
                   </h3>
                   <p className="text-xs text-gray-500 mt-3 flex-1">{item.description}</p>
                   <NewsModal item={item}>
-                    <button className="text-xs text-cyan-600 font-semibold mt-4 inline-flex hover:underline">
+                    <button className="text-xs cursor-pointer text-cyan-600 font-semibold mt-4 inline-flex hover:underline">
                       {item.linkLabel}
                     </button>
                   </NewsModal>
