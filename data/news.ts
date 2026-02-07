@@ -38,45 +38,45 @@ export const newsPageData: NewsPageData = {
   items: [
     {
       id: "news-1",
-      title: "Robotic Screening Of Intestinal Drug Absorption",
+      title:
+        "Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning",
       description:
-        "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
+        "Shi, Y., Reker, D., Byrne, J.D. et al. Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning. Nat. Biomed. Eng 8, 278–290 (2024).",
       image: "/images/newsInsights.jpg",
-      date: "Published 24 Nov, 2025",
-      linkLabel: "View Details",
-      link: "/news",
+      date: "Published 24 Nov, 2024",
+    linkLabel: "View Full News",
+      link: "https://vivtex.com/wp-content/uploads/2024/05/Screening-oral-drugs-for-their-interactions.pdf",
       content: [
-        "This update highlights the next milestone in robotic screening for intestinal drug absorption, with expanded workflows that enable deeper insights into compound behavior. Our platform automates sample preparation, controls microenvironmental conditions, and captures multi-modal measurements to characterize permeability and transport pathways with precision. Researchers benefit from standardized conditions that eliminate variability, providing reliable comparisons across large candidate sets. The system integrates advanced analytics to identify patterns, flag anomalies, and generate clear summaries that are easy to interpret for cross-functional teams.",
-        "We leverage advanced biotech tools and intelligent systems to deliver precise, secure, and scalable services. Designed for performance and compliance, our platform supports innovation across research, diagnostics, and development. By integrating automation, validated processes, and data intelligence, we help organizations accelerate discovery and improve outcomes while reducing operational complexity. The workflow supports rapid iteration, enabling teams to adjust assay parameters and immediately evaluate how those changes impact results without compromising traceability.",
-        "Beyond throughput, the platform is built for reliability. Calibration routines, automated controls, and continuous monitoring ensure accuracy and reproducibility across each run. Data is stored and organized to support collaboration across sites, with clear provenance and quality indicators that simplify reporting. This approach reduces time-to-decision, improves confidence in lead selection, and provides a robust foundation for subsequent in vivo and clinical studies. Ultimately, the technology empowers teams to make smarter, faster choices while maintaining the highest standards of quality.",
+        "Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning",
+        "In vitro systems that accurately model in vivo conditions in the gastrointestinal tract may aid the development of oral drugs with greater bioavailability. Here we show that the interaction profiles between drugs and intestinal drug transporters can be obtained by modulating transporter expression in intact porcine tissue explants via the ultrasound-mediated delivery of small interfering RNAs and that the interaction profiles can be classified via a random forest model trained on the drug–transporter relationships. For 24 drugs with well-characterized drug–transporter interactions, the model achieved 100% concordance. For 28 clinical drugs and 22 investigational drugs, the model identified 58 unknown drug–transporter interactions, 7 of which (out of 8 tested) corresponded to drug-pharmacokinetic measurements in mice. We also validated the model’s predictions for interactions between doxycycline and four drugs (warfarin, tacrolimus, digoxin and levetiracetam) through an ex vivo perfusion assay and the analysis of pharmacologic data from patients. Screening drugs for their interactions with the intestinal transportome via tissue explants and machine learning may help to expedite drug development and the evaluation of drug safety.",
       ],
     },
     {
       id: "news-2",
-      title: "Robotic Screening Of Intestinal Drug Absorption",
+      title:
+        "Robotically handled whole-tissue culture system for the screening of oral drug formulations",
       description:
-        "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
+        "von Erlach, T., Saxton, S., Shi, Y. et al. Robotically handled whole-tissue culture system for the screening of oral drug formulations. Nat Biomed Eng 4, 544–559 (2020).",
       image: "/images/newsInsights2.jpg",
-      date: "Published 24 Nov, 2025",
-      linkLabel: "View Details",
-      link: "/news",
+      date: "Published 24 Nov, 2020",
+      linkLabel: "View Full News",
+      link: "https://vivtex.com/wp-content/uploads/2024/05/Robotically-handled-whole-tissue-culture-system.pdf",
       content: [
-        "This release focuses on improved analytical depth in robotic screening, adding enhanced sampling strategies and refined transport modeling to better characterize absorption behavior. By combining high-throughput automation with smart data pipelines, the platform captures subtle shifts in compound permeability and stability that might be missed in conventional assays. The result is a more comprehensive picture of candidate performance, enabling researchers to distinguish between formulation effects, molecular properties, and experimental variability.",
-        "Our technology ecosystem integrates advanced biotechnology methods, automation, and analytics to deliver reliable, compliant, and future-ready solutions. Focused on quality and reproducibility, we support teams with scalable platforms that adapt to evolving research needs. The system integrates audit-ready data handling, enabling teams to meet documentation standards without adding manual overhead. Dashboards provide rapid visibility into trends and support scenario-based analysis for early go/no-go decisions.",
-        "By standardizing conditions across experiments and applying consistent quality controls, the platform ensures that results remain comparable over time. Teams can scale experiments quickly, adjust to new compound libraries, and maintain confidence in their outcomes. This combination of rigor, speed, and flexibility reduces project risk and supports faster progression from discovery to development, ensuring that promising candidates move forward with clear, data-driven justification.",
+        "Robotically handled whole-tissue culture system for the screening of oral drug formulations",
+        "Monolayers of cancer-derived cell lines are widely used in the modelling of the gastrointestinal (GI) absorption of drugs and in oral drug development. However, they do not generally predict drug absorption in vivo. Here, we report a robotically handled system that uses large porcine GI tissue explants that are functionally maintained for an extended period in culture for the high-throughput interrogation (several thousand samples per day) of whole segments of the GI tract. The automated culture system provided higher predictability of drug absorption in the human GI tract than a Caco-2 Transwell system (Spearman’s correlation coefficients of 0.906 and 0.302, respectively). By using the culture system to analyse the intestinal absorption of 2,930 formulations of the peptide drug oxytocin, we discovered an absorption enhancer that resulted in a 11.3-fold increase in the oral bioavailability of oxytocin in pigs in the absence of cellular disruption of the intestinal tissue. The robotically handled whole-tissue culture system should help advance the development of oral drug formulations and might also be useful for drug screening applications.",
       ],
     },
     {
       id: "news-3",
       title: "Robotic Screening Of Intestinal Drug Absorption",
       description:
-        "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
+        "Basit, A.W., Madla, C.M. & Gavins, F.K.H. Robotic screening of intestinal drug absorption. Nat Biomed Eng 4, 485–486 (2020).",
       image: "/images/newsInsights3.jpg",
-      date: "Published 24 Nov, 2025",
-      linkLabel: "View Details",
-      link: "/news",
+      date: "Published 24 Nov, 2020",
+      linkLabel: "View Full News",
+      link: "https://vivtex.com/wp-content/uploads/2024/05/Robotic-screening-of-intestinal-drug-absorption.pdf",
       content: [
-        "In this update, we expand the robotic screening workflow to include optimized conditions that better emulate physiological environments, improving predictive relevance for intestinal absorption. The platform’s automation ensures uniform sample handling and precise timing, while integrated sensors capture critical metrics for transport and stability. This combination provides a strong foundation for comparing candidate performance across diverse compound sets with minimal variability.",
+        "A robotic culture system for the high-throughput analysis of drug transport in porcine gastrointestinal tissue explants accurately predicts the absorption of orally taken drugs in the human gut.",
         "We deliver reliable, compliant, and future-ready solutions that empower innovation across the life sciences industry. Our platform is engineered to ensure precision, safety, and consistency across all services and workflows. By incorporating validated processes and automated data validation, we minimize manual errors and improve overall confidence in the results. The system supports rapid reporting and helps teams document critical decisions with clear evidence trails.",
         "The result is a scalable, high-performance screening approach that accelerates lead selection and reduces downstream risk. Teams benefit from faster turnaround, improved insight into mechanism and transport, and a consistent framework for decision-making. This ensures that early-stage research is aligned with real-world performance expectations and that the strongest candidates are advanced with confidence.",
       ],
@@ -88,7 +88,7 @@ export const newsPageData: NewsPageData = {
         "Smarter analytics workflows accelerate early-stage discovery and reduce turnaround time for complex assays.",
       image: "/images/newsInsights.jpg",
       date: "Published 08 Nov, 2025",
-      linkLabel: "View Details",
+      linkLabel: "View Full News",
       link: "/news",
       content: [
         "Precision analytics for drug discovery brings a new layer of clarity to early-stage research by combining robust experimentation with intelligent data processing. Our workflows capture high-resolution results across large datasets while maintaining tight control over experimental variables. By standardizing collection and normalization steps, the system reduces noise and improves the reliability of conclusions drawn from complex assays.",
@@ -103,10 +103,10 @@ export const newsPageData: NewsPageData = {
         "Automation reduces variability and improves consistency in translational research workflows.",
       image: "/images/newsInsights2.jpg",
       date: "Published 02 Nov, 2025",
-      linkLabel: "View Details",
+      linkLabel: "View Full News",
       link: "/news",
       content: [
-        "Automation in translational research is essential for improving consistency, reducing manual workload, and increasing throughput. Our approach integrates validated robotics and standardized workflows that coordinate sample handling, processing, and analysis with high precision. This ensures that critical steps are executed in the same way every time, producing data that is trustworthy and comparable across studies.",
+        "A robotic culture system for the high-throughput analysis of drug transport in porcine gastrointestinal tissue explants accurately predicts the absorption of orally taken drugs in the human gut.",
         "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation, while built-in safeguards detect deviations before they impact results.",
         "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases. This creates a stable foundation for long-term innovation and more predictable outcomes in translational pipelines.",
       ],

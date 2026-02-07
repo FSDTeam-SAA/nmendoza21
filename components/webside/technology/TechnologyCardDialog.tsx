@@ -11,6 +11,33 @@ interface TechnologyCardDialogProps {
   children: React.ReactNode;
 }
 
+import { motion, Variants } from "framer-motion";
+
+interface TechnologyCardDialogProps {
+  item: TechnologyItem;
+  children: React.ReactNode;
+}
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
 export default function TechnologyCardDialog({
   item,
   children,
@@ -21,19 +48,27 @@ export default function TechnologyCardDialog({
       <div onClick={() => setIsOpen(true)}>{children}</div>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="w-full  max-h-[90vh] bg-[#1FABED] overflow-y-auto p-0 rounded-2xl border-0">
-          <div className="relative px-6 pt-6 pb-8 md:px-8">
+        <DialogContent className="w-full max-h-[90vh] bg-[#1FABED] overflow-y-auto p-0 rounded-3xl border-0 shadow-2xl">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="relative px-6 pt-6 pb-8 md:px-10 md:pt-10"
+          >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute right-4 top-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="absolute right-6 top-6 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-110 active:scale-90"
               aria-label="Close dialog"
             >
-              <X className="h-5 w-5 text-white" />
+              <X className="h-6 w-6 text-white" />
             </button>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2">
               {item.image && (
-                <div className="relative w-full aspect-square md:h-80 rounded-xl overflow-hidden bg-white/10">
+                <motion.div 
+                  variants={itemVariants}
+                  className="relative w-full aspect-square md:h-80 rounded-2xl overflow-hidden bg-white/10 shadow-lg"
+                >
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -41,44 +76,51 @@ export default function TechnologyCardDialog({
                     height={500}
                     className="object-cover w-full aspect-square"
                   />
-                </div>
+                </motion.div>
               )}
 
-              <div className="text-white space-y-4">
-                <DialogTitle className="text-2xl md:text-3xl font-semibold leading-snug">
-                  {item.title}
-                </DialogTitle>
-                <p className="text-base md:text-lg font-medium text-white/90">
+              <div className="text-white space-y-6">
+                <motion.div variants={itemVariants}>
+                  <DialogTitle className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
+                    {item.title}
+                  </DialogTitle>
+                </motion.div>
+
+                <motion.p variants={itemVariants} className="text-lg font-bold text-white/70 uppercase tracking-widest">
                   Published {item.date}
-                </p>
+                </motion.p>
+
                 {item.details.fullDescription && (
-                  <p className="text-base leading-relaxed text-white/90">
+                  <motion.p variants={itemVariants} className="text-lg leading-relaxed text-white/90 font-medium border-l-4 border-white/20 pl-4 py-1">
                     {item.details.fullDescription}
-                  </p>
+                  </motion.p>
                 )}
               </div>
             </div>
 
             {item.details.paperContent && (
-              <div className="mt-6 text-white/90 text-base leading-relaxed">
+              <motion.div 
+                variants={itemVariants}
+                className="mt-10 pt-10 border-t border-white/10 text-white/80 text-lg leading-relaxed space-y-4"
+              >
                 {item.details.paperContent}
-              </div>
+              </motion.div>
             )}
 
             {item.details.paperLink && (
-              <div className="mt-6">
+              <motion.div variants={itemVariants} className="mt-10">
                 <a
                   href={item.details.paperLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-white/15 px-5 py-2 text-white font-medium hover:bg-white/25 transition-colors"
+                  className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-3 text-[#1FABED] font-bold shadow-xl hover:scale-105 active:scale-95 transition-all"
                 >
                   Read Full Paper
-                  <ExternalLink className="h-4 w-4" />
+                  <ExternalLink className="h-5 w-5" />
                 </a>
-              </div>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
         </DialogContent>
       </Dialog>
     </>

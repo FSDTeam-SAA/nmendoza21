@@ -37,7 +37,7 @@ export default function TechnologyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className=" container mx-auto py-16 bg-linear-to-r from-cyan-50 to-blue-50 border-t border-gray-200">
+      <section className=" container mx-auto my-16 py-16 bg-linear-to-r from-cyan-50 to-blue-50 border-t border-gray-200">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Interested in our research?
