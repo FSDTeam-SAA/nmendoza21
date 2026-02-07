@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar";
 import Footer from "@/components/shared/Footer";
-import next from "next";
+
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,6 @@ export const metadata: Metadata = {
   description: "Create New Vivtex Website",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +34,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );

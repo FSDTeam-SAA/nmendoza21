@@ -41,8 +41,8 @@ export default function PersonCard({
   return (
     <>
       <Card
-        className={`group cursor-pointer overflow-hidden py-0 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-          highlight ? "ring-2 ring-cyan-400" : ""
+        className={`group cursor-pointer overflow-hidden pt-3 pb-0 px-3 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+          highlight ? "  bg-primary rounded-2xl" : ""
         }`}
         onClick={() => setIsOpen(true)}
       >
@@ -52,21 +52,21 @@ export default function PersonCard({
               src={member.image}
               alt={member.name}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className={`object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105 hover:rounded-2xl ${highlight ? "rounded-none" : ""}`}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <div className={`p-6 ${highlight ? "bg-cyan-400" : "bg-white"}`}>
+          <div className={`p-6 ${highlight ? "" : "bg-white"}`}>
             <h3
-              className={`text-xl font-semibold mb-1 ${
+              className={`text-xl md:text-3xl font-semibold mb-1 ${
                 highlight ? "text-white" : "text-gray-900"
               }`}
             >
               {member.name}
             </h3>
             <p
-              className={`text-sm ${
-                highlight ? "text-white/90" : "text-cyan-500"
+              className={`text-base md:text-lg font-medium ${
+                highlight ? "text-white/90" : "text-primary"
               }`}
             >
               {member.role}

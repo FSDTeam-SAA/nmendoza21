@@ -3,7 +3,7 @@ export const bannerData = {
   description:
     "Vivtex's proprietary platform enables for the first time the use of intact gastrointestinal tract tissue for fully automated robotic testing. We use this technology to enable the development of new drugs that can be given orally instead of painful and inconvenient needle injections.",
   buttonText: "Learn More",
-  buttonLink: "#",
+  buttonLink: "/about",
   image: "/images/",
   videourl: "/images/bannervideo.mp4",
 };
@@ -19,7 +19,7 @@ export const whatWeDoData = {
         "Our platform leverages modern, secure, and scalable technologies to ensure performance, reliability, and seamless user experience.",
       image: "/images/technology.jpg",
       buttonText: "Explore",
-      buttonLink: "#",
+      buttonLink: "/technology",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export const whatWeDoData = {
         "Our programs are designed to deliver practical value, measurable results, and long-term growth for your organization.",
       image: "/images/programs.gif",
       buttonText: "Explore",
-      buttonLink: "#",
+      buttonLink: "/programs",
     },
   ],
 };
@@ -48,7 +48,7 @@ export const whoWeAreData = {
       { image: "/about/scientificadvisor.jpg" },
     ],
     button1Text: "See Our Team Members",
-    button1Link: "#",
+    button1Link: "/about",
     image: "/images/teamwork.jpg",
     videourl: "/images/whatweare.mp4",
     stats: [
@@ -56,7 +56,7 @@ export const whoWeAreData = {
       { value: "100+", label: "Projects" },
     ],
     buttonText: "Join Us",
-    buttonLink: "#",
+    buttonLink: "/contact",
   },
 };
 
@@ -69,25 +69,25 @@ export const innovationData = {
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/innovation1.jpg",
-      link: "#",
+      link: "/innovation",
     },
     {
       id: 2,
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/innovation2.jpg",
-      link: "#",
+      link: "/innovation",
     },
     {
       id: 3,
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/innovation3.jpg",
-      link: "#",
+      link: "/innovation",
     },
   ],
   buttonText: "View All",
-  buttonLink: "#",
+  buttonLink: "/innovation",
 };
 
 export const newsInsightsData = {
@@ -99,25 +99,25 @@ export const newsInsightsData = {
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/newsInsights.jpg",
-      link: "#",
+      link: "/news",
     },
     {
       id: 2,
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/newsInsights2.jpg",
-      link: "#",
+      link: "/news",
     },
     {
       id: 3,
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/newsInsights3.jpg",
-      link: "#",
+      link: "/news",
     },
   ],
   buttonText: "View All",
-  buttonLink: "#",
+  buttonLink: "/news",
 };
 
 export const technologyData = {
@@ -129,35 +129,35 @@ export const technologyData = {
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/technology1.jpg",
-      link: "#",
+      link: "/technology",
     },
     {
       id: 2,
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/technology2.jpg",
-      link: "#",
+      link: "/technology",
     },
     {
       id: 3,
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/technology3.jpg",
-      link: "#",
+      link: "/technology",
     },
     {
       id: 4,
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/technology4.jpg",
-      link: "#",
+      link: "/technology",
     },
-        {
+    {
       id: 5,
       title: "New Technology Awareness",
       date: "November 12th, 2023",
       image: "/images/technology5.jpg",
-      link: "#",
+      link: "/technology",
     },
   ],
 };
@@ -166,14 +166,14 @@ export const footerData = {
   publications: {
     title: "Publications",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+      "Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning",
     link: "#",
   },
   investedBy: {
     title: "Invested By",
     logos: [
-      { name: "MIT", image: "/images/mit.png" },
-      { name: "Harvard", image: "/images/harvard.png" },
+      { name: "MIT", image: "/images/mit.svg" },
+      { name: "Harvard", image: "/images/Harvard.svg" },
       // { name: "Stanford", image: "/images/stanford-logo.png" },
     ],
   },
