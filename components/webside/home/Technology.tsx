@@ -1,12 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { technologyData } from "@/data/homepagedata";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
 
 const Technology = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(2);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % technologyData.items.length);
@@ -15,123 +24,136 @@ const Technology = () => {
   const prevSlide = () => {
     setCurrentIndex(
       (prev) =>
-        (prev - 1 + technologyData.items.length) % technologyData.items.length,
+        (prev - 1 + technologyData.items.length) % technologyData.items.length
     );
   };
 
+  // Responsive values based on window width
+  const isMobile = windowWidth > 0 && windowWidth < 768;
+  const isTablet = windowWidth >= 768 && windowWidth < 1024;
+  
+  const cardWidth = isMobile ? 300 : isTablet ? 320 : 360;
+  const cardHeight = isMobile ? 400 : isTablet ? 440 : 480;
+  const spread = isMobile ? 180 : isTablet ? 250 : 320;
+  const containerHeight = isMobile ? "500px" : "600px";
+
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 md:py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <InViewAnimationWrapper
           animation="slideInDown"
           duration={800}
           delay={200}
         >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">{technologyData.title}</h2>
-            <p className="text-gray-600">{technologyData.subtitle}</p>
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 tracking-tight">
+              {technologyData.title}
+            </h2>
+            <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto">
+              {technologyData.subtitle}
+            </p>
           </div>
         </InViewAnimationWrapper>
-        <InViewAnimationWrapper animation="fadeIn" duration={800} delay={400}>
-          <div className="relative mx-auto max-w-7xl py-12">
-            <div className="relative overflow-hidden px-16">
-              <div
-                className="flex items-center justify-center gap-6 transition-transform duration-700 ease-out"
-                style={{ transform: `translateX(${-currentIndex * 340}px)` }}
-              >
-                {technologyData.items.map((item, index) => {
-                  const offset = index - currentIndex;
 
-                  const isActive = offset === 2;
-                  const isSide = Math.abs(offset) === 1;
-
-                  return (
-                    <div
-                      key={item.id}
-                      className={`relative transition-all duration-700 ease-out cursor-pointer shrink-0
-              ${
-                isActive
-                  ? "scale-110 opacity-100 z-30"
-                  : isSide
-                    ? "scale-90 opacity-60 blur-[1px] z-20"
-                    : "scale-75 opacity-30 blur-sm z-10"
-              }
-            `}
-                      onClick={() => setCurrentIndex(index)}
-                    >
-                      <div className="w-[320px] h-105 rounded-xl overflow-hidden shadow-2xl bg-black relative">
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          fill
-                          className="object-cover"
-                        />
-
-                        {/* Overlay */}
-                        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
-
-                        {/* Text */}
-                        <div className="absolute bottom-6 left-6 right-6">
-                          <h3 className="text-white text-xl font-semibold">
-                            {item.title}
-                          </h3>
-                          <p className="text-gray-300 text-sm mt-1">
-                            {item.date}
-                          </p>
-                          {/* 
-                        {isActive && (
-                          <button className="mt-3 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors">
-                            View Details →
-                          </button>
-                        )} */}
-                        </div>
-
-                        {/* Active Border */}
-                        {isActive && (
-                          <div className="absolute inset-0 rounded-xl ring-4 ring-primary pointer-events-none" />
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Left Arrow */}
+        <div className={`relative w-full max-w-[1400px] mx-auto flex items-center justify-center`} style={{ height: containerHeight }}>
+          {/* Navigation Arrows */}
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 md:px-0 z-50 pointer-events-none">
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary hover:bg-primary/90 text-white p-3 rounded-full shadow-xl z-40 transition-all"
+              className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-cyan-400 hover:bg-cyan-500 text-white flex items-center justify-center shadow-xl transition-all pointer-events-auto backdrop-blur-sm"
               aria-label="Previous slide"
             >
-              <ChevronLeft size={26} />
+              <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
             </button>
-
-            {/* Right Arrow */}
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary hover:bg-primary/90 text-white p-3 rounded-full shadow-xl z-40 transition-all"
+              className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-400 flex items-center justify-center shadow-xl transition-all pointer-events-auto backdrop-blur-sm"
               aria-label="Next slide"
             >
-              <ChevronRight size={26} />
+              <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
             </button>
-
-            {/* Dots */}
-            <div className="flex justify-center gap-2 mt-8">
-              {technologyData.items.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentIndex
-                      ? "bg-primary scale-125"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
-        </InViewAnimationWrapper>
+
+          {/* 3D Slider Container */}
+          <div className="relative w-full h-full flex items-center justify-center perspective-2000">
+            {technologyData.items.map((item, index) => {
+              // Calculate relative position with wrapping
+              let relativeIndex = index - currentIndex;
+              const itemCount = technologyData.items.length;
+
+              // Handle circular logic for cards
+              if (relativeIndex > Math.floor(itemCount / 2)) relativeIndex -= itemCount;
+              else if (relativeIndex < -Math.floor(itemCount / 2)) relativeIndex += itemCount;
+
+              const isCenter = relativeIndex === 0;
+              const isSide = Math.abs(relativeIndex) === 1;
+
+              return (
+                <motion.div
+                  key={item.id}
+                  initial={false}
+                  animate={{
+                    x: relativeIndex * spread,
+                    scale: isCenter ? 1.05 : isSide ? 0.8 : 0.6,
+                    zIndex: 10 - Math.abs(relativeIndex),
+                    opacity: isCenter ? 1 : isSide ? 0.6 : 0, // Hide outer cards on mobile for cleaner look
+                    rotateY: relativeIndex * -20,
+                    filter: isCenter ? "blur(0px)" : "blur(2px)",
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 180,
+                    damping: 25,
+                  }}
+                  onClick={() => setCurrentIndex(index)}
+                  className="absolute cursor-pointer"
+                  style={{ width: cardWidth, height: cardHeight }}
+                >
+                  <div className="relative w-full h-full rounded-[30px] md:rounded-[35px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] md:shadow-[0_30px_60px_rgba(0,0,0,0.18)] group transition-all duration-500">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      priority={isCenter}
+                    />
+
+                    {/* Gradient Overlay & Content */}
+                    <div 
+                      className={`absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent p-6 md:p-8 flex flex-col justify-end transition-opacity duration-300 ${isCenter ? 'opacity-100' : 'opacity-0'}`}
+                    >
+                      <div className="transform translate-y-0 transition-transform duration-500">
+                        <h3 className="text-white text-lg md:text-2xl font-bold mb-1 md:mb-2 leading-tight">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-300 text-xs md:text-sm font-medium mb-3 md:mb-4">
+                          Published 24 Nov, 2025
+                        </p>
+                        <button className="text-white text-xs md:text-sm font-bold underline underline-offset-4 decoration-white/50 hover:decoration-white transition-all">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Pagination Indicators */}
+        <div className="flex justify-center gap-2 md:gap-3 mt-8 md:mt-12">
+          {technologyData.items.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`transition-all duration-500 rounded-full h-2 md:h-2.5 ${
+                index === currentIndex ? "w-8 md:w-10 bg-cyan-400" : "w-2 md:w-2.5 bg-gray-200 hover:bg-gray-300"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -3,70 +3,54 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { bannerData } from "@/data/homepagedata";
+import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
 
 const Banner = () => {
   return (
     <>
-      <section className="relative min-h-150 flex items-center overflow-hidden">
+      <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">
         {/* Background with animation */}
-        <div className="absolute inset-0 opacity-90 animate-zoomIn">
-          <div className="w-full h-full bg-[url('/images/bannerbg.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 opacity-90">
+          <div className="w-full h-full bg-[url('/images/bannerbg.jpg')] bg-cover bg-center animate-zoomIn" />
         </div>
 
         {/* Content Container */}
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="container mx-auto px-4 relative z-10 py-12 md:py-0">
+          <div className="grid md:grid-cols-2 gap-8 items-center text-center md:text-left">
             {/* Left Content */}
-            <div className="text-white space-y-6">
-              {/* Title Animation */}
-              <h1
-                className="text-3xl font-semibold mb-5 leading-tight animate-slideInUp"
-                style={{
-                  animation: "slideInUp 0.8s ease-out 0.2s both",
-                }}
-              >
-                {bannerData.title}
-              </h1>
-
-              {/* Description Animation */}
-              <p
-                className="text-base mb-8 lg:mb-16 text-white leading-relaxed animate-fadeInUp"
-                style={{
-                  animation: "fadeInUp 0.8s ease-out 0.4s both",
-                }}
-              >
-                {bannerData.description}
-              </p>
-
-              {/* Button Animation */}
-              <div
-                style={{
-                  animation: "slideInUp 0.8s ease-out 0.6s both",
-                }}
-              >
-                <Button
-                  className="bg-primary text-white px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  asChild
-                >
-                  <a href={bannerData.buttonLink}>{bannerData.buttonText}</a>
-                </Button>
+            <InViewAnimationWrapper animation="slideInLeft" duration={800}>
+              <div className="text-white space-y-6 max-w-2xl mx-auto md:mx-0">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  {bannerData.title}
+                </h1>
+                <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
+                  {bannerData.description}
+                </p>
+                <div>
+                  <Button
+                    className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg rounded-full transform hover:scale-105 transition-all duration-300 shadow-xl"
+                    asChild
+                  >
+                    <a href={bannerData.buttonLink}>{bannerData.buttonText}</a>
+                  </Button>
+                </div>
               </div>
-            </div>
+            </InViewAnimationWrapper>
 
             {/* Right Content - Video/Image */}
-            <div
-              className="hidden md:block relative w-full h-96 animate-slideInLeft"
-              style={{
-                animation: "slideInRight 1s ease-out 0.3s both",
-              }}
-            >
-              <video
-                src={bannerData.videourl}
-                autoPlay
-                loop
-                muted
-                className="rounded-lg shadow-2xl object-cover w-full h-full hover:shadow-cyan-500/50 transition-shadow duration-500"
-              />
+            <div className="hidden lg:block w-full">
+              <InViewAnimationWrapper animation="slideInRight" duration={800} delay={200}>
+                <div className="relative w-full h-[450px]">
+                  <video
+                    src={bannerData.videourl}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="rounded-[32px] shadow-2xl object-cover w-full h-full border-4 border-white/10"
+                  />
+                </div>
+              </InViewAnimationWrapper>
             </div>
           </div>
         </div>

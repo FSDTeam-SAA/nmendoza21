@@ -26,6 +26,8 @@ export interface InnovationNewsItem {
   image: string;
   linkLabel: string;
   link: string;
+  date: string;
+  content?: string[];
 }
 
 export interface InnovationCommunityData {
@@ -76,28 +78,48 @@ export const innovationPageData: InnovationPageData = {
       title: "Robotic Screening Of Intestinal Drug Absorption",
       description:
         "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
-      image: "/images/newsInsights.jpg",
+      image: "/images/innovation2.jpg",
       linkLabel: "View Details",
       link: "/news",
+      date: "Published 24 Nov, 2025",
+      content: [
+        "Robotic screening of intestinal drug absorption is designed to transform how early-stage candidates are evaluated for real-world performance. Our platform brings together robotics, microfluidics, and advanced analytical instrumentation to simulate intestinal conditions with high fidelity, enabling rapid profiling of permeability, stability, and transport mechanisms.",
+        "We combine science, technology, and innovation to power next-generation biotechnology services. From advanced molecular techniques to intelligent data analysis, our technology enables faster insights, improved accuracy, and sustainable outcomes. Our biotechnology platform is powered by modern technologies that ensure efficiency, reliability, and high performance.",
+        "The system’s automation reduces variability by standardizing sample handling, incubation times, and measurement parameters. This consistency allows teams to compare results across campaigns and timeframes, improving the reliability of longitudinal studies. In practice, our approach delivers higher throughput without compromising data integrity.",
+      ],
     },
     {
       id: "news-2",
-      title: "Robotic Screening Of Intestinal Drug Absorption",
+      title: "Precision Analytics For Drug Discovery",
       description:
-        "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
-      image: "/images/newsInsights2.jpg",
+        "Smarter analytics workflows accelerate early-stage discovery and reduce turnaround time for complex assays.",
+      image: "/images/innovation1.jpg",
       linkLabel: "View Details",
       link: "/news",
+      date: "Published 18 Nov, 2025",
+      content: [
+        "Precision analytics for drug discovery brings a new layer of clarity to early-stage research by combining robust experimentation with intelligent data processing. Our workflows capture high-resolution results across large datasets while maintaining tight control over experimental variables.",
+        "Our analytics stack combines high-throughput experimentation with intelligent data pipelines to surface actionable insights faster. Teams gain higher confidence in lead selection and can scale experiments without compromising data integrity. Automated quality checks and anomaly detection help teams identify outliers early.",
+        "These improvements translate into faster decision cycles and more confident progression for candidates entering further development stages. Researchers can compare results across projects, integrate external datasets when needed, and produce consistent reports for stakeholders.",
+      ],
     },
     {
       id: "news-3",
-      title: "Robotic Screening Of Intestinal Drug Absorption",
+      title: "Automation In Translational Research",
       description:
-        "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
-      image: "/images/newsInsights3.jpg",
+        "Automation reduces variability and improves consistency in translational research workflows.",
+      image: "/images/innovation3.jpg",
       linkLabel: "View Details",
       link: "/news",
+      date: "Published 10 Nov, 2025",
+      content: [
+        "Automation in translational research is essential for improving consistency, reducing manual workload, and increasing throughput. Our approach integrates validated robotics and standardized workflows that coordinate sample handling, processing, and analysis with high precision.",
+        "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation.",
+        "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases.",
+      ],
     },
+   
+
   ],
   community: {
     title: "Fostering a Global Scientific Community",
