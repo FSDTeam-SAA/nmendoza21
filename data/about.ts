@@ -153,7 +153,7 @@ export const aboutData: AboutData = {
         id: "tomi-sawyer",
         name: "Tomi Sawyer",
         role: "Peptide Therapeutics Expert",
-        image: "/about/scientificadvisor.jpg",
+        image: "/about/tomi.jpg",
         bio: "Dr. Sawyer is a leading authority in peptide chemistry and drug design. With over 30 years of experience, he has contributed to the development of multiple FDA-approved peptide therapeutics and holds numerous patents in the field.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
@@ -164,7 +164,7 @@ export const aboutData: AboutData = {
         id: "ivor-elrifi",
         name: "Ivor Elrifi",
         role: "Translational Advisor",
-        image: "/about/scientificadvisor.jpg",
+        image: "/about/ivor.jpg",
         bio: "Ivor Elrifi brings extensive expertise in translating scientific discoveries into clinical applications. His work bridges the gap between laboratory research and patient care, ensuring that innovative technologies reach those who need them most.",
         socialLinks: [{ platform: "LinkedIn", url: "#" }],
       },

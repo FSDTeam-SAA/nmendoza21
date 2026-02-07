@@ -35,7 +35,7 @@ export const technologyPageData: TechnologyPageData = {
         "Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning",
       shortDescription:
         "Advanced screening methodology for oral drug interactions using porcine tissue and AI-driven analysis.",
-      image: "/images/technology/oral-drugs.jpg",
+      image: "/images/zetengin.jpg",
       date: "Published 12 Jan, 2024",
       badge: "Featured",
       details: {
@@ -65,7 +65,7 @@ export const technologyPageData: TechnologyPageData = {
         "Robotically handled whole-tissue culture system for the screening of oral drug formulations",
       shortDescription:
         "Innovative robotic system for automated whole-tissue culture and drug formulation screening.",
-      image: "/images/technology/robotic-system.jpg",
+      image: "/images/zetengin.jpg",
       date: "Published 12 Jan, 2024",
       details: {
         fullDescription:
@@ -94,7 +94,7 @@ export const technologyPageData: TechnologyPageData = {
         "Robotic screening of intestinal drug absorption of oral drug formulations",
       shortDescription:
         "Automated platform for comprehensive intestinal drug absorption analysis.",
-      image: "/images/technology/intestinal-absorption.jpg",
+      image: "/images/zetengin.jpg",
       date: "Published 12 Jan, 2024",
       details: {
         fullDescription:
@@ -122,7 +122,7 @@ export const technologyPageData: TechnologyPageData = {
       title: "Advanced Molecular Characterization using Mass Spectrometry",
       shortDescription:
         "High-resolution analysis of drug metabolism and tissue interactions.",
-      image: "/images/technology/mass-spec.jpg",
+      image: "/images/zetengin.jpg",
       date: "Published 15 Dec, 2023",
       details: {
         fullDescription:
