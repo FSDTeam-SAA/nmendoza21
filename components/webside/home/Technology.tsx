@@ -24,14 +24,14 @@ const Technology = () => {
   const prevSlide = () => {
     setCurrentIndex(
       (prev) =>
-        (prev - 1 + technologyData.items.length) % technologyData.items.length
+        (prev - 1 + technologyData.items.length) % technologyData.items.length,
     );
   };
 
   // Responsive values based on window width
   const isMobile = windowWidth > 0 && windowWidth < 768;
   const isTablet = windowWidth >= 768 && windowWidth < 1024;
-  
+
   const cardWidth = isMobile ? 300 : isTablet ? 320 : 360;
   const cardHeight = isMobile ? 400 : isTablet ? 440 : 480;
   const spread = isMobile ? 180 : isTablet ? 250 : 320;
@@ -55,9 +55,12 @@ const Technology = () => {
           </div>
         </InViewAnimationWrapper>
 
-        <div className={`relative w-full max-w-[1400px] mx-auto flex items-center justify-center`} style={{ height: containerHeight }}>
+        <div
+          className={`relative w-full max-w-350 mx-auto flex items-center justify-center`}
+          style={{ height: containerHeight }}
+        >
           {/* Navigation Arrows */}
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 md:px-0 z-50 pointer-events-none">
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 md:px-0 z-40 pointer-events-none">
             <button
               onClick={prevSlide}
               className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-cyan-400 hover:bg-cyan-500 text-white flex items-center justify-center shadow-xl transition-all pointer-events-auto backdrop-blur-sm"
@@ -82,8 +85,10 @@ const Technology = () => {
               const itemCount = technologyData.items.length;
 
               // Handle circular logic for cards
-              if (relativeIndex > Math.floor(itemCount / 2)) relativeIndex -= itemCount;
-              else if (relativeIndex < -Math.floor(itemCount / 2)) relativeIndex += itemCount;
+              if (relativeIndex > Math.floor(itemCount / 2))
+                relativeIndex -= itemCount;
+              else if (relativeIndex < -Math.floor(itemCount / 2))
+                relativeIndex += itemCount;
 
               const isCenter = relativeIndex === 0;
               const isSide = Math.abs(relativeIndex) === 1;
@@ -119,8 +124,8 @@ const Technology = () => {
                     />
 
                     {/* Gradient Overlay & Content */}
-                    <div 
-                      className={`absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent p-6 md:p-8 flex flex-col justify-end transition-opacity duration-300 ${isCenter ? 'opacity-100' : 'opacity-0'}`}
+                    <div
+                      className={`absolute inset-0 bg-linear-to-t from-black/95 via-black/20 to-transparent p-6 md:p-8 flex flex-col justify-end transition-opacity duration-300 ${isCenter ? "opacity-100" : "opacity-0"}`}
                     >
                       <div className="transform translate-y-0 transition-transform duration-500">
                         <h3 className="text-white text-lg md:text-2xl font-bold mb-1 md:mb-2 leading-tight">
@@ -148,7 +153,9 @@ const Technology = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`transition-all duration-500 rounded-full h-2 md:h-2.5 ${
-                index === currentIndex ? "w-8 md:w-10 bg-cyan-400" : "w-2 md:w-2.5 bg-gray-200 hover:bg-gray-300"
+                index === currentIndex
+                  ? "w-8 md:w-10 bg-cyan-400"
+                  : "w-2 md:w-2.5 bg-gray-200 hover:bg-gray-300"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

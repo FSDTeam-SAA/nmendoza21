@@ -38,7 +38,7 @@ export const programsPageData: ProgramsPageData = {
       "Our technology is built on advanced biotechnology research and data-driven innovation. We use cutting-edge laboratory methods, automation, and analytical tools to deliver accurate, scalable, and reliable solutions. Every process is designed to meet global quality standards while ensuring precision, safety, and consistency across all services.",
     ctaLabel: "Explore Researches",
     ctaLink: "/technology",
-    image: "/images/technology1.jpg",
+    image: "/programs/programhero.jpg",
   },
   pipelineTitle: "Current Active Pipeline",
   pipelineSubtitle:

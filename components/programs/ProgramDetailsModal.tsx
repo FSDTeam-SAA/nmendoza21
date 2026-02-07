@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import {
   Dialog,
   DialogContent,
@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { PipelineItem, PipelinePhase } from "@/data/programs";
+import { Activity, FlaskConical, Target, X } from "lucide-react";
 
 interface ProgramDetailsModalProps {
   isOpen: boolean;
@@ -18,6 +19,26 @@ interface ProgramDetailsModalProps {
   program: PipelineItem | null;
   phases: PipelinePhase[];
 }
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 export function ProgramDetailsModal({
   isOpen,
@@ -33,14 +54,14 @@ export function ProgramDetailsModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-4xl p-0 overflow-hidden border-none bg-white">
-        <div className="flex flex-col md:flex-row h-full max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-4xl p-0 overflow-hidden border-none bg-white rounded-[2rem] shadow-2xl">
+        <div className="flex flex-col md:flex-row h-full max-h-[90vh] overflow-y-auto custom-scrollbar">
           {/* Left Side: Image */}
           <div className="relative w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
             <motion.div
-              initial={{ scale: 1.1, opacity: 0 }}
+              initial={{ scale: 1.2, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="w-full h-full relative"
             >
               <Image
@@ -50,9 +71,9 @@ export function ProgramDetailsModal({
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r" />
-              <div className="absolute bottom-4 left-4 md:bottom-auto md:top-4">
-                <Badge className="bg-cyan-500 text-white border-none px-3 py-1">
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <Badge className="bg-cyan-500 hover:bg-cyan-600 text-white border-none px-4 py-1.5 text-xs font-bold tracking-wider uppercase shadow-lg">
                   {program.activePhase}
                 </Badge>
               </div>
@@ -60,98 +81,134 @@ export function ProgramDetailsModal({
           </div>
 
           {/* Right Side: Content */}
-          <div className="w-full md:w-3/5 p-6 md:p-8 space-y-6">
-            <DialogHeader className="text-left">
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                <DialogTitle className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                  {program.title}
-                </DialogTitle>
-                <DialogDescription className="text-cyan-600 font-medium text-lg">
-                  Research Program Details
-                </DialogDescription>
-              </motion.div>
-            </DialogHeader>
+          <div className="w-full md:w-3/5 p-8 md:p-12 relative">
+            <button
+              onClick={() => onOpenChange(false)}
+              className="absolute top-6 right-6 p-2 rounded-full bg-gray-50 text-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-all duration-200"
+            >
+              <X size={20} />
+            </button>
 
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="space-y-4"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="space-y-8"
             >
-              <div className="space-y-2">
-                <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                  Description
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {program.description}
-                </p>
-              </div>
+              <DialogHeader className="text-left space-y-2">
+                <motion.div variants={itemVariants}>
+                  <DialogTitle className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight">
+                    {program.title}
+                  </DialogTitle>
+                  <DialogDescription className="text-cyan-600 font-semibold text-lg mt-1 tracking-wide uppercase">
+                    Research Program Insights
+                  </DialogDescription>
+                </motion.div>
+              </DialogHeader>
 
-              <div className="space-y-4 pt-4 border-t border-gray-100">
-                <div className="flex items-center justify-between">
-                  <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                    Research Completion
-                  </h4>
-                  <span className="text-cyan-600 font-bold">{Math.round(progress)}%</span>
-                </div>
-                
-                <div className="space-y-4">
-                   <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${progress}%` }}
-                      transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
-                      className="h-full bg-cyan-500"
-                    />
+              <div className="space-y-8">
+                {/* DescriptionSection */}
+                <motion.div variants={itemVariants} className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-cyan-50 rounded-xl text-cyan-600">
+                      <Target size={24} />
+                    </div>
+                    <h4 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em]">
+                      The Scientific goal
+                    </h4>
                   </div>
+                  <p className="text-gray-600 leading-relaxed text-lg">
+                    {program.description}
+                  </p>
+                </motion.div>
 
-                  <div className="grid grid-cols-5 gap-1">
-                    {phases.map((phase, index) => (
-                      <div key={phase} className="flex flex-col items-center gap-2">
-                        <div 
-                          className={`w-3 h-3 rounded-full transition-colors duration-500 ${
-                            index <= activeIndex ? "bg-cyan-500" : "bg-gray-200"
-                          }`} 
-                        />
-                        <span className={`text-[10px] text-center font-medium ${
-                          index <= activeIndex ? "text-cyan-600" : "text-gray-400"
-                        }`}>
-                          {phase}
-                        </span>
+                {/* Pipeline Section */}
+                <motion.div variants={itemVariants} className="space-y-6 pt-6 border-t border-gray-100">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-purple-50 rounded-xl text-purple-600">
+                        <Activity size={24} />
                       </div>
-                    ))}
+                      <h4 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em]">
+                        Development Progress
+                      </h4>
+                    </div>
+                    <span className="text-2xl font-black text-cyan-600">
+                      {Math.round(progress)}%
+                    </span>
                   </div>
-                </div>
-              </div>
 
-              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
-                <div className="space-y-1">
-                  <h4 className="text-xs font-semibold text-gray-400 uppercase">Focus Area</h4>
-                  <p className="text-sm text-gray-700 font-medium">Biotechnology</p>
-                </div>
-                <div className="space-y-1">
-                  <h4 className="text-xs font-semibold text-gray-400 uppercase">Status</h4>
-                  <p className="text-sm text-gray-700 font-medium">Active Research</p>
-                </div>
-              </div>
-            </motion.div>
+                  <div className="space-y-6">
+                    <div className="relative h-3 w-full bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${progress}%` }}
+                        transition={{ delay: 0.8, duration: 1.5, ease: "circOut" }}
+                        className="h-full bg-linear-to-r from-cyan-400 to-cyan-600 shadow-[0_0_15px_rgba(6,182,212,0.4)]"
+                      />
+                    </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="pt-4"
-            >
-              <button
-                onClick={() => onOpenChange(false)}
-                className="w-full bg-gray-900 text-white font-semibold py-3 rounded-lg hover:bg-gray-800 transition-colors"
-              >
-                Close Details
-              </button>
+                    <div className="grid grid-cols-5 gap-2">
+                      {phases.map((phase, index) => (
+                        <div
+                          key={phase}
+                          className="flex flex-col items-center gap-3 group/phase"
+                        >
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ delay: 1 + index * 0.1 }}
+                            className={`w-4 h-4 rounded-full border-2 transition-all duration-500 shadow-sm ${
+                              index <= activeIndex 
+                                ? "bg-cyan-500 border-cyan-500 scale-110 shadow-cyan-200" 
+                                : "bg-white border-gray-200"
+                            }`}
+                          />
+                          <span
+                            className={`text-[9px] md:text-xs text-center font-bold tracking-tighter uppercase transition-colors duration-300 ${
+                              index <= activeIndex
+                                ? "text-cyan-600"
+                                : "text-gray-400"
+                            }`}
+                          >
+                            {phase}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Meta Info */}
+                <motion.div variants={itemVariants} className="grid grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+                  <div className="flex gap-4">
+                    <div className="p-3 bg-blue-50 rounded-2xl text-blue-600 shrink-0 h-fit">
+                      <FlaskConical size={24} />
+                    </div>
+                    <div className="space-y-1">
+                      <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                        Focus domain
+                      </h4>
+                      <p className="text-base text-gray-900 font-bold">
+                        Applied Biotechnology
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="p-3 bg-emerald-50 rounded-2xl text-emerald-600 shrink-0 h-fit">
+                      <Activity size={24} />
+                    </div>
+                    <div className="space-y-1">
+                      <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                        Current Status
+                      </h4>
+                      <p className="text-base text-gray-900 font-bold">
+                        Active R&D
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
