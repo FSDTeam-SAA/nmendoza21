@@ -72,7 +72,7 @@ const NewsModal = ({ item, children }: NewsModalProps) => {
                   {item.description}
                 </p>
               </motion.div>
-
+{/* 
               <motion.div variants={itemVariants} className="pt-2">
                 <Link
                   href={item.link}
@@ -83,7 +83,7 @@ const NewsModal = ({ item, children }: NewsModalProps) => {
                   {item.linkLabel}
                   <span className="text-xl leading-none">→</span>
                 </Link>
-              </motion.div>
+              </motion.div> */}
             </div>
           </div>
 

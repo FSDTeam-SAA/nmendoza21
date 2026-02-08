@@ -30,7 +30,7 @@ export default function TechnologyPage() {
       />
 
       {/* Technology Grid Section */}
-      <section className="my-20 ">
+      <section className="my-4 ">
         <div className="container mx-auto px-4">
           <TechnologyGrid items={technologyPageData.items} />
         </div>

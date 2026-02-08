@@ -30,7 +30,7 @@ const cardVariants: Variants = {
 
 const WhatWeDo = () => {
   return (
-    <>
+    <div>
       <section className="my-12 md:my-16 bg-white relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -44,12 +44,12 @@ const WhatWeDo = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-8 md:mb-10"
           >
-            <h2 className="text-[40px] font-semibold mb-6 tracking-tight text-secondary-foreground">
+            <h2 className="text-[40px] font-semibold tracking-tight text-secondary-foreground">
               {whatWeDoData.title}
             </h2>
-            {/* <p className="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium">
+            <p className="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium">
               {whatWeDoData.subtitle}
-            </p> */}
+            </p>
           </motion.div>
 
           <motion.div 
@@ -97,7 +97,7 @@ const WhatWeDo = () => {
           </motion.div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
