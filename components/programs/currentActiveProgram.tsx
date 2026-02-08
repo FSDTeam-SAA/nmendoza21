@@ -41,16 +41,16 @@ const CurrentActiveProgram = () => {
 
   return (
     <section className="bg-white">
-      <div className="pb-32">
+      <div className="pb-12 pt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20 md:mb-32"
+            className="text-center mb-6 md:mb-12"
           >
-            <h2 className="text-[40px] font-semibold text-gray-900 mb-8 tracking-tight">
+            <h2 className="text-[40px] font-semibold text-gray-900 mb-2 tracking-tight">
               {pipelineTitle}
             </h2>
             <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
@@ -58,7 +58,7 @@ const CurrentActiveProgram = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div   
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

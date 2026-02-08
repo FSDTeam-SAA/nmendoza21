@@ -55,7 +55,7 @@ const NewsHero = () => {
           >
             <Image
               src={heroImage}
-              alt={featured.title}
+              alt={featured.title} 
               fill
               className="object-cover transition-transform duration-[2000ms] hover:scale-110"
             />

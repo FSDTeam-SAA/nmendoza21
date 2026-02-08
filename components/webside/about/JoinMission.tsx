@@ -40,7 +40,7 @@ export default function JoinMission({
   ctaLink,
 }: JoinMissionProps) {
   return (
-    <section className="container mx-auto py-24 mb-24 overflow-hidden px-4">
+    <section className="container mx-auto py-14 mb-12 overflow-hidden px-4">
       <motion.div
         variants={containerVariants}
         initial="hidden"
