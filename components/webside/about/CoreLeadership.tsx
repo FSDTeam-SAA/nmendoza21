@@ -1,3 +1,4 @@
+'use client';
 import type { TeamMember } from "@/data/about";
 import PersonCard from "./PersonCard";
 import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
@@ -8,35 +9,66 @@ interface CoreLeadershipProps {
   members: TeamMember[];
 }
 
+import { motion, Variants } from "framer-motion";
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { y: 40, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
 export default function CoreLeadership({
   title,
   subtitle,
   members,
 }: CoreLeadershipProps) {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-gray-50/50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <InViewAnimationWrapper animation="fadeIn" duration={600}>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              {title}
-            </h2>
-            <p className="text-gray-600 text-lg">{subtitle}</p>
-          </div>
-        </InViewAnimationWrapper>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16 md:mb-24"
+        >
+          <h2 className="text-[40px] font-semibold text-gray-900 mb-6 tracking-tight">
+            {title}
+          </h2>
+          <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
+            {subtitle}
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  mx-auto">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mx-auto max-w-7xl"
+        >
           {members.map((member, index) => (
-            <InViewAnimationWrapper
+            <motion.div
               key={member.id}
-              animation="slideInUp"
-              duration={600}
-              delay={index * 150}
+              variants={cardVariants}
             >
               <PersonCard member={member} highlight={index === 1} />
-            </InViewAnimationWrapper>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

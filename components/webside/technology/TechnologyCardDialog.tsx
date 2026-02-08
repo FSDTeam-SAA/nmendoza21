@@ -57,7 +57,7 @@ export default function TechnologyCardDialog({
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute right-6 top-6 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-110 active:scale-90"
+              className="absolute right-1 top-1 p-2 z-40 rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-110 active:scale-90"
               aria-label="Close dialog"
             >
               <X className="h-6 w-6 text-white" />
@@ -65,7 +65,7 @@ export default function TechnologyCardDialog({
 
             <div className="grid gap-8 md:grid-cols-2">
               {item.image && (
-                <motion.div 
+                <motion.div
                   variants={itemVariants}
                   className="relative w-full aspect-square md:h-80 rounded-2xl overflow-hidden bg-white/10 shadow-lg"
                 >
@@ -86,29 +86,35 @@ export default function TechnologyCardDialog({
                   </DialogTitle>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-lg font-bold text-white/70 uppercase tracking-widest">
+                <motion.p
+                  variants={itemVariants}
+                  className="text-lg font-bold text-white/70 uppercase tracking-widest"
+                >
                   Published {item.date}
                 </motion.p>
-
-                {item.details.fullDescription && (
-                  <motion.p variants={itemVariants} className="text-lg leading-relaxed text-white/90 font-medium border-l-4 border-white/20 pl-4 py-1">
-                    {item.details.fullDescription}
-                  </motion.p>
-                )}
               </div>
             </div>
 
-            {item.details.paperContent && (
-              <motion.div 
+            {item.details.fullDescription && (
+              <motion.p
                 variants={itemVariants}
-                className="mt-10 pt-10 border-t border-white/10 text-white/80 text-lg leading-relaxed space-y-4"
+                className="text-lg mt-6 leading-relaxed text-white/90 font-normal border-white/20  py-1"
+              >
+                {item.details.fullDescription}
+              </motion.p>
+              )}
+              {/*  */}
+            {item.details.paperContent && (
+              <motion.div
+                variants={itemVariants}
+                className=" text-white/90 text-lg leading-relaxed space-y-4"
               >
                 {item.details.paperContent}
               </motion.div>
             )}
 
             {item.details.paperLink && (
-              <motion.div variants={itemVariants} className="mt-10">
+              <motion.div variants={itemVariants} className="mt-3">
                 <a
                   href={item.details.paperLink}
                   target="_blank"
