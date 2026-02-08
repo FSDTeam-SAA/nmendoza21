@@ -1,15 +1,37 @@
-import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
+"use client";
+import { motion, Variants } from "framer-motion";
 import { aboutData } from "@/data/about";
 import Stats from "./Stats";
+import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
 
 interface AboutHeroProps {
   title: string;
   description: string;
 }
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
 export default function AboutHero({ title, description }: AboutHeroProps) {
   return (
-    <section className="relative  ">
+<section className="relative  ">
       <div className=" min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <video

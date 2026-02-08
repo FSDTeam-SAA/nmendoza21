@@ -17,9 +17,8 @@ export interface NewsPageData {
 }
 
 export const newsPageData: NewsPageData = {
-  title: "News & Press Release",
-  subtitle:
-    "Discover the latest breakthroughs in molecular engineering, corporate milestones & our progress in bringing life changing therapeutics to patients",
+  title: "News",
+  subtitle: "Laetst Updates from our biotechnology team",
   featured: {
     id: "featured",
     title: "Robotic screening of intestinal drug absorption",
@@ -44,7 +43,7 @@ export const newsPageData: NewsPageData = {
         "Shi, Y., Reker, D., Byrne, J.D. et al. Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning. Nat. Biomed. Eng 8, 278–290 (2024).",
       image: "/images/newsInsights.jpg",
       date: "Published 24 Nov, 2024",
-    linkLabel: "View Full News",
+      linkLabel: "View Full News",
       link: "https://vivtex.com/wp-content/uploads/2024/05/Screening-oral-drugs-for-their-interactions.pdf",
       content: [
         "Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning",

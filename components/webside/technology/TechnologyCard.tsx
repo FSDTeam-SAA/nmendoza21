@@ -7,45 +7,25 @@ interface TechnologyCardProps {
 
 export default function TechnologyCard({ item }: TechnologyCardProps) {
   return (
-    <div className="flex flex-col h-full overflow-hidden  border border-gray-200 bg-white  transition-all duration-300">
-      {/* Image Container */}
-      {/* <div className="relative w-full h-48 overflow-hidden bg-gray-100">
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          className="object-cover hover:scale-105 transition-transform duration-300"
-        />
-        {item.badge && (
-          <div className="absolute top-3 right-3">
-            <span className="inline-flex items-center rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-800">
-              {item.badge}
-            </span>
-          </div>
-        )}
-      </div> */}
-
-      {/* Content Container */}
-      <div className="flex justify-between items-center p-5">
-        {/* Date */}
-
-        {/* Title */}
-        <div>
-          <h3 className="text-base font-semibold w-full md:w-10/12 text-gray-900 mb-2 line-clamp-3 hover:text-cyan-600 transition-colors">
+    <div className="group relative">
+      <div className="flex flex-col md:flex-row justify-between items-center p-8 bg-white border border-gray-100 rounded-[2rem] transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-primary/20 hover:-translate-y-1 overflow-hidden">
+        {/* Subtle hover glow */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+        
+        <div className="relative z-10 flex-1 pr-8">
+          
+          <h3 className="text-xl md:text-2xl font-normal text-[#000000] leading-tight group-hover:text-primary transition-colors duration-300">
             {item.title}
           </h3>
-
-          {/* Description */}
-          {/* <p className="text-sm text-gray-600 mb-4 grow line-clamp-2">
-          {item.shortDescription}
-        </p> */}
-          <p className="text-xs text-primary font-medium mb-2">{item.date}</p>
+          <div className="flex items-center gap-3 mt-4">
+            {/* <span className="w-2 h-2 rounded-full bg-primary/60" /> */}
+            <p className="text-sm text-primary font-black uppercase tracking-wider">{item.date}</p>
+          </div>
         </div>
 
-        {/* Button */}
-        <div className="mt-auto">
+        <div className="relative z-10 mt-8 md:mt-0">
           <TechnologyCardDialog item={item}>
-            <button className="w-full cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded-lg text-primary font-medium text-sm  transition-colors duration-200 group">
+            <button className="cursor-pointer inline-flex items-center justify-center px-10 text-primary hover:bg-transparent  hover:underline transition-all duration-300  active:scale-95">
               View Paper
             </button>
           </TechnologyCardDialog>

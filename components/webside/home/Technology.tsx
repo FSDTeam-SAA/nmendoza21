@@ -38,22 +38,22 @@ const Technology = () => {
   const containerHeight = isMobile ? "500px" : "600px";
 
   return (
-    <section className="py-12 md:py-20 bg-white overflow-hidden">
+    <section className="my-12 md:my-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <InViewAnimationWrapper
-          animation="slideInDown"
-          duration={800}
-          delay={200}
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-center mb-8"
         >
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 tracking-tight">
-              {technologyData.title}
-            </h2>
-            <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto">
-              {technologyData.subtitle}
-            </p>
-          </div>
-        </InViewAnimationWrapper>
+          <h2 className="text-[40px] font-semibold mb-3 text-gray-900 tracking-tighter">
+            {technologyData.title}
+          </h2>
+          <p className="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium">
+            {technologyData.subtitle}
+          </p>
+        </motion.div>
 
         <div
           className={`relative w-full max-w-350 mx-auto flex items-center justify-center`}
@@ -63,14 +63,14 @@ const Technology = () => {
           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 md:px-0 z-40 pointer-events-none">
             <button
               onClick={prevSlide}
-              className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-cyan-400 hover:bg-cyan-500 text-white flex items-center justify-center shadow-xl transition-all pointer-events-auto backdrop-blur-sm"
+              className="w-10 h-10 cursor-pointer md:w-14 md:h-14 rounded-full bg-cyan-400 hover:bg-cyan-500 text-white flex items-center justify-center shadow-xl transition-all pointer-events-auto backdrop-blur-sm"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-400 flex items-center justify-center shadow-xl transition-all pointer-events-auto backdrop-blur-sm"
+              className="w-10 h-10 cursor-pointer md:w-14 md:h-14 rounded-full bg-cyan-400 hover:bg-cyan-500 text-white flex items-center justify-center shadow-xl transition-all pointer-events-auto backdrop-blur-sm"
               aria-label="Next slide"
             >
               <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />

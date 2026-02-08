@@ -47,7 +47,7 @@ export const whoWeAreData = {
       { image: "/about/investor.jpg" },
       { image: "/about/scientificadvisor.jpg" },
     ],
-    button1Text: "See Our Team Members",
+    button1Text: "Team",
     button1Link: "/about",
     image: "/images/teamwork.jpg",
     videourl: "/images/whatweare.mp4",

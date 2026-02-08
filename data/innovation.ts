@@ -22,6 +22,7 @@ export interface InnovationFeatureData {
 export interface InnovationNewsItem {
   id: string;
   title: string;
+  titile2: string;
   description: string;
   image: string;
   linkLabel: string;
@@ -75,6 +76,7 @@ export const innovationPageData: InnovationPageData = {
   latestNews: [
     {
       id: "news-1",
+      titile2: "Newsletter Update box",
       title: "Robotic Screening Of Intestinal Drug Absorption",
       description:
         "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
@@ -90,6 +92,7 @@ export const innovationPageData: InnovationPageData = {
     },
     {
       id: "news-2",
+      titile2: "Scientific Conferences",
       title: "Precision Analytics For Drug Discovery",
       description:
         "Smarter analytics workflows accelerate early-stage discovery and reduce turnaround time for complex assays.",
@@ -106,6 +109,7 @@ export const innovationPageData: InnovationPageData = {
     {
       id: "news-3",
       title: "Automation In Translational Research",
+      titile2: "Scientific Community & Engagement",
       description:
         "Automation reduces variability and improves consistency in translational research workflows.",
       image: "/images/innovation3.jpg",
@@ -118,8 +122,22 @@ export const innovationPageData: InnovationPageData = {
         "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases.",
       ],
     },
-   
-
+    {
+      id: "news-4",
+      titile2: "Webinars box",
+      title: "Automation In Translational Research",
+      description:
+        "Automation reduces variability and improves consistency in translational research workflows.",
+      image: "/images/innovation4.jpg",
+      linkLabel: "View Details",
+      link: "/news",
+      date: "Published 10 Nov, 2025",
+      content: [
+        "Automation in translational research is essential for improving consistency, reducing manual workload, and increasing throughput. Our approach integrates validated robotics and standardized workflows that coordinate sample handling, processing, and analysis with high precision.",
+        "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation.",
+        "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases.",
+      ],
+    },
   ],
   community: {
     title: "Fostering a Global Scientific Community",
