@@ -1,24 +1,48 @@
+'use client';
+import { motion, Variants } from "framer-motion";
 import TechnologyCard from "./TechnologyCard";
-import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
 import { type TechnologyItem } from "@/data/technology.data";
 
 interface TechnologyGridProps {
   items: TechnologyItem[];
 }
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export default function TechnologyGrid({ items }: TechnologyGridProps) {
   return (
-    <div className="grid grid-cols-1  ">
+    <motion.div 
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      className="grid grid-cols-1 gap-4"
+    >
       {items.map((item, index) => (
-        <InViewAnimationWrapper
+        <motion.div
           key={item.id}
-          animation="slideInUp"
-          duration={600}
-          delay={index * 100}
+          variants={itemVariants}
         >
           <TechnologyCard item={item} />
-        </InViewAnimationWrapper>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }

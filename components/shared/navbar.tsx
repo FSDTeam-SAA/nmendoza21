@@ -10,7 +10,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const navItems = [
-    { name: "HOME", href: "/" },
+   
     { name: "ABOUT US", href: "/about" },
     { name: "TECHNOLOGY", href: "/technology" },
     { name: "PROGRAMS", href: "/programs" },
