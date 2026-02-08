@@ -113,7 +113,7 @@ export default function TechnologyCardDialog({
               </motion.div>
             )}
 
-            {item.details.paperLink && (
+            {/* {item.details.paperLink && (
               <motion.div variants={itemVariants} className="mt-3">
                 <a
                   href={item.details.paperLink}
@@ -125,7 +125,7 @@ export default function TechnologyCardDialog({
                   <ExternalLink className="h-5 w-5" />
                 </a>
               </motion.div>
-            )}
+            )} */}
           </motion.div>
         </DialogContent>
       </Dialog>

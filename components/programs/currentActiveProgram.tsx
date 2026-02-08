@@ -144,7 +144,7 @@ const CurrentActiveProgram = () => {
                       <div className="pt-8">
                         <Button
                           onClick={() => handleViewDetails(item)}
-                          className="w-full sm:w-auto px-12 py-8 bg-gray-950 hover:bg-primary text-white font-black text-xl rounded-md shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] group/btn"
+                          className="w-full sm:w-auto px-12 py-8 bg-primary hover:bg-gray-950 cursor-pointer text-white font-black text-xl rounded-md shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] group/btn"
                         >
                           Explore Details
                           <span className="ml-3 group-hover/btn:translate-x-2 transition-transform duration-300">→</span>
