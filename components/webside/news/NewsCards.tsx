@@ -80,7 +80,7 @@ const NewsCards = () => {
                     </p>
                     <div className="mt-8">
                       <NewsModal item={item}>
-                        <button className="text-sm cursor-pointer text-primary font-black uppercase tracking-wider inline-flex items-center gap-2 group/btn">
+                        <button className="text-sm cursor-pointer text-primary font-black uppercase tracking-wider inline-flex items-center gap-2 group/btn cursor-pointer">
                           {item.linkLabel}
                           <span className="group-hover/btn:translate-x-1 transition-transform duration-300">→</span>
                         </button>

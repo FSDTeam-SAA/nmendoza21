@@ -55,7 +55,7 @@ const NewsHero = () => {
           >
             <Image
               src={heroImage}
-              alt={featured.title}
+              alt={featured.title} 
               fill
               className="object-cover transition-transform duration-[2000ms] hover:scale-110"
             />
@@ -82,7 +82,7 @@ const NewsHero = () => {
             
             <div className="pt-6">
               <NewsModal item={featured}>
-                <Button className="bg-primary text-white hover:bg-black px-12 py-8 text-xl font-bold rounded-md transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl">
+                <Button className="bg-primary text-white hover:bg-black px-12 py-8 text-xl font-bold rounded-md transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl cursor-pointer">
                   {featured.linkLabel}
                 </Button>
               </NewsModal>

@@ -44,7 +44,7 @@ export default function TechnologyHero({
         >
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter"
+            className="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter"
           >
             {title}
           </motion.h1>
