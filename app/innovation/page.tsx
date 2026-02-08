@@ -100,10 +100,10 @@ export default function InnovationPage() {
                 </div>
                 <a
                   href={feature.featured.link}
-                  className="inline-flex items-center gap-2 text-primary font-black group"
+                  className="inline-flex items-center gap-2 text-primary font-black group cursor-pointer"
                 >
                   {feature.featured.linkLabel}
-                  <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                  <span className="group-hover:translate-x-2 transition-transform duration-300 ">→</span>
                 </a>
               </div>
             </motion.div>
