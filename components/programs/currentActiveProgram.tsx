@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ProgramDetailsModal } from "@/components/programs/ProgramDetailsModal";
-import { programsPageData, PipelineItem } from "@/data/programs";
+import { programsPageData } from "@/data/programs";
+import Link from "next/link";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -29,16 +28,6 @@ const itemVariants: Variants = {
 const CurrentActiveProgram = () => {
   const { pipelineTitle, pipelineSubtitle, phases, items } = programsPageData;
 
-  const [selectedProgram, setSelectedProgram] = useState<PipelineItem | null>(
-    null,
-  );
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleViewDetails = (program: PipelineItem) => {
-    setSelectedProgram(program);
-    setIsModalOpen(true);
-  };
-
   return (
     <section className="bg-white">
       <div className="pb-12 pt-20">
@@ -58,7 +47,7 @@ const CurrentActiveProgram = () => {
             </p>
           </motion.div>
 
-          <motion.div   
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -99,57 +88,16 @@ const CurrentActiveProgram = () => {
                         </p>
                       </div>
 
-                      <div className="space-y-8 pt-4">
-                        <div className="flex items-center justify-between gap-1 overflow-x-auto no-scrollbar py-4 px-2">
-                          {phases.map((phase, idx) => (
-                            <div
-                              key={phase}
-                              className="flex flex-col items-center min-w-[100px]"
-                            >
-                              <span
-                                className={`text-xs font-black uppercase tracking-[0.15em] mb-4 text-center transition-colors duration-500 ${
-                                  idx <= activeIndex
-                                    ? "text-primary"
-                                    : "text-gray-300"
-                                }`}
-                              >
-                                {phase}
-                              </span>
-                              <div
-                                className={`w-4 h-4 rounded-full border-4 transition-all duration-700 ${
-                                  idx <= activeIndex
-                                    ? "bg-primary border-primary shadow-[0_0_15px_rgba(31,171,237,0.5)] scale-125"
-                                    : "bg-white border-gray-100"
-                                }`}
-                              />
-                            </div>
-                          ))}
+                      <Link href={`/contact`} className="">
+                        <div className="">
+                          <Button className="w-full sm:w-auto px-12 py-8 bg-primary hover:bg-gray-950 cursor-pointer text-white font-black text-xl rounded-md shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] group/btn">
+                            Contact us to learn more
+                            <span className="ml-3 group-hover/btn:translate-x-2 transition-transform duration-300">
+                              →
+                            </span>
+                          </Button>
                         </div>
-
-                        <div className="relative h-3 rounded-full bg-gray-50 overflow-hidden border border-gray-100/50">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${progress}%` }}
-                            viewport={{ once: true }}
-                            transition={{
-                              duration: 1.5,
-                              ease: [0.22, 1, 0.36, 1],
-                              delay: 0.5,
-                            }}
-                            className="absolute inset-y-0 left-0 bg-primary rounded-full shadow-[0_0_20px_rgba(31,171,237,0.4)]"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="pt-8">
-                        <Button
-                          onClick={() => handleViewDetails(item)}
-                          className="w-full sm:w-auto px-12 py-8 bg-primary hover:bg-gray-950 cursor-pointer text-white font-black text-xl rounded-md shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] group/btn"
-                        >
-                          Explore Details
-                          <span className="ml-3 group-hover/btn:translate-x-2 transition-transform duration-300">→</span>
-                        </Button>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </motion.div>
@@ -158,12 +106,12 @@ const CurrentActiveProgram = () => {
           </motion.div>
         </div>
       </div>
-      <ProgramDetailsModal
+      {/* <ProgramDetailsModal
         isOpen={isModalOpen}
         onOpenChange={setIsModalOpen}
         program={selectedProgram}
         phases={phases}
-      />
+      /> */}
     </section>
   );
 };
