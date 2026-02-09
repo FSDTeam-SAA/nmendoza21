@@ -26,8 +26,8 @@ const JoinUs = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center ">
-          <div className="cursor-pointer">
-            <Link href="/contact">
+          <Link href="/contact">
+            <div className="cursor-pointer">
               <Image
                 className="rounded-lg"
                 src={"/images/joinus.jpg"}
@@ -35,8 +35,8 @@ const JoinUs = () => {
                 height={400}
                 alt="joinus"
               />
-            </Link>
-          </div>
+            </div>
+          </Link>
           <div>
             <motion.h3 className="text-3xl md:text-2xl font-medium mb-3 flex gap-4 items-center tracking-tight">
               <div className="w-8 h-8 bg-primary rounded-md" />
