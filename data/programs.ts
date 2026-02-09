@@ -47,35 +47,20 @@ export const programsPageData: ProgramsPageData = {
   items: [
     {
       id: "pipeline-1",
-      title: "Small Molecule Delivery Platform",
+      title: "Needle to oral switch for existing drugs",
       description:
-        "Small Molecule Delivery Platform is a pipeline project focused on designing and optimizing delivery systems that improve the stability, targeting, and efficacy of small-molecule therapeutics. The platform aims to enhance bioavailability and reduce off-target effects across multiple disease applications.",
+        "We focus on established drugs that are highly effective and safe but only available via needle injection. We use our technology to create custom drug delivery systems enabling  these drugs to be given  via the oral route.",
       image: "/images/technology2.jpg",
       activePhase: "Phase I",
     },
     {
       id: "pipeline-2",
-      title: "Small Molecule Delivery Platform",
+      title: "Create new orally bioavailable therapeutics",
       description:
-        "Small Molecule Delivery Platform is a pipeline project focused on designing and optimizing delivery systems that improve the stability, targeting, and efficacy of small-molecule therapeutics. The platform aims to enhance bioavailability and reduce off-target effects across multiple disease applications.",
+        "We have a rapidly growing number of industry partnerships with currently 6 of the top 30 Pharma companies and 4 biotech companies with the aim to create new oral blockbuster therapeutics.",
       image: "/images/technology3.jpg",
       activePhase: "Phase I",
     },
-    {
-      id: "pipeline-3",
-      title: "Small Molecule Delivery Platform",
-      description:
-        "Small Molecule Delivery Platform is a pipeline project focused on designing and optimizing delivery systems that improve the stability, targeting, and efficacy of small-molecule therapeutics. The platform aims to enhance bioavailability and reduce off-target effects across multiple disease applications.",
-      image: "/images/technology4.jpg",
-      activePhase: "Phase I",
-    },
-    {
-      id: "pipeline-4",
-      title: "Small Molecule Delivery Platform",
-      description:
-        "Small Molecule Delivery Platform is a pipeline project focused on designing and optimizing delivery systems that improve the stability, targeting, and efficacy of small-molecule therapeutics. The platform aims to enhance bioavailability and reduce off-target effects across multiple disease applications.",
-      image: "/images/technology5.jpg",
-      activePhase: "Phase I",
-    },
+
   ],
 };
