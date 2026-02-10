@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ProgramDetailsModal } from "@/components/programs/ProgramDetailsModal";
+import { ProgramDetailsModal } from "@/components/programs/ProgramDetailsModals";
 import { programsPageData, PipelineItem } from "@/data/programs";
 
 const containerVariants: Variants = {
