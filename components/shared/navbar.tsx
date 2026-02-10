@@ -51,7 +51,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-sm font-medium transition-all duration-300 relative group ${
+                  className={`text-base font-medium transition-all duration-300 relative group ${
                     isActive(item.href)
                       ? "text-cyan-500"
                       : "text-gray-700 hover:text-cyan-500"
