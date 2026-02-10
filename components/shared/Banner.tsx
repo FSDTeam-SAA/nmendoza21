@@ -36,17 +36,30 @@ const imageVariants: Variants = {
 
 const Banner = () => {
   return (
-    <>
+    <div>
       <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">
-        {/* Background with animation */}
-        <div className="absolute inset-0 z-0">
-          <motion.div 
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 10, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
-            className="w-full h-full bg-[url('/images/bannerbg.jpg')] bg-cover bg-center" 
-          />
-          <div className="absolute inset-0 bg-black/40 z-1" />
+        {/* Background with smooth animation */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <motion.video
+            initial={{ scale: 1.05 }}
+            animate={{ scale: 1.12 }}
+            transition={{
+              duration: 20, // slow = smooth
+              ease: "easeInOut", // soft easing
+              repeat: Infinity,
+              repeatType: "mirror", // smoother than reverse
+            }}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover will-change-transform"
+          >
+            <source src="/images/banner.mp4" type="video/mp4" />
+          </motion.video>
+
+          {/* softer overlay */}
+          <div className="absolute inset-0 bg-black/30 z-10" />
         </div>
 
         {/* Content Container */}
@@ -59,20 +72,20 @@ const Banner = () => {
               animate="visible"
               className="text-white space-y-8 max-w-2xl mx-auto md:mx-0"
             >
-              <motion.h1 
+              <motion.h1
                 variants={itemVariants}
                 className="text-3xl md:text-4xl lg:text-4xl font-extrabold leading-[1.1] tracking-tight"
               >
                 {bannerData.title}
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 variants={itemVariants}
                 className="text-lg  text-white/90 leading-relaxed font-medium"
               >
                 {bannerData.description}
               </motion.p>
-              
+
               <motion.div variants={itemVariants}>
                 <Button
                   className="bg-primary text-white hover:bg-black px-10 py-8 text-xl font-bold rounded-md shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98]"
@@ -84,8 +97,8 @@ const Banner = () => {
             </motion.div>
 
             {/* Right Content - Video/Image */}
-            <div className="hidden lg:block w-full">
-              <motion.div 
+            {/* <div className="hidden lg:block w-full">
+              <motion.div
                 variants={imageVariants}
                 initial="hidden"
                 animate="visible"
@@ -101,11 +114,11 @@ const Banner = () => {
                   className="relative rounded-[40px] shadow-2xl object-cover w-full h-full border-8 border-white/5 z-10"
                 />
               </motion.div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
