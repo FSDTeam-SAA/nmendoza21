@@ -38,7 +38,7 @@ const WhatWeare = () => {
   const { teamWork } = whoWeAreData;
 
   return (
-    <>
+    <div>
       <section className="py-12 md:py-16 bg-[#050505] text-white overflow-hidden relative">
         {/* Subtle glow effect */}
         <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -translate-x-1/2" />
@@ -51,7 +51,7 @@ const WhatWeare = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-8"
           >
-            <h2 className="text-[40px] font-semibold mb-6 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/60">
+            <h2 className="text-[40px] font-semibold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/60">
               {whoWeAreData.title}
             </h2>
             <p className="text-gray-400 text-lg md:text-xl  mx-auto leading-relaxed font-medium">
@@ -163,7 +163,7 @@ const WhatWeare = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

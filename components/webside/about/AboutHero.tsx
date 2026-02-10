@@ -31,8 +31,8 @@ const itemVariants: Variants = {
 
 export default function AboutHero({ title, description }: AboutHeroProps) {
   return (
-<section className="relative  ">
-      <div className=" min-h-[50vh] flex items-center overflow-hidden">
+<section className="relative  bg-black/55">
+      <div className=" min-h-[50vh] flex items-center overflow-hidden ">
         <div className="absolute inset-0 overflow-hidden">
           <video
             autoPlay

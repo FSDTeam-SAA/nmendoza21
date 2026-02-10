@@ -4,6 +4,7 @@ export interface InnovationFeatureData {
     date: string;
     title: string;
     description: string;
+    shortDescription: string;
     author: string;
     authorRole: string;
     authorAvatar: string;
@@ -24,6 +25,7 @@ export interface InnovationNewsItem {
   title: string;
   titile2: string;
   description: string;
+  shortDescription: string;
   image: string;
   linkLabel: string;
   link: string;
@@ -57,6 +59,8 @@ export const innovationPageData: InnovationPageData = {
       title: "Robotic screening of intestinal drug absorption",
       description:
         "Our technology is built on advanced biotechnology research and data-driven innovation. We use cutting-edge laboratory methods, automation, and analytical tools to deliver accurate, scalable, and reliable solutions. Every process is designed to meet global quality standards while ensuring precision, safety, and consistency across all services.",
+      shortDescription:
+        "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
       author: "Andres de Costa",
       authorRole: "Chief Science Officer",
       authorAvatar: "/images/technology1.jpg",
@@ -80,6 +84,8 @@ export const innovationPageData: InnovationPageData = {
       title: "Robotic Screening Of Intestinal Drug Absorption",
       description:
         "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
+      shortDescription:
+        "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
       image: "/images/innovation2.jpg",
       linkLabel: "View Details",
       link: "/news",
@@ -96,6 +102,8 @@ export const innovationPageData: InnovationPageData = {
       title: "Precision Analytics For Drug Discovery",
       description:
         "Smarter analytics workflows accelerate early-stage discovery and reduce turnaround time for complex assays.",
+      shortDescription:
+        "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
       image: "/images/innovation1.jpg",
       linkLabel: "View Details",
       link: "/news",
@@ -112,6 +120,8 @@ export const innovationPageData: InnovationPageData = {
       titile2: "Scientific Community & Engagement",
       description:
         "Automation reduces variability and improves consistency in translational research workflows.",
+      shortDescription:
+        "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
       image: "/images/innovation3.jpg",
       linkLabel: "View Details",
       link: "/news",
@@ -122,22 +132,24 @@ export const innovationPageData: InnovationPageData = {
         "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases.",
       ],
     },
-    {
-      id: "news-4",
-      titile2: "Webinars box",
-      title: "Automation In Translational Research",
-      description:
-        "Automation reduces variability and improves consistency in translational research workflows.",
-      image: "/images/innovation4.jpg",
-      linkLabel: "View Details",
-      link: "/news",
-      date: "Published 10 Nov, 2025",
-      content: [
-        "Automation in translational research is essential for improving consistency, reducing manual workload, and increasing throughput. Our approach integrates validated robotics and standardized workflows that coordinate sample handling, processing, and analysis with high precision.",
-        "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation.",
-        "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases.",
-      ],
-    },
+    // {
+    //   id: "news-4",
+    //   titile2: "Webinars box",
+    //   title: "Automation In Translational Research",
+    //   description:
+    //     "Automation reduces variability and improves consistency in translational research workflows.",
+    //   shortDescription:
+    //     "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
+    //   image: "/images/innovation4.jpg",
+    //   linkLabel: "View Details",
+    //   link: "/news",
+    //   date: "Published 10 Nov, 2025",
+    //   content: [
+    //     "Automation in translational research is essential for improving consistency, reducing manual workload, and increasing throughput. Our approach integrates validated robotics and standardized workflows that coordinate sample handling, processing, and analysis with high precision.",
+    //     "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation.",
+    //     "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases.",
+    //   ],
+    // },
   ],
   community: {
     title: "Fostering a Global Scientific Community",

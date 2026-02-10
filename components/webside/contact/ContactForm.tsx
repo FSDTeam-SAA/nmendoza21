@@ -178,7 +178,7 @@ const ContactForm = () => {
 
         <Button
           type="submit"
-          className="bg-cyan-600 hover:bg-cyan-700 text-white w-full h-12 rounded-xl text-base font-semibold transition-all duration-300 shadow-lg shadow-cyan-200/50 disabled:opacity-50"
+          className="bg-cyan-600 hover:bg-cyan-700 text-white w-full h-12 rounded-xl text-base font-semibold transition-all duration-300 shadow-lg shadow-cyan-200/50 disabled:opacity-50 cursor-pointer"
           disabled={loading}
         >
           {loading ? "Sending Message..." : "Send Message"}
