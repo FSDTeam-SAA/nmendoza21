@@ -17,7 +17,7 @@ export const whatWeDoData = {
       title: "Technology",
       description:
         "Our platform leverages modern, secure, and scalable technologies to ensure performance, reliability, and seamless user experience.",
-      image: "/images/technology.jpg",
+      image: "/programs/program.jpg",
       buttonText: "Explore",
       buttonLink: "/technology",
     },
@@ -26,7 +26,7 @@ export const whatWeDoData = {
       title: "Programs",
       description:
         "Our programs are designed to deliver practical value, measurable results, and long-term growth for your organization.",
-      image: "/images/programs.gif",
+      image: "/programs/program2.jpg",
       buttonText: "Explore",
       buttonLink: "/programs",
     },
@@ -47,10 +47,10 @@ export const whoWeAreData = {
       { image: "/about/investor.jpg" },
       { image: "/about/scientificadvisor.jpg" },
     ],
-    button1Text: "Team",
-    button1Link: "/about",
+    button1Text: "Join Us",
+    button1Link: "/contact",
     image: "/images/teamwork.jpg",
-    videourl: "/images/whatweare.mp4",
+    videourl: "/ourvision.mp4",
     stats: [
       { value: "50+", label: "Employees" },
       { value: "100+", label: "Projects" },

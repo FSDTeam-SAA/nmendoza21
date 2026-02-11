@@ -15,7 +15,7 @@ export default function Home() {
       <WhatWeDo />
       <NewsAndInsights />
       <WhatWeare />
-      <JoinUs />
+      {/* <JoinUs /> */}
       <Innovation />
       <Technologys />
       {/* <Technology /> */}
