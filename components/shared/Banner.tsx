@@ -88,7 +88,7 @@ const Banner = () => {
 
               <motion.div variants={itemVariants}>
                 <Button
-                  className="bg-primary text-white hover:bg-black px-10 py-8 text-xl font-bold rounded-md shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98]"
+                  className="bg-primary text-white hover:bg-black px-10 py-8 text-xl font-bold rounded-none shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98]"
                   asChild
                 >
                   <a href={bannerData.buttonLink}>{bannerData.buttonText}</a>
