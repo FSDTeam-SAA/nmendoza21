@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { programsPageData } from "@/data/programs";
+import { ProgramDetailsModal } from "@/components/programs/ProgramDetailsModals";
+
 import Link from "next/link";
+import { programsPageData } from "@/data/programs";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
