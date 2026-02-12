@@ -12,7 +12,9 @@ export type PipelinePhase =
   | "Pre-Clinical"
   | "Phase I"
   | "Phase II"
-  | "Phase III";
+  | "Phase III"
+  | "Approval"
+  // | "Indication";
 
 export interface PipelineItem {
   id: string;
@@ -43,7 +45,7 @@ export const programsPageData: ProgramsPageData = {
   pipelineTitle: "Current Active Pipeline",
   pipelineSubtitle:
     "Explore our latest technologies & validated research from our world class R&D team",
-  phases: ["Discovery", "Pre-Clinical", "Phase I", "Phase II", "Phase III"],
+  phases: ["Discovery", "Pre-Clinical", "Phase I", "Phase II", "Phase III", "Approval"],
   items: [
     {
       id: "pipeline-1",
@@ -59,7 +61,23 @@ export const programsPageData: ProgramsPageData = {
       description:
         "We have a rapidly growing number of industry partnerships with currently 6 of the top 30 Pharma companies and 4 biotech companies with the aim to create new oral blockbuster therapeutics.",
       image: "/images/technology3.jpg",
-      activePhase: "Phase I",
+      activePhase: "Phase II",
+    },
+        {
+      id: "pipeline-3",
+      title: "Create new orally bioavailable therapeutics",
+      description:
+        "We have a rapidly growing number of industry partnerships with currently 6 of the top 30 Pharma companies and 4 biotech companies with the aim to create new oral blockbuster therapeutics.",
+      image: "/images/technology3.jpg",
+      activePhase: "Approval",
+    },
+        {
+      id: "pipeline-4",
+      title: "Create new orally bioavailable therapeutics",
+      description:
+        "We have a rapidly growing number of industry partnerships with currently 6 of the top 30 Pharma companies and 4 biotech companies with the aim to create new oral blockbuster therapeutics.",
+      image: "/images/technology3.jpg",
+      activePhase: "Approval",
     },
 
   ],

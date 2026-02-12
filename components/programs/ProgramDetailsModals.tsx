@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   Dialog,
   DialogContent,
@@ -72,7 +72,54 @@ export function ProgramDetailsModal({
                 priority
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6">
+              
+              {/* Progress Bar at Bottom - Full Width */}
+              <div className="absolute bottom-0 left-0 right-0 w-full p-4 md:p-6 bg-linear-to-t from-black/60 to-transparent space-y-3 md:space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs md:text-sm font-bold text-white uppercase tracking-wider">Progress</span>
+                  <span className="text-lg md:text-xl font-black text-cyan-300">
+                    {Math.round(progress)}%
+                  </span>
+                </div>
+                <div className="relative h-2 md:h-3 w-full bg-white/20 rounded-full overflow-hidden shadow-inner">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${progress}%` }}
+                    transition={{ delay: 0.8, duration: 1.5, ease: "circOut" }}
+                    className="h-full bg-linear-to-r from-cyan-400 to-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"
+                  />
+                </div>
+                <div className="grid grid-cols-5 md:grid-cols-5 gap-1.5 md:gap-2">
+                  {phases.map((phase, index) => (
+                    <div
+                      key={phase}
+                      className="flex flex-col items-center gap-1.5 md:gap-2 group/phase"
+                    >
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: 1 + index * 0.1 }}
+                        className={`w-2.5 md:w-3 h-2.5 md:h-3 rounded-full border-2 transition-all duration-500 shadow-sm ${
+                          index <= activeIndex 
+                            ? "bg-cyan-300 border-cyan-300 scale-110 shadow-cyan-200" 
+                            : "bg-white/30 border-white/40"
+                        }`}
+                      />
+                      <span
+                        className={`text-[7px] md:text-[8px] text-center font-bold tracking-tighter uppercase transition-colors duration-300 leading-tight ${
+                          index <= activeIndex
+                            ? "text-cyan-200"
+                            : "text-white/50"
+                        }`}
+                      >
+                        {phase}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="absolute top-4 md:top-6 left-4 md:left-6">
                 <Badge className="bg-cyan-500 hover:bg-cyan-600 text-white border-none px-4 py-1.5 text-xs font-bold tracking-wider uppercase shadow-lg">
                   {program.activePhase}
                 </Badge>
@@ -123,60 +170,18 @@ export function ProgramDetailsModal({
                 </motion.div>
 
                 {/* Pipeline Section */}
-                <motion.div variants={itemVariants} className="space-y-6 pt-6 border-t border-gray-100">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-purple-50 rounded-xl text-purple-600">
-                        <Activity size={24} />
-                      </div>
-                      <h4 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em]">
-                        Development Progress
-                      </h4>
+                <motion.div variants={itemVariants} className="space-y-3 pt-6 border-t border-gray-100">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-purple-50 rounded-xl text-purple-600">
+                      <Activity size={24} />
                     </div>
-                    <span className="text-2xl font-black text-cyan-600">
-                      {Math.round(progress)}%
-                    </span>
+                    <h4 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em]">
+                      Development Progress
+                    </h4>
                   </div>
-
-                  <div className="space-y-6">
-                    <div className="relative h-3 w-full bg-gray-100 rounded-full overflow-hidden shadow-inner">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${progress}%` }}
-                        transition={{ delay: 0.8, duration: 1.5, ease: "circOut" }}
-                        className="h-full bg-linear-to-r from-cyan-400 to-cyan-600 shadow-[0_0_15px_rgba(6,182,212,0.4)]"
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-5 gap-2">
-                      {phases.map((phase, index) => (
-                        <div
-                          key={phase}
-                          className="flex flex-col items-center gap-3 group/phase"
-                        >
-                          <motion.div
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ delay: 1 + index * 0.1 }}
-                            className={`w-4 h-4 rounded-full border-2 transition-all duration-500 shadow-sm ${
-                              index <= activeIndex 
-                                ? "bg-cyan-500 border-cyan-500 scale-110 shadow-cyan-200" 
-                                : "bg-white border-gray-200"
-                            }`}
-                          />
-                          <span
-                            className={`text-[9px] md:text-xs text-center font-bold tracking-tighter uppercase transition-colors duration-300 ${
-                              index <= activeIndex
-                                ? "text-cyan-600"
-                                : "text-gray-400"
-                            }`}
-                          >
-                            {phase}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  <p className="text-gray-600 leading-relaxed text-base">
+                    Phase <span className="font-bold text-gray-900">{program.activePhase}</span> • <span className="font-semibold text-cyan-600">{Math.round(progress)}% Complete</span>
+                  </p>
                 </motion.div>
 
                 {/* Meta Info */}

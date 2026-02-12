@@ -16,9 +16,9 @@ export default function Home() {
       <NewsAndInsights />
       <WhatWeare />
       {/* <JoinUs /> */}
-      <Innovation />
+      {/* <Innovation /> */}
+      <Technology />
       <Technologys />
-      {/* <Technology /> */}
     </main>
   );
 }
