@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { technologysData } from "@/data/technologys";
 
 const leftVariant = {
@@ -89,9 +90,12 @@ const Technologys = () => {
                 <p className="text-gray-600 text-base md:text-xl leading-relaxed font-normal">
                   {item.description}
                 </p>
-                <button className="mt-4 text-sm font-semibold text-gray-900 underline underline-offset-4 decoration-gray-400/60 hover:decoration-gray-900 transition-all">
+                <Link
+                  href="/technology#technology-grid"
+                  className="inline-block mt-4 text-sm font-semibold text-gray-900 underline underline-offset-4 decoration-gray-400/60 hover:decoration-gray-900 transition-all"
+                >
                   {technologysData.ctaLabel}
-                </button>
+                </Link>
               </motion.div>
             </div>
           );
