@@ -18,7 +18,7 @@ const fadeUp: Variants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -26,36 +26,88 @@ const WhatWeare = () => {
   const { teamWork } = whoWeAreData;
 
   return (
-    <section className="relative py-20 md:py-28 bg-[#050505] text-white overflow-hidden">
-      {/* Glow background */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[140px]" />
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="relative py-20 lg:py-32 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid lg:grid-cols-2 gap-16 items-center"
+          className="grid lg:grid-cols-12  md:gap-12 lg:gap-20 items-start"
         >
-          {/* LEFT SIDE */}
-          <div className="space-y-8">
+          {/* LEFT SIDE - IMAGES */}
+          <div className="lg:col-span-6 relative order-1 lg:order-1">
+            <div className="relative group pt-8 sm:pt-12">
+              {/* Main Image - Top Level */}
+              <motion.div
+                variants={fadeUp}
+                className="relative z-20 w-full aspect-[5/3] overflow-hidden"
+              >
+                <Image
+                  src="/whoweares.webp"
+                  alt="Who We Are Main"
+                  fill
+                  className="object-cover w-full h-full"
+                />
 
-            {/* Title + Description */}
-            <motion.div variants={fadeUp} className="space-y-5">
-              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                {whoWeAreData.title}
-              </h2>
+                {/* Sharp Accent Box */}
+                <div className="absolute top-0 right-0 bg-gray-900 p-2 hidden md:block">
+                  <div className="text-white space-y-1">
+                    <p className="text-xs uppercase tracking-[0.2em] font-bold text-white/80 text-center">
+                      Established
+                    </p>
+                    <p className="text-xl font-black">2024</p>
+                  </div>
+                </div>
+              </motion.div>
 
-              <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl">
-                {whoWeAreData.subtitle}
-              </p>
-            </motion.div>
+              {/* Background Geometric Elements */}
+              <div className="absolute top-0 left-0 w-full h-full border-b-2 border-l-2 border-gray-200 -z-10 translate-x-4 sm:translate-x-6 -translate-y-4 sm:-translate-y-6" />
+              <div className="absolute top-0 left-0 w-40 h-40 sm:w-48 sm:h-48 bg-gray-900 -z-10 hidden lg:block -translate-x-8 sm:-translate-x-10 -translate-y-8 sm:-translate-y-10" />
 
-            {/* VIDEO */}
+              {/* Secondary Image - Bottom Level */}
+              <motion.div
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                className="absolute -bottom-16 sm:-bottom-20 md:-bottom-34 left-0 md:-left-8 w-[80%] aspect-5/3  md:block z-30"
+              >
+                <Image
+                  src="/whoweares.webp"
+                  alt="Our Team"
+                  fill
+                  className="object-cover w-full h-full"
+                />
+              </motion.div>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE - CONTENT & VIDEO */}
+          <div className="lg:col-span-6 space-y-10 order-2 lg:order-2">
+            {/* TEXT CONTENT */}
+            <div className="space-y-6">
+              <motion.div variants={fadeUp} className="space-y-4">
+                <span className="inline-block text-gray-900 font-bold tracking-widest uppercase text-sm border-l-4 border-gray-900 pl-4">
+                  {whoWeAreData.title}
+                </span>
+                <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
+                  Building the Future 
+                  <span className="text-gray-900">Together.</span>
+                </h2>
+              </motion.div>
+
+              <motion.p
+                variants={fadeUp}
+                className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-2xl"
+              >
+                {teamWork.description}
+              </motion.p>
+            </div>
+
+            {/* VIDEO SECTION */}
             <motion.div
               variants={fadeUp}
-              className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-white/10"
+              className="relative w-full aspect-video overflow-hidden border-[6px] sm:border-[8px] border-gray-100 shadow-lg"
             >
               <video
                 src={teamWork.videourl}
@@ -65,98 +117,40 @@ const WhatWeare = () => {
                 poster="/videobanner.png"
                 className="w-full h-full object-cover"
               />
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-white/90 px-3 sm:px-4 py-2 font-black text-xs uppercase tracking-widest text-gray-900 border border-gray-900">
+                Watch Our Story
+              </div>
             </motion.div>
 
-            {/* JOIN BUTTON */}
-            <motion.div variants={fadeUp}>
+            {/* STATS */}
+            {/* <motion.div
+              variants={fadeUp}
+              className="grid grid-cols-2 gap-8 border-t border-gray-100 pt-8"
+            >
+              {teamWork.stats?.map((stat, index) => (
+                <div key={index} className="space-y-1">
+                  <p className="text-4xl font-black text-gray-900">
+                    {stat.value}
+                  </p>
+                  <p className="text-gray-500 font-medium uppercase tracking-wider text-sm">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </motion.div> */}
+            {/* CALL TO ACTION */}
+            <motion.div variants={fadeUp} className="pt-2">
               <Button
                 asChild
-                className="group bg-primary text-white hover:bg-white hover:text-black px-10 py-6 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-[1.03]"
+                className="bg-primary text-white hover:bg-primary/80 px-8 sm:px-10 py-6 sm:py-8 rounded-none font-black text-lg sm:text-xl transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
               >
                 <a href={teamWork.button1Link}>
                   {teamWork.button1Text}
-                  <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">
-                    →
-                  </span>
+                  <span className="ml-3">→</span>
                 </a>
               </Button>
             </motion.div>
           </div>
-
-        {/* RIGHT SIDE - PREMIUM IMAGE DESIGN */}
-<motion.div
-  variants={fadeUp}
-  className="relative w-full max-w-[580px] h-[480px] mx-auto"
->
-  {/* Decorative Blur Background */}
-  <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
-  <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
-
-  {/* Main Container */}
-  <div className="relative w-full h-full">
-
-    {/* Back Image */}
-    <motion.div
-      initial={{ y: 40, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="absolute bottom-0 right-0 w-[85%] h-[360px] rounded-3xl overflow-hidden 
-                 shadow-[0_40px_80px_rgba(0,0,0,0.7)] 
-                 border border-white/10
-                 rotate-3"
-    >
-      <Image
-        src="/whoweares.webp"
-        alt="Background"
-        fill
-        className="object-cover"
-      />
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-    </motion.div>
-
-    {/* Front Image */}
-    <motion.div
-      initial={{ y: 80, opacity: 0 }}
-      whileInView={{ y: 20, opacity: 1 }}
-      transition={{ duration: 1.2 }}
-      className="absolute bottom-10 left-0 w-[85%] h-[360px] rounded-3xl overflow-hidden
-                 shadow-[0_50px_100px_rgba(0,0,0,0.8)]
-                 border border-white/20
-                 backdrop-blur-sm
-                 -rotate-2"
-    >
-      <Image
-        src="/whoweares.webp"
-        alt="Foreground"
-        fill
-        className="object-cover scale-105 hover:scale-110 transition-transform duration-700"
-      />
-
-      {/* Glass Effect Overlay */}
-      {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-[2px]" /> */}
-    </motion.div>
-
-    {/* Floating Badge Card */}
-    {/* <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.4 }}
-      className="absolute top-10 right-10 bg-white/10 backdrop-blur-lg 
-                 border border-white/20 
-                 rounded-2xl px-6 py-4 shadow-xl"
-    >
-      <p className="text-sm font-semibold text-white">
-        🚀 Innovation Driven
-      </p>
-      <p className="text-xs text-gray-300 mt-1">
-        Building the future with technology
-      </p>
-    </motion.div> */}
-  </div>
-</motion.div>
-
         </motion.div>
       </div>
     </section>

@@ -40,7 +40,7 @@ export const whoWeAreData = {
   teamWork: {
     title: "Team Work",
     description:
-      "We are always looking for passionate, driven individuals who are eager to learn, grow, and make an impact. Our team thrives on collaboration, creativity, and a shared commitment to excellence. We value people who take initiative, think boldly, and care about delivering meaningful results. If you’re excited to work in a supportive, forward-thinking environment, we’d love to have you on our team.",
+      "We are always looking for passionate, driven individuals who are eager to learn, grow, and make an impact.",
     points: [
       { image: "/about/co-founder.jpg" },
       { image: "/about/co-founder2.jpg" },
