@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { technologyData } from "@/data/homepagedata";
+import { innovationPageData } from "@/data/innovation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
 
 const Technology = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
@@ -18,13 +17,16 @@ const Technology = () => {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % technologyData.items.length);
+    setCurrentIndex(
+      (prev) => (prev + 1) % innovationPageData.latestNews.length,
+    );
   };
 
   const prevSlide = () => {
     setCurrentIndex(
       (prev) =>
-        (prev - 1 + technologyData.items.length) % technologyData.items.length,
+        (prev - 1 + innovationPageData.latestNews.length) %
+        innovationPageData.latestNews.length,
     );
   };
 
@@ -48,10 +50,10 @@ const Technology = () => {
           className="text-center mb-8"
         >
           <h2 className="text-[40px] font-semibold mb-3 text-gray-900 tracking-tighter">
-            {technologyData.title}
+            {innovationPageData.heroTitle}
           </h2>
           <p className="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium">
-            {technologyData.subtitle}
+            {innovationPageData.heroSubtitle}
           </p>
         </motion.div>
 
@@ -79,10 +81,10 @@ const Technology = () => {
 
           {/* 3D Slider Container */}
           <div className="relative w-full h-full flex items-center justify-center perspective-2000">
-            {technologyData.items.map((item, index) => {
+            {innovationPageData.latestNews.map((item, index) => {
               // Calculate relative position with wrapping
               let relativeIndex = index - currentIndex;
-              const itemCount = technologyData.items.length;
+              const itemCount = innovationPageData.latestNews.length;
 
               // Handle circular logic for cards
               if (relativeIndex > Math.floor(itemCount / 2))
@@ -132,10 +134,10 @@ const Technology = () => {
                           {item.title}
                         </h3>
                         <p className="text-gray-300 text-xs md:text-sm font-medium mb-3 md:mb-4">
-                          Published 24 Nov, 2025
+                          {item.date}
                         </p>
                         <button className="text-white text-xs md:text-sm font-bold underline underline-offset-4 decoration-white/50 hover:decoration-white transition-all">
-                          View Details
+                          {item.linkLabel}
                         </button>
                       </div>
                     </div>
@@ -148,7 +150,7 @@ const Technology = () => {
 
         {/* Pagination Indicators */}
         <div className="flex justify-center gap-2 md:gap-3 mt-8 md:mt-12">
-          {technologyData.items.map((_, index) => (
+          {innovationPageData.latestNews.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
