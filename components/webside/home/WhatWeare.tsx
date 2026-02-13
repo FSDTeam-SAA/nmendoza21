@@ -91,7 +91,7 @@ const WhatWeare = () => {
                   {whoWeAreData.title}
                 </span>
                 <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
-                  Building the Future <br />
+                  Building the Future 
                   <span className="text-gray-900">Together.</span>
                 </h2>
               </motion.div>
