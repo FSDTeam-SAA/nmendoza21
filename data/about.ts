@@ -81,7 +81,7 @@ export const aboutData: AboutData = {
         id: "thomas-von-erlach",
         name: "Thomas von Erlach",
         role: "Chief Executive Officer",
-        image: "/about/scientificofficer.jpg",
+        image: "/images/ThomasvonErlach-ChiefExecutiveOfficer.jpg",
         bio: "Thomas has been the Chief Executive Officer of Vivtex since 2026. Previously, Thomas served as the Chief Scientific Officer of Vivtex where he has been leading and building the Vivtex Technology from an initial concept to a platform that created clinical stage drug products. Thomas brings over a decade of leadership in the field of oral drug delivery with strong expertise in pharma co-development partnerships. Previously, he led an interdisciplinary team in the Laboratory of Prof. Robert Langer and Prof. Giovanni Traverso at MIT as a Postdoctoral Research Fellow. He obtained a PhD from Imperial College London in Bioengineering and BSc and MSc in Biochemistry and Biotechnology from ETH in Switzerland where we graduated receiving the Willi-Studer award for academic excellence.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
@@ -92,14 +92,24 @@ export const aboutData: AboutData = {
         id: "lena-fischer",
         name: "Lena FischerSenior",
         role: "Vice President of Finance & Operations",
-        image: "/about/chief-officer.jpg",
+        image: "/images/LenaFischer-SVPFinance&Operations.jpg",
         bio: "Lena is a seasoned finance leader with a passion for science and operational excellence. She has more than 15 years of deep expertise in big pharma and biotech operations, with a proven ability to build and scale biotech companies while developing strong, trusted networks across the industry.Her experience spans managing complex, global, and cross-functional organizations, partnering effectively with executive teams, boards, venture capital firms, auditors, and financial institutions. Before joining Vivtex, Lena was VP of Finance & Operations at AIRNA, an emerging RNA editing company. Prior to that, she was instrumental in setting up and managing finance & operations for a number of biotech companies. ",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
           { platform: "Twitter", url: "#" },
         ],
       },
-
+      {
+        id: "NMendoza",
+        name: "Nicole Mendoza",
+        role: "Finance & Operations Manager",
+        image: "/images/Nicole Mendoza - Finance & Operations Manager.jpg",
+        bio: "Nicole is a seasoned finance and operations professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Nicole has been instrumental in setting up and managing finance & operations for a number of biotech companies.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Twitter", url: "#" },
+        ],
+      },
       {
         id: "per-larsson",
         name: "Per Larsson",
@@ -138,7 +148,7 @@ export const aboutData: AboutData = {
         id: "giovanni-traverso",
         name: "Giovanni Traverso",
         role: "Co-founder",
-        image: "/about/co-founder2.jpg",
+        image: "/images/GiovanniTraverso-Co-founder&BoardMember.jpg",
         bio: "Dr. Traverso is a Professor in the Department of Mechanical Engineering at MIT and a gastroenterologist at Brigham and Women’s Hospital, Harvard Medical School. He received his BA from Trinity College, University of Cambridge, UK, and his PhD at Johns Hopkins University. He subsequently completed medical school at the University of Cambridge, UK. He is a renowned expert in oral drug delivery and co-founder of several biotech companies. He is a co-founder of Vivtex and serves as a board member.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
@@ -159,6 +169,17 @@ export const aboutData: AboutData = {
     title: "Scientific Advisors",
     subtitle: "World-renowned advisors guide our research and development",
     members: [
+       {
+        id: "Annie-Khalid",
+        name: "Annie Khalid",
+        role: "Peptide Therapeutics Expert",
+        image: "/images/AnnieKhalid-Scientist.jpg",
+        bio: "Annie is a leading expert in peptide therapeutics with over 5 years of experience in drug discovery and development. She has worked in both academia and industry, contributing to the development of several peptide-based therapeutics. Annie holds a Ph.D. in Biochemistry from the University of California, San Francisco, and has published over 100 peer-reviewed articles.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Scholar", url: "#" },
+        ],
+      },
       {
         id: "tomi-sawyer",
         name: "Tomi Sawyer",

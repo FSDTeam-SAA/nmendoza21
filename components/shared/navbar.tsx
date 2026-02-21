@@ -37,11 +37,11 @@ const Navbar = () => {
               className="flex items-center hover:scale-110 transition-transform duration-300"
             >
               <Image
-                className="object-cover"
-                src={"/images/logo.svg"}
+                className="object-cover w-full h-full"
+                src={"/images/logo.png"}
                 alt="Logo"
-                width={68}
-                height={60}
+                width={100}
+                height={100}
               />
             </Link>
 
