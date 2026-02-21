@@ -23,7 +23,7 @@ export const technologysData: TechnologySectionData = {
 		{
 			id: "tech-gi-models",
 			label: "GI Models",
-			heading: "Enhance nature's complexity",
+			heading: "Enhance nature’s complexity",
 			description:
 				"We build models that reflect real biology and improve the reliability of experimental outcomes.",
 			mediaSrc: "/images/Vivtex-15.jpg",
@@ -31,29 +31,39 @@ export const technologysData: TechnologySectionData = {
 			mediaType: "image",
 		},
 		{
-			id: "tech-ai-vision",
-			label: "AI Vision",
-			heading: "Intelligent visual systems",
+			id: "Excipient-Library",
+			label: "Excipient Library",
+			heading: "Explore Chemical Diversity",
 			description:
 				"High-accuracy visal understanding enables smarter automation and faster decisions.",
 			mediaSrc: "/images/Vivtex-11.jpg",
-			mediaAlt: "AI vision system",
+			mediaAlt: "Excipient Library",
 			mediaType: "image",
 		},
 		{
-			id: "tech-data-intelligence",
-			label: "Data Intelligence",
-			heading: "Smarter insights from data",
+			id: "tech-xx-ai",
+			label: "XX / AI",
+			heading: "Leverage Technology",
 			description:
 				"We turn complex datasets into clear, actionable insights with scalable pipelines.",
 			mediaSrc: "/images/Vivtex-14.jpg",
-			mediaAlt: "Data intelligence platform",
+			mediaAlt: "Data intelligence platform ",
+			mediaType: "image",
+		},
+		{
+			id: "tech-tissue-change",
+			label: "Tissue Change",
+			heading: "Create Next generation oral therapeutics enabled instead of create?",
+			description:
+				"Automation frameworks reduce manual work while improving speed and consistency.",
+			mediaSrc: "/images/tissue-change.jpg",
+			mediaAlt: "Tissue change technology",
 			mediaType: "image",
 		},
 		{
 			id: "tech-automation",
-			label: "Automation",
-			heading: "Streamline your operations",
+			label: "proprietary automation ",
+			heading: "Provide patients with the best care",
 			description:
 				"Automation frameworks reduce manual work while improving speed and consistency.",
 			mediaSrc: "/images/Vivtex-18.jpg",
@@ -62,3 +72,5 @@ export const technologysData: TechnologySectionData = {
 		},
 	],
 };
+
+

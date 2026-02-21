@@ -36,12 +36,27 @@ export const newsPageData: NewsPageData = {
   },
   items: [
     {
+      id: "news-5",
+      title: "Automation In Translational Research",
+      description:
+        "Automation reduces variability and improves consistency in translational research workflows.",
+      image: "/images/Vivtex-11.jpg",
+      date: "Published 02 Nov, 2025",
+      linkLabel: "View Full News",
+      link: "/news",
+      content: [
+        "A robotic culture system for the high-throughput analysis of drug transport in porcine gastrointestinal tissue explants accurately predicts the absorption of orally taken drugs in the human gut.",
+        "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation, while built-in safeguards detect deviations before they impact results.",
+        "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases. This creates a stable foundation for long-term innovation and more predictable outcomes in translational pipelines.",
+      ],
+    },
+    {
       id: "news-1",
       title:
         "Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning",
       description:
         "Shi, Y., Reker, D., Byrne, J.D. et al. Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning. Nat. Biomed. Eng 8, 278–290 (2024).",
-      image: "/images/newsInsights.jpg",
+      image: "/images/Vivtex-15.jpg",
       date: "Published 24 Nov, 2024",
       linkLabel: "View Full News",
       link: "https://vivtex.com/wp-content/uploads/2024/05/Screening-oral-drugs-for-their-interactions.pdf",
@@ -56,7 +71,7 @@ export const newsPageData: NewsPageData = {
         "Robotically handled whole-tissue culture system for the screening of oral drug formulations",
       description:
         "von Erlach, T., Saxton, S., Shi, Y. et al. Robotically handled whole-tissue culture system for the screening of oral drug formulations. Nat Biomed Eng 4, 544–559 (2020).",
-      image: "/images/newsInsights2.jpg",
+      image: "/images/Vivtex-12.jpg",
       date: "Published 24 Nov, 2020",
       linkLabel: "View Full News",
       link: "https://vivtex.com/wp-content/uploads/2024/05/Robotically-handled-whole-tissue-culture-system.pdf",
@@ -70,7 +85,7 @@ export const newsPageData: NewsPageData = {
       title: "Robotic Screening Of Intestinal Drug Absorption",
       description:
         "Basit, A.W., Madla, C.M. & Gavins, F.K.H. Robotic screening of intestinal drug absorption. Nat Biomed Eng 4, 485–486 (2020).",
-      image: "/images/newsInsights3.jpg",
+      image: "/images/Vivtex-18.jpg",
       date: "Published 24 Nov, 2020",
       linkLabel: "View Full News",
       link: "https://vivtex.com/wp-content/uploads/2024/05/Robotic-screening-of-intestinal-drug-absorption.pdf",
@@ -85,7 +100,7 @@ export const newsPageData: NewsPageData = {
       title: "Precision Analytics For Drug Discovery",
       description:
         "Smarter analytics workflows accelerate early-stage discovery and reduce turnaround time for complex assays.",
-      image: "/images/newsInsights.jpg",
+      image: "/images/Vivtex-19.jpg",
       date: "Published 08 Nov, 2025",
       linkLabel: "View Full News",
       link: "/news",
@@ -95,20 +110,6 @@ export const newsPageData: NewsPageData = {
         "These improvements translate into faster decision cycles and more confident progression for candidates entering further development stages. Researchers can compare results across projects, integrate external datasets when needed, and produce consistent reports for stakeholders. The platform enables data-driven prioritization, improves resource allocation, and supports long-term program success by ensuring that insights are both reliable and reproducible.",
       ],
     },
-    {
-      id: "news-5",
-      title: "Automation In Translational Research",
-      description:
-        "Automation reduces variability and improves consistency in translational research workflows.",
-      image: "/images/newsInsights2.jpg",
-      date: "Published 02 Nov, 2025",
-      linkLabel: "View Full News",
-      link: "/news",
-      content: [
-        "A robotic culture system for the high-throughput analysis of drug transport in porcine gastrointestinal tissue explants accurately predicts the absorption of orally taken drugs in the human gut.",
-        "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation, while built-in safeguards detect deviations before they impact results.",
-        "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases. This creates a stable foundation for long-term innovation and more predictable outcomes in translational pipelines.",
-      ],
-    },
+   
   ],
 };

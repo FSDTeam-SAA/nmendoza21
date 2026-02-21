@@ -76,14 +76,54 @@ const ContactForm = () => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
+          <InViewAnimationWrapper animation="slideInDown" duration={600} delay={500}>
+            <FormField
+              control={form.control}
+              name="firstName"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      placeholder="First name"
+                      className="bg-gray-50/50 border-gray-200 rounded-xl h-12 text-base focus-visible:ring-cyan-500 transition-all duration-200"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </InViewAnimationWrapper>
+          <InViewAnimationWrapper animation="slideInDown" duration={600} delay={600}>
+            <FormField
+              control={form.control}
+              name="lastName"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      placeholder="Last name"
+                      className="bg-gray-50/50 border-gray-200 rounded-xl h-12 text-base focus-visible:ring-cyan-500 transition-all duration-200"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </InViewAnimationWrapper>
+        </div>
+
+        <InViewAnimationWrapper animation="slideInDown" duration={600} delay={700}>
           <FormField
             control={form.control}
-            name="firstName"
+            name="email"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormControl>
                   <Input
-                    placeholder="First name"
+                    type="email"
+                    placeholder="you@company.com"
                     className="bg-gray-50/50 border-gray-200 rounded-xl h-12 text-base focus-visible:ring-cyan-500 transition-all duration-200"
                     {...field}
                   />
@@ -92,14 +132,18 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
+        </InViewAnimationWrapper>
+
+        <InViewAnimationWrapper animation="slideInDown" duration={600} delay={800}>
           <FormField
             control={form.control}
-            name="lastName"
+            name="phone"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormControl>
                   <Input
-                    placeholder="Last name"
+                    type="tel"
+                    placeholder="+1 (555) 000-0000"
                     className="bg-gray-50/50 border-gray-200 rounded-xl h-12 text-base focus-visible:ring-cyan-500 transition-all duration-200"
                     {...field}
                   />
@@ -108,81 +152,51 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-        </div>
+        </InViewAnimationWrapper>
 
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  type="email"
-                  placeholder="you@company.com"
-                  className="bg-gray-50/50 border-gray-200 rounded-xl h-12 text-base focus-visible:ring-cyan-500 transition-all duration-200"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  type="tel"
-                  placeholder="+1 (555) 000-0000"
-                  className="bg-gray-50/50 border-gray-200 rounded-xl h-12 text-base focus-visible:ring-cyan-500 transition-all duration-200"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormControl>
-                <Textarea
-                  placeholder="Leave us a message..."
-                  rows={5}
-                  className="bg-gray-50/50 border-gray-200 rounded-xl text-base focus-visible:ring-cyan-500 resize-none transition-all duration-200"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <div className="flex items-center gap-3 text-sm text-gray-600">
-          <input 
-            type="checkbox" 
-            id="privacy" 
-            className="w-4 h-4 rounded border-gray-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer" 
-            required 
+        <InViewAnimationWrapper animation="slideInDown" duration={600} delay={900}>
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormControl>
+                  <Textarea
+                    placeholder="Leave us a message..."
+                    rows={5}
+                    className="bg-gray-50/50 border-gray-200 rounded-xl text-base focus-visible:ring-cyan-500 resize-none transition-all duration-200"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
-          <label htmlFor="privacy" className="cursor-pointer select-none">
-            You agree to our friendly private policy.
-          </label>
-        </div>
+        </InViewAnimationWrapper>
 
-        <Button
-          type="submit"
-          className="bg-cyan-600 hover:bg-cyan-700 text-white w-full h-12 rounded-xl text-base font-semibold transition-all duration-300 shadow-lg shadow-cyan-200/50 disabled:opacity-50 cursor-pointer"
-          disabled={loading}
-        >
-          {loading ? "Sending Message..." : "Send Message"}
-        </Button>
+        <InViewAnimationWrapper animation="slideInDown" duration={600} delay={1000}>
+          <div className="flex items-center gap-3 text-sm text-gray-600">
+            <input 
+              type="checkbox" 
+              id="privacy" 
+              className="w-4 h-4 rounded border-gray-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer" 
+              required 
+            />
+            <label htmlFor="privacy" className="cursor-pointer select-none">
+              You agree to our friendly private policy.
+            </label>
+          </div>
+        </InViewAnimationWrapper>
+
+        <InViewAnimationWrapper animation="slideInDown" duration={600} delay={1100}>
+          <Button
+            type="submit"
+            className="bg-cyan-600 hover:bg-cyan-700 text-white w-full h-12 rounded-xl text-base font-semibold transition-all duration-300 shadow-lg shadow-cyan-200/50 disabled:opacity-50 cursor-pointer"
+            disabled={loading}
+          >
+            {loading ? "Sending Message..." : "Send Message"}
+          </Button>
+        </InViewAnimationWrapper>
       </form>
     </Form>
   );
