@@ -181,8 +181,8 @@ export const footerData = {
     title: "News Coverage",
 
     logos: [
-      { name: "EuroNews", image: "/images/eurekalert.png" },
-      { name: "CNN", image: "/images/nih.png" },
+      { name: "EuroNews", image: "/images/eurekalert.svg" },
+      { name: "CNN", image: "/images/nih.svg" },
       // { name: "BBC", image: "/images/scientific.png" },
     ],
   },
