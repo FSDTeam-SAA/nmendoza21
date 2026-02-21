@@ -41,7 +41,7 @@ export default function AboutHero({ title, description }: AboutHeroProps) {
             playsInline
             className="w-full h-full object-cover opacity-70"
           >
-            <source src="/images/abouthero.mp4" type="video/mp4" />
+            <source src="/images/Animation3.mp4" type="video/mp4" />
           </video>
         </div>
 
