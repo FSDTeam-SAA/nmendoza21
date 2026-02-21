@@ -84,7 +84,7 @@ const WhatWeare = () => {
                 className="relative z-30 w-full aspect-5/3 overflow-hidden"
               >
                 <Image
-                  src="/images/Group Picture.jpg"
+                  src="/images/group-picture.jpg"
                   alt="Who We Are Main"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
