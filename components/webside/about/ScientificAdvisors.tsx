@@ -45,7 +45,7 @@ export default function ScientificAdvisors({
           transition={{ duration: 0.8 }}
           className="text-center mb-6 md:mb-12"
         >
-          <h2 className="text-[40px] font-semibold text-gray-900 mb-2 tracking-tight">
+          <h2 className="text-[40px] font-semibold text-[#003399] mb-2 tracking-tight">
             {title}
           </h2>
           <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">

@@ -52,7 +52,7 @@ export const programsPageData: ProgramsPageData = {
       title: "Needle to oral switch for existing drugs",
       description:
         "We focus on established drugs that are highly effective and safe but only available via needle injection. We use our technology to create custom drug delivery systems enabling  these drugs to be given  via the oral route.",
-      image: "/images/technology2.jpg",
+      image: "/images/Vivtex-19.jpg",
       activePhase: "Phase I",
     },
     {
@@ -60,7 +60,7 @@ export const programsPageData: ProgramsPageData = {
       title: "Create new orally bioavailable therapeutics",
       description:
         "We have a rapidly growing number of industry partnerships with currently 6 of the top 30 Pharma companies and 4 biotech companies with the aim to create new oral blockbuster therapeutics.",
-      image: "/images/technology3.jpg",
+      image: "/images/Vivtex-15.jpg",
       activePhase: "Phase II",
     },
         {
@@ -68,7 +68,7 @@ export const programsPageData: ProgramsPageData = {
       title: "Create new orally bioavailable therapeutics",
       description:
         "We have a rapidly growing number of industry partnerships with currently 6 of the top 30 Pharma companies and 4 biotech companies with the aim to create new oral blockbuster therapeutics.",
-      image: "/images/technology3.jpg",
+      image: "/images/Vivtex-17.jpg",
       activePhase: "Approval",
     },
         {
@@ -76,7 +76,7 @@ export const programsPageData: ProgramsPageData = {
       title: "Create new orally bioavailable therapeutics",
       description:
         "We have a rapidly growing number of industry partnerships with currently 6 of the top 30 Pharma companies and 4 biotech companies with the aim to create new oral blockbuster therapeutics.",
-      image: "/images/technology3.jpg",
+      image: "/images/Vivtex-18.jpg",
       activePhase: "Approval",
     },
 

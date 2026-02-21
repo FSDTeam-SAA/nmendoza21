@@ -17,7 +17,7 @@ export const whatWeDoData = {
       title: "Technology",
       description:
         "Our platform leverages modern, secure, and scalable technologies to ensure performance, reliability, and seamless user experience.",
-      image: "/programs/program.jpg",
+      image: "/images/Vivtex-19.jpg",
       buttonText: "Explore",
       buttonLink: "/technology",
     },
@@ -26,7 +26,7 @@ export const whatWeDoData = {
       title: "Programs",
       description:
         "Our programs are designed to deliver practical value, measurable results, and long-term growth for your organization.",
-      image: "/programs/program2.jpg",
+      image: "/images/Vivtex-16.jpg",
       buttonText: "Explore",
       buttonLink: "/programs",
     },

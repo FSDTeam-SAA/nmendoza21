@@ -48,7 +48,7 @@ const NewsModal = ({ item, children }: NewsModalProps) => {
           className="px-6 pt-6 pb-8 md:px-8"
         >
           <div className="grid gap-8 md:grid-cols-2">
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white/10 shadow-lg"
             >
@@ -72,7 +72,7 @@ const NewsModal = ({ item, children }: NewsModalProps) => {
                   {item.description}
                 </p>
               </motion.div>
-{/* 
+              {/* 
               <motion.div variants={itemVariants} className="pt-2">
                 <Link
                   href={item.link}
@@ -87,7 +87,7 @@ const NewsModal = ({ item, children }: NewsModalProps) => {
             </div>
           </div>
 
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="mt-8 space-y-4 pt-8 border-t border-white/10"
           >
