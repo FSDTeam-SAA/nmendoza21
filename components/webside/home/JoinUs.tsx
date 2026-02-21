@@ -16,7 +16,7 @@ const JoinUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8"
         >
-          <h2 className="text-[40px] font-semibold  tracking-tighter bg-clip-text  text-secondary-foreground  ">
+          <h2 className="text-[40px] font-semibold  tracking-tighter bg-clip-text  text-[#003399]  ">
             Join Us
           </h2>
           <p className="text-gray-400 text-lg md:text-xl  mx-auto leading-relaxed font-medium">
@@ -30,7 +30,7 @@ const JoinUs = () => {
             <div className="cursor-pointer">
               <Image
                 className="rounded-lg"
-                src={"/images/joinus.jpg"}
+                src={"/images/Vivtex-14.jpg"}
                 width={700}
                 height={400}
                 alt="joinus"

@@ -26,7 +26,7 @@ export const technologysData: TechnologySectionData = {
 			heading: "Enhance nature's complexity",
 			description:
 				"We build models that reflect real biology and improve the reliability of experimental outcomes.",
-			mediaSrc: "/images/technology2.jpg",
+			mediaSrc: "/images/Vivtex-15.jpg",
 			mediaAlt: "GI models technology",
 			mediaType: "image",
 		},
@@ -35,8 +35,8 @@ export const technologysData: TechnologySectionData = {
 			label: "AI Vision",
 			heading: "Intelligent visual systems",
 			description:
-				"High-accuracy visual understanding enables smarter automation and faster decisions.",
-			mediaSrc: "/images/technology4.jpg",
+				"High-accuracy visal understanding enables smarter automation and faster decisions.",
+			mediaSrc: "/images/Vivtex-11.jpg",
 			mediaAlt: "AI vision system",
 			mediaType: "image",
 		},
@@ -46,7 +46,7 @@ export const technologysData: TechnologySectionData = {
 			heading: "Smarter insights from data",
 			description:
 				"We turn complex datasets into clear, actionable insights with scalable pipelines.",
-			mediaSrc: "/images/technology3.jpg",
+			mediaSrc: "/images/Vivtex-14.jpg",
 			mediaAlt: "Data intelligence platform",
 			mediaType: "image",
 		},
@@ -56,7 +56,7 @@ export const technologysData: TechnologySectionData = {
 			heading: "Streamline your operations",
 			description:
 				"Automation frameworks reduce manual work while improving speed and consistency.",
-			mediaSrc: "/images/technologys.jpg",
+			mediaSrc: "/images/Vivtex-18.jpg",
 			mediaAlt: "Automation systems",
 			mediaType: "image",
 		},

@@ -55,7 +55,7 @@ const Banner = () => {
             playsInline
             className="w-full h-full object-cover will-change-transform"
           >
-            <source src="/images/banner.mp4" type="video/mp4" />
+            <source src="/images/Animation 1.mp4" type="video/mp4" />
           </motion.video>
 
           {/* softer overlay */}
