@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { programsPageData } from "@/data/programs";
 import { motion, Variants } from "framer-motion";
@@ -40,7 +39,7 @@ const ProgramHero = () => {
   return (
     <section className="pt-24 pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -67,17 +66,17 @@ const ProgramHero = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={imageVariants}
             className="relative w-full aspect-square md:aspect-video lg:aspect-4/3"
           >
-            <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-3xl z-0" />
-            <Image
-              src={hero.image}
-              alt="Vivtex Programs"
-              fill
-              className="object-cover rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.1)] relative z-10 border-8 border-white/5"
-              priority
+            <div className="absolute -inset-4 bg-primary/10  blur-3xl z-0" />
+            <video
+              src="/images/Animation 2 v1.mp4"
+              autoPlay
+              muted
+              loop
+              className="w-full h-full object-cover  shadow-[0_30px_60px_rgba(0,0,0,0.1)] relative z-10"
             />
           </motion.div>
         </motion.div>

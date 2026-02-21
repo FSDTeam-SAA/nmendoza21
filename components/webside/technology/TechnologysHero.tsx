@@ -61,11 +61,11 @@ const TechnologysHero = () => {
           >
             {/* <div className="  bg-primary/10 rounded-[3rem] blur-3xl z-0" /> */}
             <Image
-              src="/images/technologyhero.jpg"
+              src="/images/Technology.jpg"
               alt="Technology Frontier"
               width={600}
               height={432}
-              className="object-cover w-full aspect-5/4 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.1)] relative z-10 border-8 border-white/5"
+              className="object-cover w-full aspect-5/4 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.1)] relative z-10 "
               priority
             />
           </motion.div>

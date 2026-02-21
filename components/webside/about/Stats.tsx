@@ -11,7 +11,7 @@ interface StatsProps {
 
 export default function Stats({ stats }: StatsProps) {
   return (
-    <section className="container mx-auto bg-gray-950 py-16">
+    <section className="container mx-auto bg-black/90 py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
