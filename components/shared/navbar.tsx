@@ -53,8 +53,8 @@ const Navbar = () => {
                   href={item.href}
                   className={`text-base font-medium transition-all duration-300 relative group ${
                     isActive(item.href)
-                      ? "text-cyan-500"
-                      : "text-gray-700 hover:text-cyan-500"
+                      ? "text-[#003399]"
+                      : "text-gray-700 hover:text-[#003399]"
                   }`}
                   style={{
                     animation: `slideInDown 0.6s ease-out ${index * 0.1}s both`,
@@ -62,7 +62,7 @@ const Navbar = () => {
                 >
                   {item.name}
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-cyan-500 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-[#003399] transition-all duration-300 ${
                       isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />

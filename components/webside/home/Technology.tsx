@@ -4,6 +4,7 @@ import Image from "next/image";
 import { innovationPageData } from "@/data/innovation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Technology = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
@@ -49,7 +50,7 @@ const Technology = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center mb-8"
         >
-          <h2 className="text-[40px] font-semibold mb-3 text-gray-900 tracking-tighter">
+          <h2 className="text-[40px] font-semibold mb-3  text-[#003399] tracking-tighter">
             {innovationPageData.heroTitle}
           </h2>
           <p className="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium">
@@ -136,9 +137,12 @@ const Technology = () => {
                         <p className="text-gray-300 text-xs md:text-sm font-medium mb-3 md:mb-4">
                           {item.date}
                         </p>
+                        <Link href={item.link} className="inline-block">
+                        
                         <button className="text-white text-xs md:text-sm font-bold underline underline-offset-4 decoration-white/50 hover:decoration-white transition-all">
                           {item.linkLabel}
                         </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

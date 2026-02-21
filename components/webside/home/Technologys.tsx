@@ -26,7 +26,7 @@ const Technologys = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8 md:mb-10"
         >
-          <h2 className="text-[40px] font-semibold tracking-tight">
+          <h2 className="text-[40px] font-semibold text-[#003399] tracking-tight">
             {technologysData.title}
           </h2>
           <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
@@ -72,7 +72,7 @@ const Technologys = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                  className="absolute top-6 left-10 text-white text-2xl font-medium"
+                  className="absolute top-6 left-10 text-[#003399] text-2xl font-medium"
                 >
                   {item.label}
                 </motion.h3>

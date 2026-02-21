@@ -63,7 +63,7 @@ export const innovationPageData: InnovationPageData = {
         "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
       author: "Andres de Costa",
       authorRole: "Chief Science Officer",
-      authorAvatar: "/images/technology1.jpg",
+      authorAvatar: "/images/Vivtex-18.jpg",
       linkLabel: "Read Full Issue",
       link: "/news",
     },
@@ -86,7 +86,7 @@ export const innovationPageData: InnovationPageData = {
         "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
       shortDescription:
         "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
-      image: "/images/innovation2.jpg",
+      image: "/images/Vivtex-14.jpg",
       linkLabel: "View Details",
       link: "/news",
       date: "Published 24 Nov, 2025",
@@ -104,7 +104,7 @@ export const innovationPageData: InnovationPageData = {
         "Smarter analytics workflows accelerate early-stage discovery and reduce turnaround time for complex assays.",
       shortDescription:
         "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
-      image: "/images/innovation1.jpg",
+      image: "/images/Vivtex-11.jpg",
       linkLabel: "View Details",
       link: "/news",
       date: "Published 18 Nov, 2025",
@@ -122,7 +122,7 @@ export const innovationPageData: InnovationPageData = {
         "Automation reduces variability and improves consistency in translational research workflows.",
       shortDescription:
         "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
-      image: "/images/innovation3.jpg",
+      image: "/images/Vivtex-15.jpg",
       linkLabel: "View Details",
       link: "/news",
       date: "Published 10 Nov, 2025",
