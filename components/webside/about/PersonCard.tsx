@@ -105,7 +105,8 @@ export default function PersonCard({
                   <Image
                     src={member.image}
                     alt={member.name}
-                    fill
+                    width={400}
+                    height={400}
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 192px"
                   />

@@ -103,13 +103,48 @@ export const aboutData: AboutData = {
         id: "NMendoza",
         name: "Nicole Mendoza",
         role: "Finance & Operations Manager",
-        image: "/images/Nicole Mendoza - Finance & Operations Manager.jpg",
+        image: "/images/NicoleMendoza-Finance&OperationsManager.jpg",
         bio: "Nicole is a seasoned finance and operations professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Nicole has been instrumental in setting up and managing finance & operations for a number of biotech companies.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
           { platform: "Twitter", url: "#" },
         ],
       },
+      {
+        id: "xavier-garrabou",
+        name: "Xavier Garrabou",
+        role: "Director of Operations",
+        image: "/images/XavierGarrabou-DirectorofOperations.jpg",
+        bio: "Xavier is a seasoned operations professional with deep expertise in biotech and pharmaceutical operations. He has more than 15 years of experience in managing complex, global, and cross-functional organizations. Xavier has been instrumental in setting up and managing operations for a number of biotech companies.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Twitter", url: "#" },
+        ],
+      },
+      {
+        id: "xavier-garrabou",
+        name: "Emilie Frugier",
+        role: "Head of IP",
+        image: "/images/EmilieFrugier-HeadofIP.jpg",
+        bio: "Emilie is a seasoned intellectual property professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Emilie has been instrumental in setting up and managing IP for a number of biotech companies.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Twitter", url: "#" },
+        ],
+      },
+
+      {
+        id: "xavier-garrabou",
+        name: "Daniil Olsen",
+        role: "Laboratory Technician",
+        image: "/images/DaniilOlsen-LaboratoryTechnician.jpg",
+        bio: "Daniil is a skilled laboratory technician with deep expertise in biotech and pharmaceutical operations. He has more than 15 years of experience in managing complex, global, and cross-functional organizations. Daniil has been instrumental in setting up and managing laboratory operations for a number of biotech companies.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Twitter", url: "#" },
+        ],
+      },
+
       {
         id: "per-larsson",
         name: "Per Larsson",
@@ -169,7 +204,7 @@ export const aboutData: AboutData = {
     title: "Scientific Advisors",
     subtitle: "World-renowned advisors guide our research and development",
     members: [
-       {
+      {
         id: "Annie-Khalid",
         name: "Annie Khalid",
         role: "Peptide Therapeutics Expert",

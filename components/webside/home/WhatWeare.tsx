@@ -53,7 +53,7 @@ const WhatWeare = () => {
               className="relative w-full aspect-video overflow-hidden border-[6px] sm:border-8 border-gray-100 shadow-lg"
             >
               <video
-                src="/images/whatweare.mp4"
+                src="/ourvision.mp4"
                 controls
                 loop
                 playsInline

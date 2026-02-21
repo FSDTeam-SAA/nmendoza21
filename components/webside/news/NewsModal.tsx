@@ -72,18 +72,18 @@ const NewsModal = ({ item, children }: NewsModalProps) => {
                   {item.description}
                 </p>
               </motion.div>
-              {/* 
+        
               <motion.div variants={itemVariants} className="pt-2">
                 <Link
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-base font-bold text-[#1FABED] shadow-xl transition-all duration-300 hover:scale-105 hover:bg-white active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                  className="inline-flex items-center gap-3 rounded-full  px-6 py-3 text-base font-bold   transition-all duration-300 hover:scale-105 hover:border-b active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                 >
                   {item.linkLabel}
                   <span className="text-xl leading-none">→</span>
                 </Link>
-              </motion.div> */}
+              </motion.div> 
             </div>
           </div>
 
