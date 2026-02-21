@@ -20,7 +20,8 @@ const Footer = () => {
             </p>
             <div className="space-y-3 pt-2">
               <p className="text-xs md:text-sm text-white/70 hover:text-white transition-colors cursor-pointer  border-white/10 ">
-                Robotically handled whole-tissue culture system for the screening of oral drug formulations
+                Robotically handled whole-tissue culture system for the
+                screening of oral drug formulations
               </p>
               <p className="text-xs md:text-sm text-white/70 hover:text-white transition-colors cursor-pointer  border-white/10">
                 Robotic screening of intestinal drug absorption
@@ -47,7 +48,9 @@ const Footer = () => {
                     height={logo.name === "Harvard" ? 144 : 60}
                     className={cn(
                       "object-cover ",
-                      logo.name === "MIT" ? "w-32 md:w-[239px]  mb-6 mt-6" : "w-28 md:w-[170px] "
+                      logo.name === "MIT"
+                        ? "w-32 md:w-[239px]  mb-6 mt-6"
+                        : "w-28 md:w-[170px] ",
                     )}
                   />
                 </div>
@@ -63,10 +66,60 @@ const Footer = () => {
             </h3>
             <div className="space-y-6">
               <div className="flex flex-wrap gap-4 items-center mb-6">
+                <div className="p-2 rounded-lg">
+                  <Image
+                    src={"/images/nature.svg"}
+                    alt={"Nature"}
+                    width={60}
+                    height={30}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="p-2 rounded-lg">
+                  <Image
+                    src={"/images/stat.svg"}
+                    alt={"Stat"}
+                    width={70}
+                    height={20}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div className="space-y-6">
+                {footerData.newsCoverage.logos.map((logo, index) => {
+                  let dimensions = { w: 120, h: 40, class: "w-24" };
+                  if (logo.name === "EuroNews")
+                    dimensions = { w: 197, h: 64, class: "w-32 md:w-[197px]" };
+                  else if (logo.name === "CNN")
+                    dimensions = { w: 197, h: 30, class: "w-32 md:w-[197px]" };
+                  else if (logo.name === "BBC")
+                    dimensions = { w: 94, h: 29, class: "w-20 md:w-[94px]" };
+
+                  return (
+                    <div key={index} className="">
+                      <div
+                        key={index}
+                        className="flex items-center justify-start transition-colors"
+                      >
+                        <Image
+                          src={logo.image}
+                          alt={logo.name}
+                          width={dimensions.w}
+                          height={dimensions.h}
+                          className={cn(
+                            "object-contain h-auto",
+                            dimensions.class,
+                          )}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+                <div className="flex  items-center gap-5">
                   <div className="p-2 rounded-lg">
                     <Image
-                      src={'/images/nature.png'}
-                      alt={'Nature'}
+                      src={"/images/scientific.svg"}
+                      alt={"Nature"}
                       width={60}
                       height={30}
                       className="object-contain"
@@ -74,36 +127,14 @@ const Footer = () => {
                   </div>
                   <div className="p-2 rounded-lg">
                     <Image
-                      src={'/images/stat.png'}
-                      alt={'Stat'}
+                      src={"images/mitnew.svg"}
+                      alt={"Stat"}
                       width={70}
                       height={20}
                       className="object-contain"
                     />
                   </div>
-              </div>
-              <div className="space-y-6">
-                {footerData.newsCoverage.logos.map((logo, index) => {
-                  let dimensions = { w: 120, h: 40, class: "w-24" };
-                  if (logo.name === "EuroNews") dimensions = { w: 197, h: 64, class: "w-32 md:w-[197px]" };
-                  else if (logo.name === "CNN") dimensions = { w: 197, h: 30, class: "w-32 md:w-[197px]" };
-                  else if (logo.name === "BBC") dimensions = { w: 94, h: 29, class: "w-20 md:w-[94px]" };
-
-                  return (
-                    <div
-                      key={index}
-                      className="flex items-center justify-start transition-colors"
-                    >
-                      <Image
-                        src={logo.image}
-                        alt={logo.name}
-                        width={dimensions.w}
-                        height={dimensions.h}
-                        className={cn("object-contain h-auto", dimensions.class)}
-                      />
-                    </div>
-                  );
-                })}
+                </div>
               </div>
             </div>
           </div>

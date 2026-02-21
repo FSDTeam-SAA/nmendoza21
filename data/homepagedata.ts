@@ -183,7 +183,7 @@ export const footerData = {
     logos: [
       { name: "EuroNews", image: "/images/eurekalert.png" },
       { name: "CNN", image: "/images/nih.png" },
-      { name: "BBC", image: "/images/scientific.png" },
+      // { name: "BBC", image: "/images/scientific.png" },
     ],
   },
   getInTouch: {
