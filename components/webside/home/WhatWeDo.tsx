@@ -66,10 +66,10 @@ const WhatWeDo = () => {
               >
                 <Link
                   href={`${service.title === "Technology" ? "/technology" : "/programs"}`}
-                  className=" h-full"
+                  className=" w-full"
                 >
                   <div className=" rounded-none overflow-hidden p-0 md:p-0  transition-all duration-500 ease-in-out border border-gray-100/50 flex flex-col h-full hover:-translate-y-1">
-                    <div className="relative aspect-square overflow-hidden rounded-none shadow-inner">
+                    <div className="relative aspect-video overflow-hidden rounded-none shadow-inner">
                       <Image
                         src={service.image}
                         alt={service.title}

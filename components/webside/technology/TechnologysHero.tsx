@@ -35,13 +35,13 @@ const imageVariants: Variants = {
 
 const TechnologysHero = () => {
   return (
-    <section className="my-20 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <motion.div 
+    <section className="my-12 md:my-16  overflow-hidden">
+      <div className="container mx-auto  px-4">
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid lg:grid-cols-2 gap-16 items-center"
+          className="grid lg:grid-cols-2  gap-8 md:gap-12 mb-0 items-center"
         >
           <motion.div variants={textVariants} className="space-y-8">
             <h1 className="text-4xl md:text-4xl font-black text-gray-900 leading-[1.1] tracking-tighter">
@@ -54,10 +54,10 @@ const TechnologysHero = () => {
               and reliable solutions.
             </p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             variants={imageVariants}
-            className="relative w-full aspect-square md:aspect-video lg:aspect-square"
+            className="relative w-full aspect-square md:aspect-square lg:aspect-5/4 overflow-hidden rounded-4xl"
           >
             {/* <div className="  bg-primary/10 rounded-[3rem] blur-3xl z-0" /> */}
             <Image
@@ -65,7 +65,7 @@ const TechnologysHero = () => {
               alt="Technology Frontier"
               width={600}
               height={432}
-              className="object-cover w-full aspect-5/4 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.1)] relative z-10 "
+              className="object-cover w-full aspect-5/4  shadow-[0_30px_60px_rgba(0,0,0,0.1)] relative z-10 "
               priority
             />
           </motion.div>
