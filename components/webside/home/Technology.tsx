@@ -5,10 +5,12 @@ import { innovationPageData } from "@/data/innovation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import SubscribeModal from "@/components/shared/SubscribeModal";
 
 const Technology = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
   const [windowWidth, setWindowWidth] = useState(0);
+  const [isSubscribeModalOpen, setIsSubscribeModalOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -137,12 +139,15 @@ const Technology = () => {
                         <p className="text-gray-300 text-xs md:text-sm font-medium mb-3 md:mb-4">
                           {item.date}
                         </p>
-                        <Link href={item.link} className="inline-block">
-                        
-                        <button className="text-white text-xs md:text-sm font-bold underline underline-offset-4 decoration-white/50 hover:decoration-white transition-all">
-                          {item.linkLabel}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setIsSubscribeModalOpen(true);
+                          }}
+                          className="text-white text-xs md:text-sm bg-primary px-3 py-2 font-bold hover:bg-primary/90 transition-all"
+                        >
+                          Subscribe Us
                         </button>
-                        </Link>
                       </div>
                     </div>
                   </div>
@@ -168,6 +173,11 @@ const Technology = () => {
           ))}
         </div>
       </div>
+
+      <SubscribeModal
+        open={isSubscribeModalOpen}
+        onOpenChange={setIsSubscribeModalOpen}
+      />
     </section>
   );
 };

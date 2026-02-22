@@ -3,6 +3,7 @@ import TechnologyHero from "@/components/webside/technology/TechnologyHero";
 import TechnologyGrid from "@/components/webside/technology/TechnologyGrid";
 import technologyPageData from "@/data/technology.data";
 import TechnologysHero from "@/components/webside/technology/TechnologysHero";
+import Technologys from "@/components/webside/home/Technologys";
 
 export const metadata: Metadata = {
   title: "Technology | Vivtex",
@@ -23,21 +24,11 @@ export default function TechnologyPage() {
     <main className="min-h-screen bg-white">
       <TechnologysHero />
       {/* Hero Section */}
-      <TechnologyHero
-        title={technologyPageData.title}
-        subtitle={technologyPageData.subtitle}
-        description={technologyPageData.description}
-      />
+   
 
-      {/* Technology Grid Section */}
-      <section className="my-4 " id='technology-grid'>
-        <div className="container mx-auto px-4">
-          <TechnologyGrid items={technologyPageData.items} />
-        </div>
-      </section>
 
       {/* CTA Section */}
-      <section className=" container mx-auto my-16 py-16 bg-linear-to-r from-cyan-50 to-blue-50   border-gray-200 rounded-2xl">
+      {/* <section className=" container mx-auto my-16 py-16 bg-linear-to-r from-cyan-50 to-blue-50   border-gray-200 rounded-2xl">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Interested in our research?
@@ -52,6 +43,20 @@ export default function TechnologyPage() {
           >
             Get in Touch
           </a>
+        </div>
+      </section> */}
+      <Technologys />
+    
+   <TechnologyHero
+        title={technologyPageData.title}
+        subtitle={technologyPageData.subtitle}
+        description={technologyPageData.description}
+      />
+
+      {/* Technology Grid Section */}
+      <section className="my-4 " id='technology-grid'>
+        <div className="container mx-auto px-4">
+          <TechnologyGrid items={technologyPageData.items} />
         </div>
       </section>
     </main>

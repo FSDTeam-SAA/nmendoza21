@@ -17,7 +17,7 @@ const rightVariant = {
 
 const Technologys = () => {
   return (
-    <div className="container mx-auto my-10 md:my-16">
+    <div className="container mx-auto ">
       <div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
