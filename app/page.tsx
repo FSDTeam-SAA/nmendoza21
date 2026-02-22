@@ -16,13 +16,12 @@ export default function Home() {
     <main className="min-h-screen">
       <Banner />
       <WhatWeDo />
-      {/* <NewsAndInsights /> */}
-       <NewsTest />
+      <NewsAndInsights />
+       {/* <NewsTest /> */}
       <WhatWeare />
-      <JoinUs />
+      {/* <JoinUs /> */}
       {/* <Innovation /> */}
       <Technology />
-      <Technologys />
     </main>
   );
 }

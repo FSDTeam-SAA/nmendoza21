@@ -17,7 +17,7 @@ export const whatWeDoData = {
       title: "Technology",
       description:
         "Our platform leverages modern, secure, and scalable technologies to ensure performance, reliability, and seamless user experience.",
-      image: "/images/Vivtex-19.jpg",
+      image: "/images/Technology.jpg",
       buttonText: "Explore",
       buttonLink: "/technology",
     },
@@ -179,7 +179,6 @@ export const footerData = {
   },
   newsCoverage: {
     title: "News Coverage",
-
     logos: [
       { name: "EuroNews", image: "/images/eurekalert.svg" },
       { name: "CNN", image: "/images/nih.svg" },
