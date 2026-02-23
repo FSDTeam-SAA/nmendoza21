@@ -69,7 +69,7 @@ const WhatWeDo = () => {
                   className=" w-full"
                 >
                   <div className=" rounded-none overflow-hidden p-0 md:p-0  transition-all duration-500 ease-in-out border border-gray-100/50 flex flex-col h-full hover:-translate-y-1">
-                    <div className="relative aspect-video overflow-hidden rounded-none shadow-inner">
+                    <div className="relative aspect-4/3 overflow-hidden rounded-none shadow-inner">
                       <Image
                         src={service.image}
                         alt={service.title}
@@ -81,11 +81,11 @@ const WhatWeDo = () => {
                     <div className="mt-4 p-3">
                       <div className="flex items-center gap-4 mb-4">
                         {/* <div className="w-10 h-2 bg-primary rounded-full" /> */}
-                        <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900">
+                        <h3 className="text-2xl md:text-3xl font-extrabold text-[#004BC9] uppercase">
                           {service.title}
                         </h3>
                       </div>
-                      <p className="text-gray-600 text-lg md:text-xl font-medium leading-[1.6]">
+                      <p className="text-gray-500 text-lg md:text-xl font-medium text-justify leading-[1.6]">
                         {service.description}
                       </p>
                     </div>

@@ -31,6 +31,7 @@ export interface InnovationNewsItem {
   link: string;
   date: string;
   content?: string[];
+  buttonLabel?: string;
 }
 
 export interface InnovationCommunityData {
@@ -45,6 +46,7 @@ export interface InnovationPageData {
   feature: InnovationFeatureData;
   latestNewsTitle: string;
   latestNews: InnovationNewsItem[];
+  latestNews2?: InnovationNewsItem[];
   community: InnovationCommunityData;
 }
 
@@ -56,7 +58,7 @@ export const innovationPageData: InnovationPageData = {
     featured: {
       label: "Featured Newsletter",
       date: "Published 24 Nov, 2025",
-      title: "Robotic screening of intestinal drug absorption",
+      title: "Scientific Conferences",
       description:
         "Our technology is built on advanced biotechnology research and data-driven innovation. We use cutting-edge laboratory methods, automation, and analytical tools to deliver accurate, scalable, and reliable solutions. Every process is designed to meet global quality standards while ensuring precision, safety, and consistency across all services.",
       shortDescription:
@@ -81,15 +83,15 @@ export const innovationPageData: InnovationPageData = {
     {
       id: "news-1",
       titile2: "Newsletter Update box",
-      title: "Robotic Screening Of Intestinal Drug Absorption",
+      title: "Webinars and podcasts",
       description:
         "Of Course The Fugit Sound Is Very Watery, And Where There Are Boats, Today...",
       shortDescription:
         "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
-      image: "/images/Vivtex-14.jpg",
+      image: "/images/webinar.jpg",
       linkLabel: "View Details",
       link: "/news",
-      date: "Published 24 Nov, 2025",
+      date: "",
       content: [
         "Robotic screening of intestinal drug absorption is designed to transform how early-stage candidates are evaluated for real-world performance. Our platform brings together robotics, microfluidics, and advanced analytical instrumentation to simulate intestinal conditions with high fidelity, enabling rapid profiling of permeability, stability, and transport mechanisms.",
         "We combine science, technology, and innovation to power next-generation biotechnology services. From advanced molecular techniques to intelligent data analysis, our technology enables faster insights, improved accuracy, and sustainable outcomes. Our biotechnology platform is powered by modern technologies that ensure efficiency, reliability, and high performance.",
@@ -99,15 +101,15 @@ export const innovationPageData: InnovationPageData = {
     {
       id: "news-2",
       titile2: "Scientific Conferences",
-      title: "Precision Analytics For Drug Discovery",
+      title: "Scientific Conferences",
       description:
         "Smarter analytics workflows accelerate early-stage discovery and reduce turnaround time for complex assays.",
       shortDescription:
         "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
-      image: "/images/Vivtex-11.jpg",
+      image: "/images/scientific.png",
       linkLabel: "View Details",
       link: "/news",
-      date: "Published 18 Nov, 2025",
+      date: "",
       content: [
         "Precision analytics for drug discovery brings a new layer of clarity to early-stage research by combining robust experimentation with intelligent data processing. Our workflows capture high-resolution results across large datasets while maintaining tight control over experimental variables.",
         "Our analytics stack combines high-throughput experimentation with intelligent data pipelines to surface actionable insights faster. Teams gain higher confidence in lead selection and can scale experiments without compromising data integrity. Automated quality checks and anomaly detection help teams identify outliers early.",
@@ -116,49 +118,33 @@ export const innovationPageData: InnovationPageData = {
     },
     {
       id: "news-3",
-      title: "Automation In Translational Research",
+      title: "Newsletter",
       titile2: "Scientific Community & Engagement",
       description:
         "Automation reduces variability and improves consistency in translational research workflows.",
       shortDescription:
         "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
-      image: "/images/Vivtex-15.jpg",
+      image: "/images/automation.png",
       linkLabel: "View Details",
       link: "/news",
-      date: "Published 10 Nov, 2025",
+      date: "",
+      buttonLabel: "Sign Up",
       content: [
         "Automation in translational research is essential for improving consistency, reducing manual workload, and increasing throughput. Our approach integrates validated robotics and standardized workflows that coordinate sample handling, processing, and analysis with high precision.",
         "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation.",
         "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases.",
       ],
     },
-    // {
-    //   id: "news-4",
-    //   titile2: "Webinars box",
-    //   title: "Automation In Translational Research",
-    //   description:
-    //     "Automation reduces variability and improves consistency in translational research workflows.",
-    //   shortDescription:
-    //     "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
-    //   image: "/images/innovation4.jpg",
-    //   linkLabel: "View Details",
-    //   link: "/news",
-    //   date: "Published 10 Nov, 2025",
-    //   content: [
-    //     "Automation in translational research is essential for improving consistency, reducing manual workload, and increasing throughput. Our approach integrates validated robotics and standardized workflows that coordinate sample handling, processing, and analysis with high precision.",
-    //     "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation.",
-    //     "By minimizing variability and enhancing efficiency, automation supports stronger translational insights and shortens the path from discovery to clinical relevance. Teams gain the ability to scale programs without scaling risk, and they can maintain high standards of quality even as throughput increases.",
-    //   ],
-    // },
   ],
+
   community: {
-    title: "Fostering a Global Scientific Community",
+    title: "Webinars & Podcasts",
     description:
       "Innovation doesn’t happen in a vacuum. We actively engage with academia, students, and independent researchers to bridge the gap between theoretical science and life-saving applications.",
     bullets: [
       "Annual Post-Doctoral Research Grants",
-      "K-12 Science Mentorship Program",
-      "Open Access Laboratory Initiatives",
+      // "K-12 Science Mentorship Program",
+      // "Open Access Laboratory Initiatives",
     ],
   },
 };

@@ -31,7 +31,7 @@ export const contactPageData: ContactPageData = {
       id: "address",
       label: "",
       value:
-        "135 William T Morrissey Blvd, Suite P101, Boston, MA 02125 | Wägistrasse 13, 8952 Schlieren, Switzerland",
+        "135 William T Morrissey Blvd, Suite P101, Boston, MA 02125 | Wagistrasse 13, 8952 Schlieren, Switzerland",
       icon: "map",
     },
   ],

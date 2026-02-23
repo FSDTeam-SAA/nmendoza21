@@ -6,29 +6,9 @@ import { cn } from "@/lib/utils";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white py-16">
+    <footer className="bg-[#003051] text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Publications */}
-          <div className="space-y-4">
-            <h3 className="text-xl md:text-2xl font-extrabold mb-6 flex items-center gap-2">
-              <span className="w-2 h-8 rounded-full inline-block"></span>
-              {footerData.publications.title}
-            </h3>
-            <p className="text-sm text-white/80 leading-relaxed italic">
-              {footerData.publications.description}
-            </p>
-            <div className="space-y-3 pt-2">
-              <p className="text-xs md:text-sm text-white/70 hover:text-white transition-colors cursor-pointer  border-white/10 ">
-                Robotically handled whole-tissue culture system for the
-                screening of oral drug formulations
-              </p>
-              <p className="text-xs md:text-sm text-white/70 hover:text-white transition-colors cursor-pointer  border-white/10">
-                Robotic screening of intestinal drug absorption
-              </p>
-            </div>
-          </div>
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
           {/* Invested By */}
           <div>
             <h3 className="text-xl md:text-2xl font-extrabold mb-0 flex items-center gap-2">

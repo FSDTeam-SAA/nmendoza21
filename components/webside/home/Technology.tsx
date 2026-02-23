@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SubscribeModal from "@/components/shared/SubscribeModal";
+import { Button } from "@/components/ui/button";
 
 const Technology = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
@@ -139,15 +140,20 @@ const Technology = () => {
                         <p className="text-gray-300 text-xs md:text-sm font-medium mb-3 md:mb-4">
                           {item.date}
                         </p>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setIsSubscribeModalOpen(true);
-                          }}
-                          className="text-white text-xs md:text-sm bg-primary px-3 py-2 font-bold hover:bg-primary/90 transition-all"
+                        {
+                          item.buttonLabel && (
+                        <Button
+                          // variant="outline"
+                          className="text-white bg-primary cursor-pointer hover:bg-white hover:text-black transition-all"
+                          onClick={() => setIsSubscribeModalOpen(true)}
                         >
-                          Subscribe Us
-                        </button>
+                          
+                              {item.buttonLabel}
+                          
+                        </Button>
+                            
+                          )
+                        }
                       </div>
                     </div>
                   </div>

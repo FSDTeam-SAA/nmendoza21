@@ -24,14 +24,14 @@ const Technologys = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8 md:mb-10"
+          className="text-start mb-8 md:mb-20"
         >
-          <h2 className="text-[40px] font-semibold text-[#003399] tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-semibold text-[#003152] tracking-tight">
             {technologysData.title}
           </h2>
-          <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
+          {/* <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
             {technologysData.subtitle}
-          </p>
+          </p> */}
         </motion.div>
       </div>
 
@@ -41,7 +41,7 @@ const Technologys = () => {
           const mediaVariant = isEven ? leftVariant : rightVariant;
           const textVariant = isEven ? rightVariant : leftVariant;
           const mediaOrderClass = isEven ? "" : "md:order-2";
-          const textOrderClass = isEven ? "" : "md:order-1";
+          const textOrderClass = isEven ? "bg-[#ced6d8] p-16" : "md:order-1 bg-[#ced6d8] p-16";
 
           return (
             <div
@@ -56,26 +56,16 @@ const Technologys = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className={`relative ${mediaOrderClass}`}
               >
-                <div className="relative w-full aspect-[5/4] md:aspect-[4/3] lg:aspect-[3/2] overflow-hidden rounded-4xl">
-                  <Image
+                <div className="relative w-full aspect-5/4 md:aspect-4/3 lg:aspect-3/2 overflow-hidden rounded-4xl">
+                  <video
                     src={item.mediaSrc}
-                    alt={item.mediaAlt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                    className="object-cover"
-                    priority={index === 0}
+                    className="object-cover absolute inset-0 w-full h-full"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                   />
                 </div>
-
-                <motion.h3
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                  className="absolute top-6 left-10 text-[#003399] text-2xl font-medium"
-                >
-                  {item.label}
-                </motion.h3>
               </motion.div>
 
               <motion.div
@@ -86,16 +76,10 @@ const Technologys = () => {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
                 className={textOrderClass}
               >
-                <h2 className="text-3xl font-medium mb-3">{item.heading}</h2>
-                <p className="text-gray-600 text-base md:text-xl leading-relaxed font-normal">
+                <h2 className="text-3xl font-medium mb-3 text-[#003399]">{item.heading}</h2>
+                <p className="text-black text-base md:text-xl leading-relaxed font-normal text-justify">
                   {item.description}
                 </p>
-                <Link
-                  href="/technology#technology-grid"
-                  className="inline-block mt-4 text-sm font-semibold text-gray-900 underline underline-offset-4 decoration-gray-400/60 hover:decoration-gray-900 transition-all"
-                >
-                  {technologysData.ctaLabel}
-                </Link>
               </motion.div>
             </div>
           );

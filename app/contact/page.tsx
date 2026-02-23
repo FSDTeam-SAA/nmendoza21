@@ -6,6 +6,7 @@ import { contactPageData } from "@/data/contact";
 import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
 import ContactForm from "@/components/webside/contact/ContactForm";
 import Map from "@/components/webside/contact/Map";
+import NewContact from "@/components/webside/contact/NewContact";
 
 interface FormField {
   name: string;
@@ -43,7 +44,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#f8f6f2] overflow-x-hidden">
       {/* Hero */}
-      <section className="pt-24 pb-12 text-center">
+      {/* <section className="pt-24 pb-12 text-center">
         <InViewAnimationWrapper animation="slideInUp" duration={800}>
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
@@ -54,13 +55,13 @@ export default function ContactPage() {
             </p>
           </div>
         </InViewAnimationWrapper>
-      </section>
+      </section> */}
 
       {/* Main Content */}
-      <section className="pb-32">
+      {/* <section className="pb-32">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Contact Info */}
+       
             <div className="space-y-10">
               <InViewAnimationWrapper animation="slideInLeft" duration={800} delay={200}>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
@@ -88,16 +89,16 @@ export default function ContactPage() {
               ))}
             </div>
 
-            {/* Contact Form Wrapper */}
+    
             <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl shadow-gray-200/50 border border-gray-100">
               <ContactForm />
             </div>
           </div>
         </div>
-      </section>
-
+      </section> */}
+<NewContact />
       {/* Map Section */}
-      <Map />
+      {/* <Map /> */}
     </main>
   );
 }

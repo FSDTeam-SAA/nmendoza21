@@ -85,9 +85,9 @@ const CurrentActiveProgram = () => {
             <h2 className="text-[40px] font-semibold text-gray-900 mb-2 tracking-tight">
               {pipelineTitle}
             </h2>
-            <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
+            {/* <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
               {pipelineSubtitle}
-            </p>
+            </p> */}
           </motion.div>
 
           <motion.div

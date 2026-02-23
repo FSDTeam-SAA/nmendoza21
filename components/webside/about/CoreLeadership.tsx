@@ -1,7 +1,6 @@
 'use client';
 import type { TeamMember } from "@/data/about";
 import PersonCard from "./PersonCard";
-import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
 
 interface CoreLeadershipProps {
   title: string;
@@ -43,14 +42,11 @@ export default function CoreLeadership({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8 md:mb-16"
+          className="text-start mb-8 md:mb-16"
         >
           <h2 className="text-[40px] font-semibold text-[#003399] mb-3 tracking-tight">
             {title}
           </h2>
-          <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
-            {subtitle}
-          </p>
         </motion.div>
 
         <motion.div 
@@ -58,11 +54,11 @@ export default function CoreLeadership({
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mx-auto max-w-7xl"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mx-auto "
         >
           {members.map((member, index) => (
             <motion.div
-              key={member.id}
+              key={index}
               variants={cardVariants}
             >
               <PersonCard member={member} highlight={index === 1} />

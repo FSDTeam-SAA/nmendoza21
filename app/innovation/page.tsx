@@ -5,6 +5,7 @@ import { Check } from "lucide-react";
 import { innovationPageData } from "@/data/innovation";
 import InnovationLatestNews from "@/components/webside/innovation/InnovationLatestNews";
 import { motion, Variants } from "framer-motion";
+import Upcomming from "@/components/webside/innovation/Upcomming";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -26,43 +27,47 @@ const itemVariants: Variants = {
 };
 
 export default function InnovationPage() {
-  const {
-    heroTitle,
-    heroSubtitle,
-    feature,
-    community,
-  } = innovationPageData;
+  const { heroTitle, heroSubtitle, feature, community } = innovationPageData;
 
   return (
     <main className="min-h-screen bg-[#f8f6f2]">
       {/* Hero */}
-      <section className="pt-24 pb-16 text-center">
+      <section className="pt-24 pb-8 text-start">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="container mx-auto px-4"
         >
-          <h1 className="text-4xl md:text-7xl font-extrabold text-gray-900 tracking-tighter mb-6">
+          <h1 className="text-4xl md:text-7xl font-extrabold text-[#003399] tracking-tighter mb-6">
             {heroTitle}
           </h1>
-          <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
-            {heroSubtitle}
-          </p>
         </motion.div>
       </section>
 
+      <div className="container mx-auto px-4">
+        <div className="pb-3! lg:pb-12!">
+          <p className="text-gray-500 text-3xl md:text-4xl max-w-2xl font-semibold leading-relaxed">
+            Scientific Conferences
+          </p>
+        </div>
+      </div>
+
+      {/* Latest News */}
+      <InnovationLatestNews />
+      <Upcomming />
+
       {/* Featured */}
-      <section className="pb-16">
+      {/* <section className="py-12">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid lg:grid-cols-[2fr_1fr] gap-10"
+            className="grid lg:grid-cols-[2fr_1fr] gap-10 mt-12!"
           >
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-white rounded-[2rem] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] p-10 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500"
             >
@@ -103,12 +108,14 @@ export default function InnovationPage() {
                   className="inline-flex items-center gap-2 text-primary font-black group cursor-pointer"
                 >
                   {feature.featured.linkLabel}
-                  <span className="group-hover:translate-x-2 transition-transform duration-300 ">→</span>
+                  <span className="group-hover:translate-x-2 transition-transform duration-300 ">
+                    →
+                  </span>
                 </a>
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-primary rounded-[2rem] p-10 text-white shadow-[0_20px_50px_rgba(var(--primary-rgb),0.2)] flex flex-col justify-between"
             >
@@ -128,33 +135,39 @@ export default function InnovationPage() {
                 className="inline-flex items-center gap-2 text-white font-black mt-10 group"
               >
                 {feature.upcoming.linkLabel}
-                <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                <span className="group-hover:translate-x-2 transition-transform duration-300">
+                  →
+                </span>
               </a>
             </motion.div>
           </motion.div>
         </div>
-      </section>
-
-      {/* Latest News */}
-      <InnovationLatestNews />
+      </section> */}
 
       {/* Community */}
       <section className="pb-32 pt-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl"
+            className=" gap-10 grid grid-cols-2"
           >
+            <div>
+
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
               {community.title}
             </h2>
-            <p className="text-gray-500 text-lg md:text-xl mb-10 font-medium leading-relaxed">
-              {community.description}
+            <p className="text-gray-500 text-lg md:text-xl mb-10 font-medium leading-relaxed text-justify">
+              Stay connected to the forefront of biotechnology innovation
+              through our curated webinars and expert-led podcasts. This section
+              brings together thought leaders, researchers, clinicians, and
+              industry pioneers to explore the science shaping the future of
+              healthcare, therapeutics, diagnostics, and life sciences.
             </p>
-            <motion.ul 
+            </div>
+            {/* <motion.ul
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -162,8 +175,8 @@ export default function InnovationPage() {
               className="grid md:grid-cols-2 gap-6"
             >
               {community.bullets.map((item) => (
-                <motion.li 
-                  key={item} 
+                <motion.li
+                  key={item}
                   variants={itemVariants}
                   className="flex items-start gap-4 text-lg font-medium text-gray-700 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm"
                 >
@@ -173,7 +186,27 @@ export default function InnovationPage() {
                   {item}
                 </motion.li>
               ))}
-            </motion.ul>
+            </motion.ul> */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-primary rounded-[2rem] p-10 text-white shadow-[0_20px_50px_rgba(var(--primary-rgb),0.2)] flex flex-col justify-between"
+            >
+              <div className="">
+
+                <span className="text-lg font-black uppercase tracking-[0.1em] text-white/60 ">
+                Upcoming Webinars:
+                </span>
+                {/* <h3 className="text-lg md:text-xl font-black mt-6 tracking-tight leading-tight">
+                  {feature.upcoming.date}
+                </h3> */}
+                {/* <h3 className="text-lg md:text-sm font-black   mt-2  tracking-tight leading-tight">
+                  {feature.upcoming.place}
+                </h3> */}
+                <p className="text-white/80 text-3xl leading-relaxed mt-6 font-semibold">
+                 Advances and challenges towards enabling oral administration of peptide therapeutics.
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

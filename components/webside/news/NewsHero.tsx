@@ -37,7 +37,7 @@ const textVariants: Variants = {
 
 const NewsHero = () => {
   const { featured } = newsPageData;
-  const heroImage = "/images/Vivtex-14.jpg";
+  const heroImage = "/news/Robotic.webp";
 
   return (
     <section className="pb-24">

@@ -34,13 +34,13 @@ export interface ProgramsPageData {
 
 export const programsPageData: ProgramsPageData = {
   hero: {
-    title: "Programs &\nApplied Research",
+    title: "Programs",
     subtitle: "",
     description:
-      "Our technology is built on advanced biotechnology research and data-driven innovation. We use cutting-edge laboratory methods, automation, and analytical tools to deliver accurate, scalable, and reliable solutions. Every process is designed to meet global quality standards while ensuring precision, safety, and consistency across all services.",
+      "We strive to advance select high potential next generation oral therapeutics by partnering with leading Pharmaceutical and Biotech companies. To advance our mission to provide patients with the best possible treatment option, we focus on disease areas where oral dosing has a positive impact on the patient’s quality of life and treatment outcome. Our programs have a strong focus on peptide therapeutics and modalities that are traditionally limited to needle administration while requiring frequent long-term dosing.",
     ctaLabel: "Explore Researches",
     ctaLink: "/technology",
-    image: "/programs/programhero.jpg",
+    image: "/images/Programs.jpg",
   },
   pipelineTitle: "Current Active Pipeline",
   pipelineSubtitle:

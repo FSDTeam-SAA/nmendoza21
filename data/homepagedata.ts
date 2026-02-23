@@ -1,5 +1,5 @@
 export const bannerData = {
-  title: "Push medical boundaries through technological innovation",
+  title: "Overcome  medical boundaries \n through technological innovation",
   description:
     "Vivtex's proprietary platform enables for the first time the use of intact gastrointestinal tract tissue for fully automated robotic testing. We use this technology to enable the development of new drugs that can be given orally instead of painful and inconvenient needle injections.",
   buttonText: "Learn More",
@@ -16,8 +16,8 @@ export const whatWeDoData = {
       id: 1,
       title: "Technology",
       description:
-        "Explore how our platform is using gastrointestinal tracts from animals and humans combined with cutting edge technologies to find ways how to trick the body to absorb drugs orally.",
-      image: "/images/Technology.jpg",
+        "Discover how our platform combines animal and human gastrointestinal tissues with cutting-edge technologies to uncover new ways to enable oral drug absorption.",
+      image: "/Technology.jpg",
       buttonText: "Explore",
       buttonLink: "/technology",
     },
@@ -26,7 +26,7 @@ export const whatWeDoData = {
       title: "Programs",
       description:
         "From technology to new future oral medicine – see Vivtex’s effort to translate technological innovation into patient wellbeing",
-      image: "/images/Vivtex-19.jpg",
+      image: "/images/Vivtex-15.jpg",
       buttonText: "Explore",
       buttonLink: "/programs",
     },
@@ -170,7 +170,7 @@ export const footerData = {
     link: "#",
   },
   investedBy: {
-    title: "Invested By",
+    title: "Invented by",
     logos: [
       { name: "MIT", image: "/images/mit.svg" },
       { name: "Harvard", image: "/images/Harvard.svg" },
@@ -178,7 +178,7 @@ export const footerData = {
     ],
   },
   newsCoverage: {
-    title: "News Coverage",
+    title: "As seen in:",
     logos: [
       { name: "EuroNews", image: "/images/eurekalert.svg" },
       { name: "CNN", image: "/images/nih.svg" },
@@ -187,9 +187,8 @@ export const footerData = {
   },
   getInTouch: {
     title: "Get In Touch",
-    address: "23 Cambridge Park Drive, Suite 125",
-    city: "Cambridge, MA 02140",
-    email: "info@example.com",
-    phone: "+1 (617) 555-0100",
+    address: "135 William T Morrissey Blvd, Suite P101, Boston, MA 02125",
+    city: "Wagistrasse 13, Schlieren 8952, Switzerland",
+    email: "info@vivtex.com",
   },
 };
