@@ -31,6 +31,7 @@ export interface InnovationNewsItem {
   link: string;
   date: string;
   content?: string[];
+  buttonLabel?: string;
 }
 
 export interface InnovationCommunityData {
@@ -45,6 +46,7 @@ export interface InnovationPageData {
   feature: InnovationFeatureData;
   latestNewsTitle: string;
   latestNews: InnovationNewsItem[];
+  latestNews2?: InnovationNewsItem[];
   community: InnovationCommunityData;
 }
 
@@ -89,7 +91,7 @@ export const innovationPageData: InnovationPageData = {
       image: "/images/webinar.jpg",
       linkLabel: "View Details",
       link: "/news",
-      date: "Published 24 Nov, 2025",
+      date: "",
       content: [
         "Robotic screening of intestinal drug absorption is designed to transform how early-stage candidates are evaluated for real-world performance. Our platform brings together robotics, microfluidics, and advanced analytical instrumentation to simulate intestinal conditions with high fidelity, enabling rapid profiling of permeability, stability, and transport mechanisms.",
         "We combine science, technology, and innovation to power next-generation biotechnology services. From advanced molecular techniques to intelligent data analysis, our technology enables faster insights, improved accuracy, and sustainable outcomes. Our biotechnology platform is powered by modern technologies that ensure efficiency, reliability, and high performance.",
@@ -107,7 +109,7 @@ export const innovationPageData: InnovationPageData = {
       image: "/images/scientific.png",
       linkLabel: "View Details",
       link: "/news",
-      date: "Published 18 Nov, 2025",
+      date: "",
       content: [
         "Precision analytics for drug discovery brings a new layer of clarity to early-stage research by combining robust experimentation with intelligent data processing. Our workflows capture high-resolution results across large datasets while maintaining tight control over experimental variables.",
         "Our analytics stack combines high-throughput experimentation with intelligent data pipelines to surface actionable insights faster. Teams gain higher confidence in lead selection and can scale experiments without compromising data integrity. Automated quality checks and anomaly detection help teams identify outliers early.",
@@ -116,7 +118,7 @@ export const innovationPageData: InnovationPageData = {
     },
     {
       id: "news-3",
-      title: "Automation In Translational Research",
+      title: "Newsletter",
       titile2: "Scientific Community & Engagement",
       description:
         "Automation reduces variability and improves consistency in translational research workflows.",
@@ -125,7 +127,8 @@ export const innovationPageData: InnovationPageData = {
       image: "/images/automation.png",
       linkLabel: "View Details",
       link: "/news",
-      date: "Published 10 Nov, 2025",
+      date: "",
+      buttonLabel: "Sign Up",
       content: [
         "Automation in translational research is essential for improving consistency, reducing manual workload, and increasing throughput. Our approach integrates validated robotics and standardized workflows that coordinate sample handling, processing, and analysis with high precision.",
         "We integrate validated automation tools that streamline sample handling, analysis, and reporting across labs. This reduces operational complexity and improves throughput for clinical and preclinical research teams. Automated scheduling and monitoring allow for continuous operation.",
@@ -133,14 +136,15 @@ export const innovationPageData: InnovationPageData = {
       ],
     },
   ],
+
   community: {
-    title: "Fostering a Global Scientific Community",
+    title: "Webinars & Podcasts",
     description:
       "Innovation doesn’t happen in a vacuum. We actively engage with academia, students, and independent researchers to bridge the gap between theoretical science and life-saving applications.",
     bullets: [
       "Annual Post-Doctoral Research Grants",
-      "K-12 Science Mentorship Program",
-      "Open Access Laboratory Initiatives",
+      // "K-12 Science Mentorship Program",
+      // "Open Access Laboratory Initiatives",
     ],
   },
 };

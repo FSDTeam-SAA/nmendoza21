@@ -28,7 +28,6 @@ const WhatWeare = () => {
   return (
     <section className="relative my-20 lg:my-32 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-       
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -43,7 +42,7 @@ const WhatWeare = () => {
                 {whoWeAreData.title}
               </h2> */}
               <h3 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
-              We are changing the future of medicine together{" "}
+                We are changing the future of medicine together{" "}
                 {/* <span className="text-gray-900">Together.</span> */}
               </h3>
             </motion.div>
@@ -79,19 +78,34 @@ const WhatWeare = () => {
 
             {/* IMAGE SECTION */}
             <div className="relative group">
-              <motion.div
-                variants={fadeUp}
-                className="relative z-30 w-full aspect-5/3 overflow-hidden"
-              >
-                <Image
-                  src="/images/group-picture.jpg"
-                  alt="Who We Are Main"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                  priority
-                  className="object-cover"
-                />
-              </motion.div>
+              <div className="relative h-[320px] sm:h-[360px] md:h-[420px] lg:h-[460px]">
+                <motion.div
+                  variants={fadeUp}
+                  className="absolute top-0 right-0 z-30 w-[88%] sm:w-[82%] h-[62%] sm:h-[64%] overflow-hidden rounded-md shadow-lg"
+                >
+                  <Image
+                    src="/images/group-picture.jpg"
+                    alt="Who We Are Main"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    priority
+                    className="object-cover"
+                  />
+                </motion.div>
+                <motion.div
+                  variants={fadeUp}
+                  className="absolute -bottom-8 left-0 z-40 w-[80%] sm:w-[75%] h-[58%] sm:h-[60%] overflow-hidden rounded-md shadow-lg"
+                >
+                  <Image
+                    src="/Group.jpg"
+                    alt="Who We Are Secondary"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    priority
+                    className="object-cover"
+                  />
+                </motion.div>
+              </div>
 
               {/* Background Geometric Elements */}
               <div className="absolute top-0 left-0 w-full h-full border-b-2 border-l-2 border-gray-200 -z-10 translate-x-4 sm:translate-x-6 -translate-y-4 sm:-translate-y-6" />

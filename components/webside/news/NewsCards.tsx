@@ -5,6 +5,8 @@ import Image from "next/image";
 import { newsPageData } from "@/data/news";
 import NewsModal from "@/components/webside/news/NewsModal";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
+import Link from "next/link";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -23,7 +25,7 @@ const cardVariants: Variants = {
     opacity: 1,
     transition: { duration: 0.5, ease: "easeOut" },
   },
-  exit: { opacity: 0, scale: 0.95, transition: { duration: 0.3 } }
+  exit: { opacity: 0, scale: 0.95, transition: { duration: 0.3 } },
 };
 
 const NewsCards = () => {
@@ -40,14 +42,14 @@ const NewsCards = () => {
   const goToPage = (page: number) => {
     const safePage = Math.min(Math.max(page, 1), totalPages);
     setCurrentPage(safePage);
-    window.scrollTo({ top: 400, behavior: 'smooth' });
+    window.scrollTo({ top: 400, behavior: "smooth" });
   };
 
   return (
     <section className="py-24 bg-gray-50/30">
       <div className="container mx-auto px-4">
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={currentPage}
             variants={containerVariants}
             initial="hidden"
@@ -71,7 +73,9 @@ const NewsCards = () => {
                     />
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
-                    <p className="text-sm text-gray-400 font-bold">{item.date}</p>
+                    <p className="text-sm text-gray-400 font-bold">
+                      {item.date}
+                    </p>
                     <h3 className="text-xl font-black text-gray-900 mt-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
                       {item.title}
                     </h3>
@@ -82,7 +86,9 @@ const NewsCards = () => {
                       <NewsModal item={item}>
                         <button className="text-sm cursor-pointer text-primary font-black uppercase tracking-wider inline-flex items-center gap-2 group/btn cursor-pointer">
                           {item.linkLabel}
-                          <span className="group-hover/btn:translate-x-1 transition-transform duration-300">→</span>
+                          <span className="group-hover/btn:translate-x-1 transition-transform duration-300">
+                            →
+                          </span>
                         </button>
                       </NewsModal>
                     </div>
@@ -94,7 +100,7 @@ const NewsCards = () => {
         </AnimatePresence>
 
         {/* Pagination */}
-        <div className="mt-20 flex items-center justify-center gap-3 flex-wrap">
+        {/* <div className="mt-20 flex items-center justify-center gap-3 flex-wrap">
           <button
             onClick={() => goToPage(currentPage - 1)}
             disabled={currentPage === 1}
@@ -134,8 +140,10 @@ const NewsCards = () => {
           >
             Next →
           </button>
-        </div>
+        </div> */}
       </div>
+
+
     </section>
   );
 };

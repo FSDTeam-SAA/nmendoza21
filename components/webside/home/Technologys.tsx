@@ -24,9 +24,9 @@ const Technologys = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8 md:mb-10"
+          className="text-start mb-8 md:mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-semibold text-[#003399] tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-semibold text-[#003152] tracking-tight">
             {technologysData.title}
           </h2>
           {/* <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
@@ -41,7 +41,7 @@ const Technologys = () => {
           const mediaVariant = isEven ? leftVariant : rightVariant;
           const textVariant = isEven ? rightVariant : leftVariant;
           const mediaOrderClass = isEven ? "" : "md:order-2";
-          const textOrderClass = isEven ? "bg-[#CED6D8] p-16" : "md:order-1 bg-[#CED6D8] p-16";
+          const textOrderClass = isEven ? "bg-[#ced6d8] p-16" : "md:order-1 bg-[#ced6d8] p-16";
 
           return (
             <div
@@ -77,7 +77,7 @@ const Technologys = () => {
                 className={textOrderClass}
               >
                 <h2 className="text-3xl font-medium mb-3 text-[#003399]">{item.heading}</h2>
-                <p className="text-gray-600 text-base md:text-xl leading-relaxed font-normal text-justify">
+                <p className="text-black text-base md:text-xl leading-relaxed font-normal text-justify">
                   {item.description}
                 </p>
               </motion.div>

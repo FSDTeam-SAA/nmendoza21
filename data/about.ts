@@ -99,12 +99,12 @@ export const aboutData: AboutData = {
           { platform: "Twitter", url: "#" },
         ],
       },
-      {
-        id: "NMendoza",
-        name: "Nicole Mendoza",
-        role: "Finance & Operations Manager",
-        image: "/images/NicoleMendoza-Finance&OperationsManager.jpg",
-        bio: "Nicole is a seasoned finance and operations professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Nicole has been instrumental in setting up and managing finance & operations for a number of biotech companies.",
+            {
+        id: "xavier-garrabou",
+        name: "Emilie Frugier",
+        role: "Head of IP",
+        image: "/images/EmilieFrugier-HeadofIP.jpg",
+        bio: "Emilie is a seasoned intellectual property professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Emilie has been instrumental in setting up and managing IP for a number of biotech companies.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
           { platform: "Twitter", url: "#" },
@@ -121,18 +121,18 @@ export const aboutData: AboutData = {
           { platform: "Twitter", url: "#" },
         ],
       },
-      {
-        id: "xavier-garrabou",
-        name: "Emilie Frugier",
-        role: "Head of IP",
-        image: "/images/EmilieFrugier-HeadofIP.jpg",
-        bio: "Emilie is a seasoned intellectual property professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Emilie has been instrumental in setting up and managing IP for a number of biotech companies.",
+
+{
+        id: "NMendoza",
+        name: "Nicole Mendoza",
+        role: "Finance & Operations Manager",
+        image: "/about/NicoleMendoza-Finance&Operations Manager.png",
+        bio: "Nicole is a seasoned finance and operations professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Nicole has been instrumental in setting up and managing finance & operations for a number of biotech companies.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
           { platform: "Twitter", url: "#" },
         ],
       },
-
       {
         id: "xavier-garrabou",
         name: "Daniil Olsen",
@@ -148,7 +148,7 @@ export const aboutData: AboutData = {
       {
         id: "per-larsson",
         name: "Per Larsson",
-        role: "Senior Scientific Advisor",
+        role: "Head of Computational Science",
         image: "/about/per-larsson.jpg",
         bio: "Per Larsson has been working with modeling and simulation, as well as machine learning and AI methods, to understand the behavior of orally administered drugs for several years. In particular, his work has focused on how to make the design of oral peptide formulations more knowledge-based and how to best interface computational methods with experimental studies for drug delivery.",
         socialLinks: [{ platform: "LinkedIn", url: "#" }],
@@ -157,7 +157,7 @@ export const aboutData: AboutData = {
       {
         id: "james-wright",
         name: "James Wright",
-        role: "Senior Scientific Advisor",
+        role: "SVP of Drug Development",
         image: "/about/scientificadvisor.jpg",
         bio: "Dr. Wright joined Vivtex in 2018 as a core member of the Vivtex Executive Management Team and Senior Scientific Advisor. Prior to that he held various executive and leadership positions in pharma and biotech companies, including Vice President of Development at Infinity Pharmaceuticals, Inc., Vice President of Pharmaceutical Development at Millennium Pharmaceuticals and Senior Vice President of Development at Alkermes plc. In addition, he was a Distinguished Scientist at Boehringer Ingelheim Pharmaceuticals. Furthermore, Dr Wright was co-Founder and Chairman of the Scientific & Clinical Advisory Board of the drug delivery company Civitas Therapeutics that was sold for $525 million in 2014. He received his Ph.D. in Pharmacy from the University of Wisconsin and B.A. and degrees in Biology and Chemistry from the University of California, Santa Barbara.",
         socialLinks: [{ platform: "LinkedIn", url: "#" }],
@@ -165,7 +165,7 @@ export const aboutData: AboutData = {
       {
         id: "Annie-Khalid",
         name: "Annie Khalid",
-        role: "Peptide Therapeutics Expert",
+        role: "Scientist",
         image: "/images/AnnieKhalid-Scientist.jpg",
         bio: "Annie is a leading expert in peptide therapeutics with over 5 years of experience in drug discovery and development. She has worked in both academia and industry, contributing to the development of several peptide-based therapeutics. Annie holds a Ph.D. in Biochemistry from the University of California, San Francisco, and has published over 100 peer-reviewed articles.",
         socialLinks: [
@@ -173,6 +173,87 @@ export const aboutData: AboutData = {
           { platform: "Scholar", url: "#" },
         ],
       },
+      {
+        id: "EdgardoRivera",
+        name: "Edgardo Rivera",
+        role: "Principal Scientist",
+        image: "/about/EdgardoRivera-PrincipalScientist.jpg",
+        bio: "Edgardo is a Principal Scientist at Vivtex with over 10 years of experience in peptide drug development. He has led multiple projects in the development of novel peptide therapeutics and has published over 50 peer-reviewed articles.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Scholar", url: "#" },
+        ],
+      },
+      {
+        id: "Linh-Huynh",
+        name: "Linh Huynh",
+        role: "Business Operations Associate II",
+        image: "/about/LinhHuynh-BusinessOperationsAssociateII.jpg",
+        bio: "Linh is a Business Operations Associate II at Vivtex with over 5 years of experience in business operations and project management. She has supported multiple projects in peptide drug development and has contributed to the successful launch of several products. Linh holds a Master's degree in Business Administration from the University of California, Los Angeles.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Scholar", url: "#" },
+        ],
+      },
+      {
+        id: "Marvin-Naing",
+        name: "Marvin Naing",
+        role: "Scientist I",
+        image: "/about/MarvinNaing-ScientistI.jpg",
+        bio: "Marvin is a Scientist I at Vivtex with over 5 years of experience in peptide drug development. He has supported multiple projects in peptide drug development and has contributed to the successful launch of several products. Marvin holds a Master's degree in Chemistry from the University of California, Los Angeles.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Scholar", url: "#" },
+        ],
+      },
+          {
+        id: "Meredith-Veldran",
+        name: "Meredith Veldran",
+        role: "Pre-Clinical Project Manager",
+        image: "/about/MeredithVeldran-Pre-ClinicalProjectManager.jpg",
+        bio: "Meredith is a Pre-Clinical Project Manager at Vivtex with over 5 years of experience in pre-clinical project management and drug development. She has supported multiple projects in peptide drug development and has contributed to the successful launch of several products. Meredith holds a Master's degree in Biology from the University of California, Los Angeles.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Scholar", url: "#" },
+        ],
+      },
+
+     
+      {
+        id: "Luke-Sepich",
+        name: "Luke Sepich",
+        role: "Associate Operations Manager",
+        image: "/about/LukeSepich-AssociateOperationsManager.jpg",
+        bio: "Luke is an Associate Operations Manager at Vivtex with over 5 years of experience in operations management and project coordination. He has supported multiple projects in peptide drug development and has contributed to the successful launch of several products. Luke holds a Bachelor's degree in Business Administration from the University of California, Los Angeles.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Scholar", url: "#" },
+        ],
+      },
+      {
+        id: "Nicole-Ryu",
+        name: "Nicole Ryu",
+        role: "Research Associate I",
+        image: "/about/NicoleRyu-ResearchAssociateI.jpg",
+        bio: "Nicole is a Research Associate I at Vivtex with over 5 years of experience in peptide drug development. She has supported multiple projects in peptide drug development and has contributed to the successful launch of several products. Nicole holds a Master's degree in Biology from the University of California, Los Angeles.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Scholar", url: "#" },
+        ],
+      },
+            {
+        id: "Sofia-Chehade",
+        name: "Sofia Chehade",
+        role: "Laboratory Technician",
+        image: "/about/SofiaChehade-LaboratoryTechnician.jpg",
+        bio: "Sofia is a Laboratory Technician at Vivtex with over 5 years of experience in peptide drug development. She has supported multiple projects in peptide drug development and has contributed to the successful launch of several products. Sofia holds a Bachelor's degree in Biology from the University of California, Los Angeles.",
+        socialLinks: [
+          { platform: "LinkedIn", url: "#" },
+          { platform: "Scholar", url: "#" },
+        ],
+      },
+
+      
       {
         id: "tomi-sawyer",
         name: "Tomi Sawyer",
@@ -236,7 +317,7 @@ export const aboutData: AboutData = {
     members: [],
   },
   joinMission: {
-    title: "Join Our Mission",
+    title: "Join the Vivtex family",
     description:
       "We are always looking for curious minded and bold partners to help us to shape up the future of medicine.",
     ctaText: "Contact Us",

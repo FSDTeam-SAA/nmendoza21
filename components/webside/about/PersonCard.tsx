@@ -64,7 +64,7 @@ export default function PersonCard({
     <>
       <Card
         className="group cursor-pointer overflow-hidden pt-3 pb-0 px-3 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:text-white hover:bg-primary hover:rounded-2xl"
-        onClick={() => setIsOpen(true)}
+        // onClick={() => setIsOpen(true)}
       >
         <CardContent className="p-0">
           <div className="relative aspect-square w-full overflow-hidden bg-gray-100 rounded-2xl">

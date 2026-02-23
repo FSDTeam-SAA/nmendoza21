@@ -31,6 +31,7 @@ const cardVariants: Variants = {
 const NewsAndInsights = () => {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // Published 02 Nov, 2025
 
   return (
     <>
@@ -45,7 +46,7 @@ const NewsAndInsights = () => {
             transition={{ duration: 0.8 }}
             className="text-start mb-8 md:mb-10"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-semibold lg:mb-12 mb-4 tracking-tight">
+            <h2 className="text-2xl text-[#003051] sm:text-3xl lg:text-[40px] font-semibold lg:mb-12 mb-4 tracking-tight">
               {newsPageData.title}
             </h2>
             <p className="text-gray-500 text-base sm:text-lg md:text-xl max-w-2xl mx-start leading-relaxed font-medium">
@@ -60,14 +61,51 @@ const NewsAndInsights = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="grid grid-cols-1 gap-6 sm:gap-8 md:gap-7 mx-auto mb-8"
           >
-            {newsPageData.items.slice(0, 4).map((item, index) => (
-              <React.Fragment key={item.id}>
-                {index === 1 && (
+            <React.Fragment>
+              {/*              
                   <div className="text-sm lg:text-xl font-medium text-gray-500">
                     Media Coverage
-                  </div>
-                )}
+                  </div> */}
 
+              <motion.div variants={cardVariants} className="group h-full">
+                <Link href={"/news"}>
+                  <div className="group h-full flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 bg-white rounded-none overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 group/card hover:bg-primary/70 hover:text-white!">
+                    <div className="p-4 sm:p-5 md:p-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 w-full">
+                      <div className="flex-1">
+                        <h3 className="text-base mb-1 sm:mb-2 font-medium text-secondary-foreground transition-colors line-clamp-2 leading-tight group-hover:text-white">
+                          {newsPageData.featured.title}
+                        </h3>
+                      </div>
+
+                      <div className="flex items-center sm:items-end sm:flex-col sm:text-right gap-2 sm:gap-1">
+                        <p className="text-gray-400 text-xs sm:text-sm font-bold group-hover:text-white">
+                          {newsPageData.featured.date}
+                        </p>
+                      </div>
+
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setSelectedNews(newsPageData.featured);
+                          setIsModalOpen(true);
+                        }}
+                        className="text-sm font-black hover:text-white flex items-center gap-2 group/btn sm:mt-1"
+                      >
+                        Read More
+                        <span className="group-hover:translate-x-2 transition-transform duration-300">
+                          →
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            </React.Fragment>
+            <div className="text-sm lg:text-xl font-medium text-gray-500">
+              Media Coverage
+            </div>
+            {newsPageData.items.slice(0, 2).map((item, index) => (
+              <React.Fragment key={item.id}>
                 <motion.div variants={cardVariants} className="group h-full">
                   <Link href={"/news"}>
                     <div className="group h-full flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 bg-white rounded-none overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 group/card hover:bg-primary/70 hover:text-white!">
@@ -85,7 +123,8 @@ const NewsAndInsights = () => {
                         </div>
 
                         <button
-                          onClick={() => {
+                          onClick={(e) => {
+                            e.preventDefault();
                             setSelectedNews(item);
                             setIsModalOpen(true);
                           }}
