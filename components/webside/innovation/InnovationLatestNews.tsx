@@ -30,7 +30,7 @@ const InnovationLatestNews = () => {
   return (
     <section className="pb-24">
       <div className="container mx-auto px-4">
-        <motion.h2 
+        {/* <motion.h2 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -38,7 +38,7 @@ const InnovationLatestNews = () => {
           className="text-2xl md:text-3xl font-black text-gray-900 mb-10 tracking-tight"
         >
           {latestNewsTitle}
-        </motion.h2>
+        </motion.h2> */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"

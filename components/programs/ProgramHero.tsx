@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { programsPageData } from "@/data/programs";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -46,24 +47,24 @@ const ProgramHero = () => {
           className="grid lg:grid-cols-2 gap-16 items-center"
         >
           <motion.div variants={textVariants} className="space-y-10">
-            <h1 className="text-[40px] font-semibold text-gray-900 leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-[40px] font-semibold text-[#003399] leading-[1.1] tracking-tight mb-6">
               {hero.title.split("\n").map((line, i) => (
                 <span key={i} className="block">
                   {line}
                 </span>
               ))}
             </h1>
-            <p className="text-gray-500 text-lg md:text-xl leading-relaxed font-medium max-w-xl">
+            <p className="text-gray-500 text-lg md:text-xl leading-relaxed font-medium max-w-xl text-justify">
               {hero.description}
             </p>
-            <div className="pt-6">
+            {/* <div className="pt-6">
               <Button
                 className="bg-primary text-white hover:bg-black px-12 py-8 text-xl font-bold rounded-md shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98]"
                 asChild
               >
                 <a href={hero.ctaLink}>{hero.ctaLabel}</a>
               </Button>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
@@ -71,11 +72,11 @@ const ProgramHero = () => {
             className="relative w-full aspect-square md:aspect-video lg:aspect-4/3"
           >
             <div className="absolute -inset-4 bg-primary/10  blur-3xl z-0" />
-            <video
-              src="/images/Animation 2 v1.mp4"
-              autoPlay
-              muted
-              loop
+            <Image
+              src={hero.image}
+              width={500}
+              height={500}
+              alt="Program Hero Image"
               className="w-full h-full object-cover  shadow-[0_30px_60px_rgba(0,0,0,0.1)] relative z-10"
             />
           </motion.div>
