@@ -31,7 +31,7 @@ const NewContact = () => {
 
           <Link
             className="mt-8 inline-block text-sm font-medium border-b-2 border-white hover:opacity-80 transition"
-            href="https://www.google.com/maps/place/Wagistrasse+13,+8952+Schlieren,+Switzerland/@47.399309,8.4572774,17z/data=!3m1!4b1!4m6!3m5!1s0x47900b89170b9da1:0xab3446137c738193!8m2!3d47.399309!4d8.4572774!16s%2Fg%2F11q2vw9c76?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
+            href="https://www.google.com/maps/place/Vivtex/@42.3159972,-71.0493791,17z/data=!3m1!4b1!4m6!3m5!1s0x89e3714e4b51f687:0xff4e5bd3c6f26a60!8m2!3d42.3159972!4d-71.0493791!16s%2Fg%2F11jgc1b4jc?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
           >
