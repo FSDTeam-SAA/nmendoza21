@@ -39,12 +39,12 @@ const WhatWeare = () => {
           {/* LEFT SIDE - VIDEO & TITLE */}
           <div className="lg:col-span-6 space-y-8 ">
             <motion.div variants={fadeUp} className="space-y-4">
-              <h2 className="text-[#003399] font-bold tracking-widest uppercase text-3xl md:text-4xl">
+              {/* <h2 className="text-[#003399] font-bold tracking-widest uppercase text-3xl md:text-4xl">
                 {whoWeAreData.title}
-              </h2>
+              </h2> */}
               <h3 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
-                Building the Future{" "}
-                <span className="text-gray-900">Together.</span>
+              We are changing the future of medicine together{" "}
+                {/* <span className="text-gray-900">Together.</span> */}
               </h3>
             </motion.div>
 
