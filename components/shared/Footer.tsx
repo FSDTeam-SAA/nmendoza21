@@ -3,10 +3,11 @@ import Image from "next/image";
 import { footerData } from "@/data/homepagedata";
 import { BriefcaseBusiness, Mail, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#003051] text-white py-16">
+    <footer className="bg-[#003051] text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
           {/* Invested By */}
@@ -163,6 +164,11 @@ const Footer = () => {
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div> */}
+        <div>
+          <p className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-center items-center gap-4 text-xs md:text-sm text-white/60">
+            All Content Ⓒ Vivtex Corporation 2026 | All rights reserved | <a target="_blank" href="https://vivtex.com/wp-content/uploads/2025/02/Privacy-Policy-25.pdf" className="hover:text-white transition-colors">Privacy Policy</a> 
+          </p>
+        </div>
       </div>
     </footer>
   );
