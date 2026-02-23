@@ -37,7 +37,7 @@ const imageVariants: Variants = {
 const Banner = () => {
   return (
     <div>
-      <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">
+      <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-start lg:pt-20 pt-6 overflow-hidden">
         {/* Background with smooth animation */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <motion.video
@@ -64,57 +64,21 @@ const Banner = () => {
 
         {/* Content Container */}
         <div className="container mx-auto px-4 relative z-10 py-12 md:py-0">
-          <div className="grid md:grid-cols-2 gap-8 items-center text-center md:text-left">
+          <div className="grid items-center text-center md:text-left">
             {/* Left Content */}
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="text-white space-y-8 max-w-2xl mx-auto md:mx-0"
+              className="text-white space-y-8 text-start max-w-4xl mx-auto md:mx-0"
             >
               <motion.h1
                 variants={itemVariants}
-                className="text-3xl md:text-4xl lg:text-4xl font-extrabold leading-[1.1] tracking-tight"
+                className="text-3xl md:text-4xl lg:text-[42px] font-extrabold leading-[1.1] tracking-tight uppercase whitespace-pre-line"
               >
                 {bannerData.title}
               </motion.h1>
-
-              {/* <motion.p
-                variants={itemVariants}
-                className="text-lg  text-white/90 leading-relaxed font-medium"
-              >
-                {bannerData.description}
-              </motion.p> */}
-
-              <motion.div variants={itemVariants}>
-                {/* <Button
-                  className="bg-primary text-white hover:bg-black px-10 py-8 text-xl font-bold rounded-none shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98]"
-                  asChild
-                >
-                  <a href={bannerData.buttonLink}>{bannerData.buttonText}</a>
-                </Button> */}
-              </motion.div>
             </motion.div>
-
-            {/* Right Content - Video/Image */}
-            {/* <div className="hidden lg:block w-full">
-              <motion.div
-                variants={imageVariants}
-                initial="hidden"
-                animate="visible"
-                className="relative w-full h-[500px]"
-              >
-                <div className="absolute -inset-4 bg-primary/20 rounded-[40px] blur-3xl z-0" />
-                <video
-                  src={bannerData.videourl}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="relative rounded-[40px] shadow-2xl object-cover w-full h-full border-8 border-white/5 z-10"
-                />
-              </motion.div>
-            </div> */}
           </div>
         </div>
       </section>

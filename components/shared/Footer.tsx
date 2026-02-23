@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white py-16">
+    <footer className="bg-[#003051] text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
           {/* Invested By */}

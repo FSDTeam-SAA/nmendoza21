@@ -16,7 +16,7 @@ export interface TechnologySectionData {
 
 export const technologysData: TechnologySectionData = {
   title: "Technology",
-  subtitle: "Explore our latest technologies",
+  subtitle: "Understand our processes",
   ctaLabel: "Read More ....",
   items: [
     {

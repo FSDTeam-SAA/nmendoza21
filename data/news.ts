@@ -18,7 +18,7 @@ export interface NewsPageData {
 
 export const newsPageData: NewsPageData = {
   title: "News",
-  subtitle: "Laetst Updates from our biotechnology team",
+  subtitle: "Press Releases ",
   featured: {
     id: "featured",
     title: "Robotic screening of intestinal drug absorption",

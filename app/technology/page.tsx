@@ -22,34 +22,16 @@ export const metadata: Metadata = {
 export default function TechnologyPage() {
   return (
     <main className="min-h-screen bg-white lg:pt-12 pt-5">
-      {/* CTA Section */}
-      {/* <section className=" container mx-auto my-16 py-16 bg-linear-to-r from-cyan-50 to-blue-50   border-gray-200 rounded-2xl">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Interested in our research?
-          </h2>
-          <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-            Learn more about our innovative technologies and how they&apos;re
-            advancing the future of biotechnology.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 rounded-lg bg-primary text-white font-semibold transition-colors"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </section> */}
       <Technologys />
-    
-   <TechnologyHero
+
+      <TechnologyHero
         title={technologyPageData.title}
         subtitle={technologyPageData.subtitle}
         description={technologyPageData.description}
       />
 
       {/* Technology Grid Section */}
-      <section className="my-4 " id='technology-grid'>
+      <section className="my-4 " id="technology-grid">
         <div className="container mx-auto px-4">
           <TechnologyGrid items={technologyPageData.items} />
         </div>

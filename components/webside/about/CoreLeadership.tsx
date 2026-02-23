@@ -42,14 +42,11 @@ export default function CoreLeadership({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8 md:mb-16"
+          className="text-start mb-8 md:mb-16"
         >
           <h2 className="text-[40px] font-semibold text-[#003399] mb-3 tracking-tight">
             {title}
           </h2>
-          <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
-            {subtitle}
-          </p>
         </motion.div>
 
         <motion.div 

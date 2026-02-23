@@ -27,13 +27,6 @@ export default function AboutPage() {
         subtitle={aboutData.boardOfDirectors.subtitle}
         members={aboutData.boardOfDirectors.members}
       />
-
-      <ScientificAdvisors
-        title={aboutData.scientificAdvisors.title}
-        subtitle={aboutData.scientificAdvisors.subtitle}
-        members={aboutData.scientificAdvisors.members}
-      />
-
       <JoinMission
         title={aboutData.joinMission.title}
         description={aboutData.joinMission.description}
