@@ -34,7 +34,7 @@ const NewsAndInsights = () => {
 
   return (
     <>
-      <section className="my-12 md:my-18  relative overflow-hidden">
+      <section className="my-12 md:my-18  relative overflow-hidden bg-gray-200 container mx-auto lg:p-5 rounded-3xls" >
         {/* Subtle texture or decoration if needed, keeping it clean for now */}
 
         <div className="container mx-auto px-4 relative z-10">
