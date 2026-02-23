@@ -74,13 +74,13 @@ export const aboutData: AboutData = {
     },
   ],
   coreLeadership: {
-    title: "Core Leadership",
+    title: "Vivtex Team",
     subtitle: "World-class experts leading the charge in biotechnology",
     members: [
       {
         id: "thomas-von-erlach",
         name: "Thomas von Erlach",
-        role: "Chief Executive Officer",
+        role: "Chief Executive Officer & Co-founder",
         image: "/images/ThomasvonErlach-ChiefExecutiveOfficer.jpg",
         bio: "Thomas has been the Chief Executive Officer of Vivtex since 2026. Previously, Thomas served as the Chief Scientific Officer of Vivtex where he has been leading and building the Vivtex Technology from an initial concept to a platform that created clinical stage drug products. Thomas brings over a decade of leadership in the field of oral drug delivery with strong expertise in pharma co-development partnerships. Previously, he led an interdisciplinary team in the Laboratory of Prof. Robert Langer and Prof. Giovanni Traverso at MIT as a Postdoctoral Research Fellow. He obtained a PhD from Imperial College London in Bioengineering and BSc and MSc in Biochemistry and Biotechnology from ETH in Switzerland where we graduated receiving the Willi-Studer award for academic excellence.",
         socialLinks: [

@@ -57,25 +57,15 @@ const Technologys = () => {
                 className={`relative ${mediaOrderClass}`}
               >
                 <div className="relative w-full aspect-[5/4] md:aspect-[4/3] lg:aspect-[3/2] overflow-hidden rounded-4xl">
-                  <Image
+                  <video
                     src={item.mediaSrc}
-                    alt={item.mediaAlt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                    className="object-cover"
-                    priority={index === 0}
+                    className="object-cover absolute inset-0 w-full h-full"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                   />
                 </div>
-
-                <motion.h3
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                  className="absolute top-6 left-10 text-[#003399] text-2xl font-medium"
-                >
-                  {item.label}
-                </motion.h3>
               </motion.div>
 
               <motion.div

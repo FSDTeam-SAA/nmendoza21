@@ -21,12 +21,7 @@ export const metadata: Metadata = {
 
 export default function TechnologyPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <TechnologysHero />
-      {/* Hero Section */}
-   
-
-
+    <main className="min-h-screen bg-white lg:pt-12 pt-5">
       {/* CTA Section */}
       {/* <section className=" container mx-auto my-16 py-16 bg-linear-to-r from-cyan-50 to-blue-50   border-gray-200 rounded-2xl">
         <div className="container mx-auto px-4 text-center">

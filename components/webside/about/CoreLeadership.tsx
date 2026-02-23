@@ -1,7 +1,6 @@
 'use client';
 import type { TeamMember } from "@/data/about";
 import PersonCard from "./PersonCard";
-import InViewAnimationWrapper from "@/components/shared/InViewAnimationWrapper";
 
 interface CoreLeadershipProps {
   title: string;
@@ -62,7 +61,7 @@ export default function CoreLeadership({
         >
           {members.map((member, index) => (
             <motion.div
-              key={member.id}
+              key={index}
               variants={cardVariants}
             >
               <PersonCard member={member} highlight={index === 1} />
