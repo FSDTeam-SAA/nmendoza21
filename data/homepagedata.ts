@@ -1,5 +1,5 @@
 export const bannerData = {
-  title: "Create New Oarl Therapeutics through Technological Innovation",
+  title: "Push medical boundaries through technological innovation",
   description:
     "Vivtex's proprietary platform enables for the first time the use of intact gastrointestinal tract tissue for fully automated robotic testing. We use this technology to enable the development of new drugs that can be given orally instead of painful and inconvenient needle injections.",
   buttonText: "Learn More",

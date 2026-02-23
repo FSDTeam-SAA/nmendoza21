@@ -38,9 +38,9 @@ const Navbar = () => {
             >
               <Image
                 className="object-cover w-full h-full"
-                src={"/images/logo.svg"}
+                src={"/images/logo.png"}
                 alt="Logo"
-                width={100}
+                width={150}
                 height={100}
               />
             </Link>
