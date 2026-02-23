@@ -40,11 +40,11 @@ export default function TechnologyHero({
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-center"
+          className="text-start"
         >
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-black text-[#003399] tracking-tighter"
+            className="text-4xl md:text-6xl font-black text-[#003152] tracking-tighter"
           >
             {title}
           </motion.h1>

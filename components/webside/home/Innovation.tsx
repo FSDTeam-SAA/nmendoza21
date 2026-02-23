@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+// import CustomImage from "@/components/shared/CustomImage";
 import { Button } from "@/components/ui/button";
 import { innovationData } from "@/data/homepagedata";
 import { innovationPageData } from "@/data/innovation";
@@ -9,6 +9,7 @@ import InnovationLatestModal from "@/components/webside/innovation/InnovationLat
 
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import CustomImage from "@/components/shared/CustomImage";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -68,7 +69,7 @@ const Innovation = () => {
                 <Link href={`/innovation`}>
                   <div className="cursor-pointer h-full flex flex-col rounded-3xl transition-all duration-500   border border-transparent hover:border-gray-100 group/card">
                     <div className="relative aspect-square  overflow-hidden rounded-2xl shadow-sm ">
-                      <Image
+                      <CustomImage
                         src={item.image}
                         alt={item.title}
                         fill

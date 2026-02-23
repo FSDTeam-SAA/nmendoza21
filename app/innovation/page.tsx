@@ -5,6 +5,7 @@ import { Check } from "lucide-react";
 import { innovationPageData } from "@/data/innovation";
 import InnovationLatestNews from "@/components/webside/innovation/InnovationLatestNews";
 import { motion, Variants } from "framer-motion";
+import Upcomming from "@/components/webside/innovation/Upcomming";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -54,10 +55,10 @@ export default function InnovationPage() {
 
       {/* Latest News */}
       <InnovationLatestNews />
-
+      <Upcomming />
 
       {/* Featured */}
-      <section className="py-12">
+      {/* <section className="py-12">
         <div className="container mx-auto px-4">
           <motion.div
             variants={containerVariants}
@@ -141,25 +142,32 @@ export default function InnovationPage() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Community */}
       <section className="pb-32 pt-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl"
+            className=" gap-10 grid grid-cols-2"
           >
+            <div>
+
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
               {community.title}
             </h2>
-            <p className="text-gray-500 text-lg md:text-xl mb-10 font-medium leading-relaxed">
-              {community.description}
+            <p className="text-gray-500 text-lg md:text-xl mb-10 font-medium leading-relaxed text-justify">
+              Stay connected to the forefront of biotechnology innovation
+              through our curated webinars and expert-led podcasts. This section
+              brings together thought leaders, researchers, clinicians, and
+              industry pioneers to explore the science shaping the future of
+              healthcare, therapeutics, diagnostics, and life sciences.
             </p>
-            <motion.ul
+            </div>
+            {/* <motion.ul
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -178,7 +186,27 @@ export default function InnovationPage() {
                   {item}
                 </motion.li>
               ))}
-            </motion.ul>
+            </motion.ul> */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-primary rounded-[2rem] p-10 text-white shadow-[0_20px_50px_rgba(var(--primary-rgb),0.2)] flex flex-col justify-between"
+            >
+              <div className="">
+
+                <span className="text-lg font-black uppercase tracking-[0.1em] text-white/60 ">
+                Upcoming Webinars:
+                </span>
+                {/* <h3 className="text-lg md:text-xl font-black mt-6 tracking-tight leading-tight">
+                  {feature.upcoming.date}
+                </h3> */}
+                {/* <h3 className="text-lg md:text-sm font-black   mt-2  tracking-tight leading-tight">
+                  {feature.upcoming.place}
+                </h3> */}
+                <p className="text-white/80 text-3xl leading-relaxed mt-6 font-semibold">
+                 Advances and challenges towards enabling oral administration of peptide therapeutics.
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

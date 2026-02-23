@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+import CustomImage from "@/components/shared/CustomImage";
+// import CustomImage from "@/components/shared/CustomImage";
 import {
   Dialog,
   DialogContent,
@@ -54,7 +55,7 @@ const InnovationLatestModal = ({
               variants={itemVariants}
               className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white/10 shadow-lg"
             >
-              <Image
+              <CustomImage
                 src={item.image}
                 alt={item.title}
                 fill

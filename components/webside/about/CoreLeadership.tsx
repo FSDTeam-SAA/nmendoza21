@@ -54,7 +54,7 @@ export default function CoreLeadership({
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mx-auto max-w-7xl"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mx-auto "
         >
           {members.map((member, index) => (
             <motion.div

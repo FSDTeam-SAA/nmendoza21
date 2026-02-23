@@ -1,5 +1,5 @@
 export const bannerData = {
-  title: "Push medical boundaries \n through technological innovation",
+  title: "Overcome  medical boundaries \n through technological innovation",
   description:
     "Vivtex's proprietary platform enables for the first time the use of intact gastrointestinal tract tissue for fully automated robotic testing. We use this technology to enable the development of new drugs that can be given orally instead of painful and inconvenient needle injections.",
   buttonText: "Learn More",
@@ -16,8 +16,8 @@ export const whatWeDoData = {
       id: 1,
       title: "Technology",
       description:
-        "Explore how our platform is using gastrointestinal tracts from animals and humans combined with cutting edge technologies to find ways how to trick the body to absorb drugs orally.",
-      image: "/images/Technology.jpg",
+        "Discover how our platform combines animal and human gastrointestinal tissues with cutting-edge technologies to uncover new ways to enable oral drug absorption.",
+      image: "/Technology.jpg",
       buttonText: "Explore",
       buttonLink: "/technology",
     },
@@ -178,7 +178,7 @@ export const footerData = {
     ],
   },
   newsCoverage: {
-    title: "News Coverage",
+    title: "As seen in:",
     logos: [
       { name: "EuroNews", image: "/images/eurekalert.svg" },
       { name: "CNN", image: "/images/nih.svg" },

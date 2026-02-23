@@ -11,15 +11,15 @@ export default function NewsPage() {
   return (
     <main className="min-h-screen bg-[#f8f6f2]">
       {/* Hero */}
-      <section className="pt-14 pb-10 text-center">
+      <section className="pt-14 pb-10 text-start">
         <InViewAnimationWrapper animation="slideInUp" duration={800}>
           <div className="container mx-auto px-4">
-            <h1 className="text-2xl md:text-4xl font-bold text-gray-900">
-              {title}
+            <h1 className="text-2xl md:text-5xl font-bold text-primary">
+              Press Releases
             </h1>
-            <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
+            {/* <p className="text-gray-500 text-lg md:text-xl max-w-2xl  leading-relaxed font-medium">
               {subtitle}
-            </p>
+            </p> */}
           </div>
         </InViewAnimationWrapper>
       </section>
@@ -27,6 +27,18 @@ export default function NewsPage() {
       {/* Featured */}
       <NewsHero />
 
+      <section className=" text-start">
+        <InViewAnimationWrapper animation="slideInUp" duration={800}>
+          <div className="container mx-auto px-4">
+            <h1 className="text-2xl md:text-5xl font-bold text-primary">
+              Media Coverage
+            </h1>
+            {/* <p className="text-gray-500 text-lg md:text-xl max-w-2xl  leading-relaxed font-medium">
+                  {subtitle}
+                </p> */}
+          </div>
+        </InViewAnimationWrapper>
+      </section>
       <NewsCards />
     </main>
   );
