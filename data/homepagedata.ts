@@ -40,7 +40,7 @@ export const whoWeAreData = {
   teamWork: {
     title: "Team Work",
     description:
-      "We are always looking for passionate, driven individuals who are eager to learn, grow, and make an impact.",
+      "True innovation in healthcare isn’t just creating powerful therapies — it’s giving patientsthe power to choose how they heal.",
     points: [
       { image: "/about/co-founder.jpg" },
       { image: "/about/co-founder2.jpg" },
