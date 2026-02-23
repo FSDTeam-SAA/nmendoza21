@@ -56,7 +56,7 @@ export const innovationPageData: InnovationPageData = {
     featured: {
       label: "Featured Newsletter",
       date: "Published 24 Nov, 2025",
-      title: "Robotic screening of intestinal drug absorption",
+      title: "Scientific Conferences",
       description:
         "Our technology is built on advanced biotechnology research and data-driven innovation. We use cutting-edge laboratory methods, automation, and analytical tools to deliver accurate, scalable, and reliable solutions. Every process is designed to meet global quality standards while ensuring precision, safety, and consistency across all services.",
       shortDescription:

@@ -48,7 +48,7 @@ const InnovationLatestNews = () => {
         >
           {latestNews.map((item, index) => (
             <motion.div
-              key={item.id}
+              key={index}
               variants={cardVariants}
               className="group h-full"
             >

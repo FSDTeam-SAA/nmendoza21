@@ -56,7 +56,7 @@ export const newsPageData: NewsPageData = {
         "Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning",
       description:
         "Shi, Y., Reker, D., Byrne, J.D. et al. Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning. Nat. Biomed. Eng 8, 278–290 (2024).",
-      image: "/images/Vivtex-15.jpg",
+      image: "/images/Vivtex-12.jpg",
       date: "Published 24 Nov, 2024",
       linkLabel: "View Full News",
       link: "https://vivtex.com/wp-content/uploads/2024/05/Screening-oral-drugs-for-their-interactions.pdf",
@@ -71,7 +71,7 @@ export const newsPageData: NewsPageData = {
         "Robotically handled whole-tissue culture system for the screening of oral drug formulations",
       description:
         "von Erlach, T., Saxton, S., Shi, Y. et al. Robotically handled whole-tissue culture system for the screening of oral drug formulations. Nat Biomed Eng 4, 544–559 (2020).",
-      image: "/images/Vivtex-12.jpg",
+      image: "/images/Robotically.jpg",
       date: "Published 24 Nov, 2020",
       linkLabel: "View Full News",
       link: "https://vivtex.com/wp-content/uploads/2024/05/Robotically-handled-whole-tissue-culture-system.pdf",

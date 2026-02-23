@@ -95,7 +95,7 @@ const InnovationLatestModal = ({
                   <motion.p
                     key={`${item.id}-content-${index}`}
                     variants={itemVariants}
-                    className="text-lg leading-relaxed text-white/80"
+                    className="text-lg leading-relaxed text-white/80 whitespace-pre-line"
                   >
                     {paragraph}
                   </motion.p>
