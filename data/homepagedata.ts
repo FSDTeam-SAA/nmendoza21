@@ -16,7 +16,7 @@ export const whatWeDoData = {
       id: 1,
       title: "Technology",
       description:
-        "Our platform leverages modern, secure, and scalable technologies to ensure performance, reliability, and seamless user experience.",
+        "Explore how our platform is using gastrointestinal tracts from animals and humans combined with cutting edge technologies to find ways how to trick the body to absorb drugs orally.",
       image: "/images/Technology.jpg",
       buttonText: "Explore",
       buttonLink: "/technology",
@@ -25,8 +25,8 @@ export const whatWeDoData = {
       id: 2,
       title: "Programs",
       description:
-        "Our programs are designed to deliver practical value, measurable results, and long-term growth for your organization.",
-      image: "/images/Vivtex-16.jpg",
+        "From technology to new future oral medicine – see Vivtex’s effort to translate technological innovation into patient wellbeing",
+      image: "/images/Vivtex-19.jpg",
       buttonText: "Explore",
       buttonLink: "/programs",
     },
