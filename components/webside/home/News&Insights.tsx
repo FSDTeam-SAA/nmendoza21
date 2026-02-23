@@ -34,7 +34,7 @@ const NewsAndInsights = () => {
 
   return (
     <>
-      <section className="my-12 md:my-18  relative overflow-hidden bg-gray-200 container mx-auto lg:p-5 rounded-3xls" >
+      <section className="my-12 md:my-18  relative overflow-hidden bg-gray-200 container mx-auto lg:p-5 rounded-3xls">
         {/* Subtle texture or decoration if needed, keeping it clean for now */}
 
         <div className="container mx-auto px-4 relative z-10">
@@ -66,8 +66,8 @@ const NewsAndInsights = () => {
                 variants={cardVariants}
                 className="group h-full"
               >
-                <Link href={"/news"}>
-                  <div className="group h-full flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 bg-white rounded-none overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 group/card">
+                <Link href={"/news"} className="">
+                  <div className="group h-full flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 bg-white rounded-none overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 group/card hover:bg-primary/70 hover:text-white!">
                     {/* <div className="relative aspect-video overflow-hidden">
                     <Image
                       src={item.image}
@@ -82,12 +82,12 @@ const NewsAndInsights = () => {
                         {/* <p className="text-primary text-xs md:text-sm font-black uppercase tracking-[0.2em] mb-3">
                         Research & Insights
                       </p> */}
-                        <h3 className="text-base  mb-1 sm:mb-2 font-medium text-secondary-foreground transition-colors line-clamp-2 leading-tight">
+                        <h3 className="text-base  mb-1 sm:mb-2 font-medium text-secondary-foreground transition-colors line-clamp-2 leading-tight group-hover:text-white">
                           {item.title}
                         </h3>
                       </div>
                       <div className="flex items-center sm:items-end sm:flex-col sm:text-right gap-2 sm:gap-1">
-                        <p className="text-gray-400 text-xs sm:text-sm font-bold">
+                        <p className="text-gray-400 text-xs sm:text-sm font-bold group-hover:text-white">
                           {item.date}
                         </p>
                         {/* <button
@@ -106,7 +106,7 @@ const NewsAndInsights = () => {
                           setSelectedNews(item);
                           setIsModalOpen(true);
                         }}
-                        className="text-sm font-black hover:text-primary transition-colors flex items-center gap-2 group/btn sm:mt-1"
+                        className="text-sm font-black hover:text-white flex items-center gap-2 group/btn sm:mt-1"
                       >
                         Read More
                         <span className="group-hover:translate-x-2 transition-transform duration-300">

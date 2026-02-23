@@ -187,9 +187,8 @@ export const footerData = {
   },
   getInTouch: {
     title: "Get In Touch",
-    address: "23 Cambridge Park Drive, Suite 125",
-    city: "Cambridge, MA 02140",
-    email: "info@example.com",
-    phone: "+1 (617) 555-0100",
+    address: "135 William T Morrissey Blvd, Suite P101, Boston, MA 02125",
+    city: "Wagistrasse 13, Schlieren 8952, Switzerland",
+    email: "info@vivtex.com",
   },
 };

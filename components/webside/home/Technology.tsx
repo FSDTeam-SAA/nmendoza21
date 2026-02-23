@@ -139,15 +139,6 @@ const Technology = () => {
                         <p className="text-gray-300 text-xs md:text-sm font-medium mb-3 md:mb-4">
                           {item.date}
                         </p>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setIsSubscribeModalOpen(true);
-                          }}
-                          className="text-white text-xs md:text-sm bg-primary px-3 py-2 font-bold hover:bg-primary/90 transition-all"
-                        >
-                          Subscribe Us
-                        </button>
                       </div>
                     </div>
                   </div>
