@@ -18,7 +18,7 @@ const rightVariant = {
 const Technologys = () => {
   return (
     <div className="container mx-auto ">
-      <div>
+      {/* <div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,57 +29,86 @@ const Technologys = () => {
           <h2 className="text-4xl md:text-6xl font-semibold text-[#003152] tracking-tight">
             {technologysData.title}
           </h2>
-          {/* <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
             {technologysData.subtitle}
-          </p> */}
+          </p>
         </motion.div>
-      </div>
+      </div> */}
 
-      <div className="grid grid-cols-1 gap-6">
+      {/* Technology items with image-text layout */}
+      <div className="space-y-20 md:space-y-32">
         {technologysData.items.map((item, index) => {
-          const isEven = index % 2 === 0;
-          const mediaVariant = isEven ? leftVariant : rightVariant;
-          const textVariant = isEven ? rightVariant : leftVariant;
-          const mediaOrderClass = isEven ? "" : "md:order-2";
-          const textOrderClass = isEven ? "bg-[#ced6d8] p-16" : "md:order-1 bg-[#ced6d8] p-16";
-
           return (
             <div
               key={item.id}
-              className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center"
+              className="flex flex-col md:flex-row items-stretch gap-0"
             >
+              {/* Left side - Image/Video with thick border */}
               <motion.div
-                variants={mediaVariant}
+                variants={leftVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className={`relative ${mediaOrderClass}`}
+                className="w-full md:w-[45%] relative"
               >
-                <div className="relative w-full aspect-5/4 md:aspect-4/3 lg:aspect-3/2 overflow-hidden rounded-4xl">
-                  <video
-                    src={item.mediaSrc}
-                    className="object-cover absolute inset-0 w-full h-full"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                  />
+                <div className="relative w-full h-full min-h-[400px] md:min-h-[500px]">
+                  {/* Navy blue shadow/border background */}
+                  <div className="absolute inset-0 -right-3 top-5 w-full aspect-video bg-[#003152] z-0"></div>
+
+                  {/* Main image container */}
+                  {item.image ? (
+                    <div className="relative w-[98%] h-full overflow-hidden z-10">
+                      <Image
+                        src={item.image}
+                        alt={item.mediaAlt}
+                        className="object-cover w-full aspect-video"
+                        width={800}
+                        height={450}
+                      />
+                    </div>
+                  ) : (
+                    <div className="relative w-[98%] h-full  overflow-hidden z-10">
+                      <video
+                        src={item.mediaSrc}
+                        className="object-cover w-full aspect-video"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      />
+                    </div>
+                  )}
                 </div>
               </motion.div>
 
+              {/* Vertical line separator */}
+              <div className="hidden md:flex flex-col items-center justify-center w-10 ">
+                {/* <div className="h-[2px] w-full bg-[#003152]" /> */}
+                <div className="w-[3px] h-4/5 bg-[#003152] ml-20 mb-18" />
+              </div>
+
+              {/* Right side - Text content */}
               <motion.div
-                variants={textVariant}
+                variants={rightVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-                className={textOrderClass}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                className="flex-1  flex items-center px-6 md:px-0 mt-10 py-8 md:py-12"
               >
-                <h2 className="text-3xl font-medium mb-3 text-[#003399]">{item.heading}</h2>
-                <p className="text-black text-base md:text-xl leading-relaxed font-normal text-justify">
-                  {item.description}
-                </p>
+                <div className="space-y-5">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#003152] leading-snug ml-16 -mt-20">
+                    {item.heading}
+                  </h2>
+                  <p className="text-gray-800 text-base md:text-lg lg:text-xl leading-relaxed font-light ml-16">
+                    {item.description}
+                  </p>
+
+                  <div className="   top-0 justify-center inset-0 flex items-center border-t-1 border-[#003152]">
+                    <div className="h-[2px] w-full bg-[#003152]" />
+                  </div>
+                </div>
               </motion.div>
             </div>
           );

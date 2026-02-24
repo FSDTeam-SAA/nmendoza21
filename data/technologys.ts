@@ -3,8 +3,9 @@ export interface TechnologySectionItem {
   label: string;
   heading: string;
   description: string;
-  mediaSrc: string;
+  mediaSrc?: string;
   mediaAlt: string;
+  image?: string;
 }
 
 export interface TechnologySectionData {
@@ -22,10 +23,11 @@ export const technologysData: TechnologySectionData = {
     {
       id: "tech-gi-models",
       label: "GI Models",
-      heading: "Embrace nature’s complexity",
+      heading: "Embrace Nature's Complexity",
       description:
         "We capture the biological complexity of the Gastrointestinal tract by using a new robotic organ interfacing technology (GI-ORIS) that enables us to rapidly interrogate the GI tract in the lab on an organ level based on fully automated high throughput screening experiments.",
-      mediaSrc: "/animations/Animation2.mp4",
+      // mediaSrc: "/animations/Animation2.mp4",
+      image:'/gemini-2.5-flash-image_I_want_a_picture_of_the_gastrointestinal_track_at_a_microscopical_level-2.jpg',    
       mediaAlt: "GI models technology",
     },
     {
@@ -34,7 +36,8 @@ export const technologysData: TechnologySectionData = {
       heading: "Explore Chemical Diversity",
       description:
         "By high throughput testing, we can systematically identify a wide range of chemicals and combinations to discover unique interactions enabling drugs to overcome the GI barriers.",
-      mediaSrc: "/animations/Animation3.mp4",
+      // mediaSrc: "/animations/Animation3.mp4",
+      image:'/Pippeting.png',
       mediaAlt: "Excipient Library",
     },
     {
@@ -49,10 +52,11 @@ export const technologysData: TechnologySectionData = {
     {
       id: "tech-tissue-change",
       label: "Tissue Change",
-      heading: "Create Next generation oral therapeutics",
+      heading: "Create Next Generation Oral Therapeutics",
       description:
         "We use our platform to ultimately create oral products that capture all the technology into a simple pill or tablets with convenient dosing requirements.",
-      mediaSrc: "/animations/Animation4.mp4",
+      // mediaSrc: "/animations/Animation4.mp4",
+      image:'/pill.jpg',
       mediaAlt: "Tissue change technology",
     },
   ],

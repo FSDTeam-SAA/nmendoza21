@@ -80,21 +80,21 @@ export const newsPageData: NewsPageData = {
         "Monolayers of cancer-derived cell lines are widely used in the modelling of the gastrointestinal (GI) absorption of drugs and in oral drug development. However, they do not generally predict drug absorption in vivo. Here, we report a robotically handled system that uses large porcine GI tissue explants that are functionally maintained for an extended period in culture for the high-throughput interrogation (several thousand samples per day) of whole segments of the GI tract. The automated culture system provided higher predictability of drug absorption in the human GI tract than a Caco-2 Transwell system (Spearman’s correlation coefficients of 0.906 and 0.302, respectively). By using the culture system to analyse the intestinal absorption of 2,930 formulations of the peptide drug oxytocin, we discovered an absorption enhancer that resulted in a 11.3-fold increase in the oral bioavailability of oxytocin in pigs in the absence of cellular disruption of the intestinal tissue. The robotically handled whole-tissue culture system should help advance the development of oral drug formulations and might also be useful for drug screening applications.",
       ],
     },
-    // {
-    //   id: "news-3",
-    //   title: "Robotic Screening Of Intestinal Drug Absorption",
-    //   description:
-    //     "Basit, A.W., Madla, C.M. & Gavins, F.K.H. Robotic screening of intestinal drug absorption. Nat Biomed Eng 4, 485–486 (2020).",
-    //   image: "/images/Vivtex-18.jpg",
-    //   date: "Published 24 Nov, 2020",
-    //   linkLabel: "View Full News",
-    //   link: "https://vivtex.com/wp-content/uploads/2024/05/Robotic-screening-of-intestinal-drug-absorption.pdf",
-    //   content: [
-    //     "A robotic culture system for the high-throughput analysis of drug transport in porcine gastrointestinal tissue explants accurately predicts the absorption of orally taken drugs in the human gut.",
-    //     "We deliver reliable, compliant, and future-ready solutions that empower innovation across the life sciences industry. Our platform is engineered to ensure precision, safety, and consistency across all services and workflows. By incorporating validated processes and automated data validation, we minimize manual errors and improve overall confidence in the results. The system supports rapid reporting and helps teams document critical decisions with clear evidence trails.",
-    //     "The result is a scalable, high-performance screening approach that accelerates lead selection and reduces downstream risk. Teams benefit from faster turnaround, improved insight into mechanism and transport, and a consistent framework for decision-making. This ensures that early-stage research is aligned with real-world performance expectations and that the strongest candidates are advanced with confidence.",
-    //   ],
-    // },
+    {
+      id: "news-3",
+      title: "Robotic Screening Of Intestinal Drug Absorption",
+      description:
+        "Basit, A.W., Madla, C.M. & Gavins, F.K.H. Robotic screening of intestinal drug absorption. Nat Biomed Eng 4, 485–486 (2020).",
+      image: "/images/Vivtex-18.jpg",
+      date: "Published 24 Nov, 2020",
+      linkLabel: "View Full News",
+      link: "https://vivtex.com/wp-content/uploads/2024/05/Robotic-screening-of-intestinal-drug-absorption.pdf",
+      content: [
+        "A robotic culture system for the high-throughput analysis of drug transport in porcine gastrointestinal tissue explants accurately predicts the absorption of orally taken drugs in the human gut.",
+        "We deliver reliable, compliant, and future-ready solutions that empower innovation across the life sciences industry. Our platform is engineered to ensure precision, safety, and consistency across all services and workflows. By incorporating validated processes and automated data validation, we minimize manual errors and improve overall confidence in the results. The system supports rapid reporting and helps teams document critical decisions with clear evidence trails.",
+        "The result is a scalable, high-performance screening approach that accelerates lead selection and reduces downstream risk. Teams benefit from faster turnaround, improved insight into mechanism and transport, and a consistent framework for decision-making. This ensures that early-stage research is aligned with real-world performance expectations and that the strongest candidates are advanced with confidence.",
+      ],
+    },
     // {
     //   id: "news-4",
     //   title: "Precision Analytics For Drug Discovery",

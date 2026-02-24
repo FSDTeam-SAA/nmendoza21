@@ -81,7 +81,7 @@ export const aboutData: AboutData = {
         id: "thomas-von-erlach",
         name: "Thomas von Erlach",
         role: "Chief Executive Officer & Co-founder",
-        image: "/images/ThomasvonErlach-ChiefExecutiveOfficer.jpg",
+        image: "/about/ThomasvonErlach-ChiefExecutiveOfficer.png",
         bio: "Thomas has been the Chief Executive Officer of Vivtex since 2026. Previously, Thomas served as the Chief Scientific Officer of Vivtex where he has been leading and building the Vivtex Technology from an initial concept to a platform that created clinical stage drug products. Thomas brings over a decade of leadership in the field of oral drug delivery with strong expertise in pharma co-development partnerships. Previously, he led an interdisciplinary team in the Laboratory of Prof. Robert Langer and Prof. Giovanni Traverso at MIT as a Postdoctoral Research Fellow. He obtained a PhD from Imperial College London in Bioengineering and BSc and MSc in Biochemistry and Biotechnology from ETH in Switzerland where we graduated receiving the Willi-Studer award for academic excellence.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
@@ -89,21 +89,22 @@ export const aboutData: AboutData = {
         ],
       },
       {
-        id: "lena-fischer",
-        name: "Lena FischerSenior",
-        role: "Vice President of Finance & Operations",
-        image: "/images/LenaFischer-SVPFinance&Operations.jpg",
-        bio: "Lena is a seasoned finance leader with a passion for science and operational excellence. She has more than 15 years of deep expertise in big pharma and biotech operations, with a proven ability to build and scale biotech companies while developing strong, trusted networks across the industry.Her experience spans managing complex, global, and cross-functional organizations, partnering effectively with executive teams, boards, venture capital firms, auditors, and financial institutions. Before joining Vivtex, Lena was VP of Finance & Operations at AIRNA, an emerging RNA editing company. Prior to that, she was instrumental in setting up and managing finance & operations for a number of biotech companies. ",
+        id: "Annie-Khalid",
+        name: "Annie Khalid",
+        role: "Scientist",
+        image: "/images/AnnieKhalid-Scientist.jpg",
+        bio: "Annie is a leading expert in peptide therapeutics with over 5 years of experience in drug discovery and development. She has worked in both academia and industry, contributing to the development of several peptide-based therapeutics. Annie holds a Ph.D. in Biochemistry from the University of California, San Francisco, and has published over 100 peer-reviewed articles.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
-          { platform: "Twitter", url: "#" },
+          { platform: "Scholar", url: "#" },
         ],
       },
-            {
+
+      {
         id: "xavier-garrabou",
         name: "Emilie Frugier",
         role: "Head of IP",
-        image: "/images/EmilieFrugier-HeadofIP.jpg",
+        image: "/about/EmilieFrugier-HeadofIP.png",
         bio: "Emilie is a seasoned intellectual property professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Emilie has been instrumental in setting up and managing IP for a number of biotech companies.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
@@ -122,11 +123,11 @@ export const aboutData: AboutData = {
         ],
       },
 
-{
+      {
         id: "NMendoza",
         name: "Nicole Mendoza",
         role: "Finance & Operations Manager",
-        image: "/about/NicoleMendoza-Finance&Operations Manager.png",
+        image: "/about/NicoleMendoza-Finance&OperationsManager.png",
         bio: "Nicole is a seasoned finance and operations professional with deep expertise in biotech and pharmaceutical operations. She has more than 15 years of experience in managing complex, global, and cross-functional organizations. Nicole has been instrumental in setting up and managing finance & operations for a number of biotech companies.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
@@ -137,7 +138,7 @@ export const aboutData: AboutData = {
         id: "xavier-garrabou",
         name: "Daniil Olsen",
         role: "Laboratory Technician",
-        image: "/images/DaniilOlsen-LaboratoryTechnician.jpg",
+        image: "/about/DaniilOlsen-LaboratoryTechnician.png",
         bio: "Daniil is a skilled laboratory technician with deep expertise in biotech and pharmaceutical operations. He has more than 15 years of experience in managing complex, global, and cross-functional organizations. Daniil has been instrumental in setting up and managing laboratory operations for a number of biotech companies.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
@@ -148,7 +149,7 @@ export const aboutData: AboutData = {
       {
         id: "per-larsson",
         name: "Per Larsson",
-        role: "Head of Computational Science",
+        role: "VP of Computational Science",
         image: "/about/per-larsson.jpg",
         bio: "Per Larsson has been working with modeling and simulation, as well as machine learning and AI methods, to understand the behavior of orally administered drugs for several years. In particular, his work has focused on how to make the design of oral peptide formulations more knowledge-based and how to best interface computational methods with experimental studies for drug delivery.",
         socialLinks: [{ platform: "LinkedIn", url: "#" }],
@@ -158,19 +159,19 @@ export const aboutData: AboutData = {
         id: "james-wright",
         name: "James Wright",
         role: "SVP of Drug Development",
-        image: "/about/scientificadvisor.jpg",
+        image: "/about/Jim Wright-SVPofDrugDevelopment.png",
         bio: "Dr. Wright joined Vivtex in 2018 as a core member of the Vivtex Executive Management Team and Senior Scientific Advisor. Prior to that he held various executive and leadership positions in pharma and biotech companies, including Vice President of Development at Infinity Pharmaceuticals, Inc., Vice President of Pharmaceutical Development at Millennium Pharmaceuticals and Senior Vice President of Development at Alkermes plc. In addition, he was a Distinguished Scientist at Boehringer Ingelheim Pharmaceuticals. Furthermore, Dr Wright was co-Founder and Chairman of the Scientific & Clinical Advisory Board of the drug delivery company Civitas Therapeutics that was sold for $525 million in 2014. He received his Ph.D. in Pharmacy from the University of Wisconsin and B.A. and degrees in Biology and Chemistry from the University of California, Santa Barbara.",
         socialLinks: [{ platform: "LinkedIn", url: "#" }],
       },
       {
-        id: "Annie-Khalid",
-        name: "Annie Khalid",
-        role: "Scientist",
-        image: "/images/AnnieKhalid-Scientist.jpg",
-        bio: "Annie is a leading expert in peptide therapeutics with over 5 years of experience in drug discovery and development. She has worked in both academia and industry, contributing to the development of several peptide-based therapeutics. Annie holds a Ph.D. in Biochemistry from the University of California, San Francisco, and has published over 100 peer-reviewed articles.",
+        id: "lena-fischer",
+        name: "Lena Fischer",
+        role: "SVP Finance & Operations",
+        image: "/images/LenaFischer-SVPFinance&Operations.jpg",
+        bio: "Lena is a seasoned finance leader with a passion for science and operational excellence. She has more than 15 years of deep expertise in big pharma and biotech operations, with a proven ability to build and scale biotech companies while developing strong, trusted networks across the industry.Her experience spans managing complex, global, and cross-functional organizations, partnering effectively with executive teams, boards, venture capital firms, auditors, and financial institutions. Before joining Vivtex, Lena was VP of Finance & Operations at AIRNA, an emerging RNA editing company. Prior to that, she was instrumental in setting up and managing finance & operations for a number of biotech companies. ",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
-          { platform: "Scholar", url: "#" },
+          { platform: "Twitter", url: "#" },
         ],
       },
       {
@@ -198,7 +199,7 @@ export const aboutData: AboutData = {
       {
         id: "Marvin-Naing",
         name: "Marvin Naing",
-        role: "Scientist I",
+        role: "Scientist",
         image: "/about/MarvinNaing-ScientistI.jpg",
         bio: "Marvin is a Scientist I at Vivtex with over 5 years of experience in peptide drug development. He has supported multiple projects in peptide drug development and has contributed to the successful launch of several products. Marvin holds a Master's degree in Chemistry from the University of California, Los Angeles.",
         socialLinks: [
@@ -206,7 +207,7 @@ export const aboutData: AboutData = {
           { platform: "Scholar", url: "#" },
         ],
       },
-          {
+      {
         id: "Meredith-Veldran",
         name: "Meredith Veldran",
         role: "Pre-Clinical Project Manager",
@@ -218,7 +219,6 @@ export const aboutData: AboutData = {
         ],
       },
 
-     
       {
         id: "Luke-Sepich",
         name: "Luke Sepich",
@@ -241,7 +241,7 @@ export const aboutData: AboutData = {
           { platform: "Scholar", url: "#" },
         ],
       },
-            {
+      {
         id: "Sofia-Chehade",
         name: "Sofia Chehade",
         role: "Laboratory Technician",
@@ -253,7 +253,6 @@ export const aboutData: AboutData = {
         ],
       },
 
-      
       {
         id: "tomi-sawyer",
         name: "Tomi Sawyer",
@@ -282,8 +281,8 @@ export const aboutData: AboutData = {
       {
         id: "robert-langer",
         name: "Robert Langer",
-        role: "Co-Founder",
-        image: "/about/co-founder.jpg",
+        role: "Co-founder",
+        image: "/about/BobLanger-Co-founder.jpg",
         bio: "Dr. Langer is the David H. Koch Institute Professor at MIT. He is heralded as one of the most prolific inventors in the history of medicine. He has written over 1,400 articles and has over 1,300 issues and pending patents worldwide. Dr. Langer’s patents have been licensed or sublicensed to over 350 pharmaceutical, chemical, biotechnology and medical device companies. He is the most cited engineer in history and is co-founder of over 40 biotech companies. He is a co-founder of Vivtex and also serves as head of its board of directors.",
         socialLinks: [
           { platform: "LinkedIn", url: "#" },
@@ -305,7 +304,7 @@ export const aboutData: AboutData = {
         id: "jack-barbut",
         name: "Jack Barbut",
         role: "Investor",
-        image: "/about/investor.jpg",
+        image: "/about/JackBarbut-Investor.jpg",
         bio: "Mr. Barbut is a 30+ years life science executive with extensive experience in management, R&D, business development and sales. He served as CEO of Novimmune from 2000-2016 where he built the organization from ground up to become a 120 employee fully integrated Swiss biotech corporation specializing in Immunology and Immunology-Oncology. Previously, he served as CEO of Synarc, a San Francisco based, global 150 employee, centralized imaging center, for clinical research. He was also formerly the founder, Vice Chairman and President of Chrysalis, a Nasdaq traded global full service CRO. Jack is a Swiss citizen and graduate of EPFL, Lausanne, in System Engineering.",
         socialLinks: [{ platform: "LinkedIn", url: "#" }],
       },

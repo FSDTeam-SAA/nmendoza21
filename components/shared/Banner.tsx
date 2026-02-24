@@ -37,7 +37,7 @@ const imageVariants: Variants = {
 const Banner = () => {
   return (
     <div>
-      <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-start lg:pt-20 pt-6 overflow-hidden">
+      <section className="relative min-h-[400px] md:min-h-[600px] lg:min-h-[660px] flex items-start lg:pt-20 pt-6 overflow-hidden">
         {/* Background with smooth animation */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <motion.video
