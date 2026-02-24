@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Google_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar";
 import Footer from "@/components/shared/Footer";
@@ -7,10 +7,10 @@ import Footer from "@/components/shared/Footer";
 import { Toaster } from "sonner";
 
 
-const googleSans = Google_Sans({
-  variable: "--font-google-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${googleSans.variable} antialiased`}
+        className={`${manrope.variable} antialiased`}
       >
         <Navbar />  
         {children}

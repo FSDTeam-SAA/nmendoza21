@@ -16,8 +16,8 @@ export const whatWeDoData = {
       id: 1,
       title: "Technology",
       description:
-        "Discover how our platform combines animal and human gastrointestinal tissues with cutting-edge technologies to uncover new ways to enable oral drug absorption.",
-      image: "/Technology.jpg",
+        "Explore how we use the entire gastrointestinal tract outside the body for automated high throughput screening combined with AI.",
+      image: "/R6D_8575minks_media.jpg",
       buttonText: "Explore",
       buttonLink: "/technology",
     },
@@ -178,17 +178,17 @@ export const footerData = {
     ],
   },
   newsCoverage: {
-    title: "As seen in:",
+    title: "As seen in",
     logos: [
-      { name: "EuroNews", image: "/images/eurekalert.svg" },
-      { name: "CNN", image: "/images/nih.svg" },
+      // { name: "EuroNews", image: "EurekAlert!" },
+      // { name: "CNN", image: "/images/nih.svg" },
       // { name: "BBC", image: "/images/scientific.png" },
     ],
   },
   getInTouch: {
-    title: "Get In Touch",
-    address: "135 William T Morrissey Blvd, Suite P101, Boston, MA 02125",
-    city: "Wagistrasse 13, Schlieren 8952, Switzerland",
-    email: "info@vivtex.com",
+    // title: "Get In Touch",
+    // address: "135 William T Morrissey Blvd, Suite P101, Boston, MA 02125",
+    // city: "Wagistrasse 13, Schlieren 8952, Switzerland",
+    // email: "info@vivtex.com",
   },
 };

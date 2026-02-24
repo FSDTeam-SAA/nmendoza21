@@ -51,9 +51,9 @@ const Technology = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-center mb-8"
+          className="text-center mb-0"
         >
-          <h2 className="text-[40px] font-semibold mb-3  text-[#003399] tracking-tighter">
+          <h2 className="text-[40px] font-semibold mb-0  text-[#003399] tracking-tighter">
             {innovationPageData.heroTitle}
           </h2>
           <p className="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium">

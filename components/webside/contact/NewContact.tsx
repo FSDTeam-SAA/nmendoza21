@@ -22,7 +22,7 @@ const NewContact = () => {
         {/* Text Card */}
         <div className="w-full bg-primary text-white p-8 md:p-10 rounded-2xl shadow-lg flex flex-col justify-between">
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Vivtex Corporation</h2>
+            <h2 className="text-2xl font-semibold mb-4">US Office</h2>
             <p className="text-white/90">
               135 William T Morrissey Blvd, Suite P101
             </p>
@@ -68,7 +68,7 @@ const NewContact = () => {
         {/* Text Card */}
         <div className="w-full bg-primary text-white p-8 md:p-10 rounded-2xl shadow-lg flex flex-col justify-between">
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Vivtex GmbH</h2>
+            <h2 className="text-2xl font-semibold mb-4">Swiss Office</h2>
             <p className="text-white/90">
               Wagistrasse 13
             </p>
@@ -108,7 +108,7 @@ const NewContact = () => {
           </Link>
         </div>
         <div>
-          <h3 className=" text-primary font-bold text-xl mb-3">PARTNERSHIP</h3>
+          <h3 className=" text-primary font-bold text-xl mb-3">RECRUITING</h3>
           <Link
             className=" cursor-pointer hover:border-b  border-black text-black"
             href="mailto:recruiting@vivtex.com"

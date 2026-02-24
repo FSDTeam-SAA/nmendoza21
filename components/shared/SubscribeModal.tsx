@@ -108,12 +108,12 @@ const SubscribeModal = ({ open, onOpenChange }: SubscribeModalProps) => {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="designation">Designation</Label>
+            <Label htmlFor="designation">Role</Label>
             <Input
               id="designation"
               name="designation"
               type="text"
-              placeholder="Enter your designation"
+              placeholder="Enter your Role"
               value={formData.designation}
               onChange={handleChange}
               required
@@ -121,16 +121,16 @@ const SubscribeModal = ({ open, onOpenChange }: SubscribeModalProps) => {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="description">Description</Label>
+            <Label htmlFor="description">Company</Label>
             <Textarea
               id="description"
               name="description"
-              placeholder="Enter a short description"
+              placeholder="Enter your company"
               value={formData.description}
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              rows={4}
+              rows={1}
             />
           </div>
 

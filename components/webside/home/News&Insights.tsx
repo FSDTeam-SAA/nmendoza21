@@ -35,7 +35,7 @@ const NewsAndInsights = () => {
 
   return (
     <>
-      <section className="my-12 md:my-18  relative overflow-hidden bg-gray-200 container mx-auto lg:p-5 rounded-3xls">
+      <section className="my-12 md:my-18  relative overflow-hidden bg-[#003051] container mx-auto lg:p-5 rounded-3xls">
         {/* Subtle texture or decoration if needed, keeping it clean for now */}
 
         <div className="container mx-auto px-4 relative z-10">
@@ -44,11 +44,13 @@ const NewsAndInsights = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-start mb-8 md:mb-10"
+            className="text-start mb-2 md:mb-2"
           >
-            <h2 className="text-2xl text-[#003051] sm:text-3xl lg:text-[40px] font-semibold lg:mb-12 mb-4 tracking-tight">
-              {newsPageData.title}
-            </h2>
+            <Link href={"/news"}>
+              <h2 className="text-2xl text-white sm:text-3xl lg:text-[40px] font-semibold lg:mb-5 mb-0 tracking-tight">
+                {newsPageData.title}
+              </h2>
+            </Link>
             <p className="text-gray-500 text-base sm:text-lg md:text-xl max-w-2xl mx-start leading-relaxed font-medium">
               {newsPageData.subtitle}
             </p>
@@ -59,7 +61,7 @@ const NewsAndInsights = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 gap-6 sm:gap-8 md:gap-7 mx-auto mb-8"
+            className="grid grid-cols-1 gap-4 sm:gap-4 md:gap-4 mx-auto mb-3"
           >
             <React.Fragment>
               {/*              
@@ -67,12 +69,12 @@ const NewsAndInsights = () => {
                     Media Coverage
                   </div> */}
 
-              <motion.div variants={cardVariants} className="group h-full">
+              <motion.div variants={cardVariants} className="group h-ful ">
                 <Link href={"/news"}>
-                  <div className="group h-full flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 bg-white rounded-none overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 group/card hover:bg-primary/70 hover:text-white!">
-                    <div className="p-4 sm:p-5 md:p-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 w-full">
+                  <div className="group h-full flex flex-col sm:flex-row sm:items-center gap-0 sm:gap-4 bg-white rounded-none overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 group/card hover:bg-primary/70 hover:text-white!">
+                    <div className="p-4 sm:p-4 md:p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap- w-full">
                       <div className="flex-1">
-                        <h3 className="text-base mb-1 sm:mb-2 font-medium text-secondary-foreground transition-colors line-clamp-2 leading-tight group-hover:text-white">
+                        <h3 className="text-base mb-0 sm:mb-0 font-medium text-secondary-foreground transition-colors line-clamp-2 leading-tight group-hover:text-white">
                           {newsPageData.featured.title}
                         </h3>
                       </div>
@@ -104,14 +106,14 @@ const NewsAndInsights = () => {
             <div className="text-sm lg:text-xl font-medium text-gray-500">
               Media Coverage
             </div>
-            {newsPageData.items.slice(0, 2).map((item, index) => (
+            {newsPageData.items.slice(0, 3).map((item, index) => (
               <React.Fragment key={item.id}>
                 <motion.div variants={cardVariants} className="group h-full">
                   <Link href={"/news"}>
                     <div className="group h-full flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 bg-white rounded-none overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 group/card hover:bg-primary/70 hover:text-white!">
-                      <div className="p-4 sm:p-5 md:p-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 w-full">
+                      <div className="p-4 sm:p-4 md:p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 w-full">
                         <div className="flex-1">
-                          <h3 className="text-base mb-1 sm:mb-2 font-medium text-secondary-foreground transition-colors line-clamp-2 leading-tight group-hover:text-white">
+                          <h3 className="text-base mb-1 sm:mb-0 font-medium text-secondary-foreground transition-colors line-clamp-2 leading-tight group-hover:text-white">
                             {item.title}
                           </h3>
                         </div>
