@@ -12,6 +12,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 
 interface SubscribeModalProps {
   open: boolean;
@@ -22,6 +23,8 @@ const SubscribeModal = ({ open, onOpenChange }: SubscribeModalProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    designation: "",
+    description: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -42,7 +45,7 @@ const SubscribeModal = ({ open, onOpenChange }: SubscribeModalProps) => {
 
       if (response.ok) {
         toast.success("Thank you for subscribing! We'll keep you updated.");
-        setFormData({ name: "", email: "" });
+        setFormData({ name: "", email: "", designation: "", description: "" });
         setTimeout(() => {
           onOpenChange(false);
         }, 800);
@@ -56,7 +59,9 @@ const SubscribeModal = ({ open, onOpenChange }: SubscribeModalProps) => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -100,6 +105,32 @@ const SubscribeModal = ({ open, onOpenChange }: SubscribeModalProps) => {
               onChange={handleChange}
               required
               disabled={isSubmitting}
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="designation">Designation</Label>
+            <Input
+              id="designation"
+              name="designation"
+              type="text"
+              placeholder="Enter your designation"
+              value={formData.designation}
+              onChange={handleChange}
+              required
+              disabled={isSubmitting}
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="description">Description</Label>
+            <Textarea
+              id="description"
+              name="description"
+              placeholder="Enter a short description"
+              value={formData.description}
+              onChange={handleChange}
+              required
+              disabled={isSubmitting}
+              rows={4}
             />
           </div>
 

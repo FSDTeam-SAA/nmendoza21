@@ -4,12 +4,12 @@ import nodemailer from "nodemailer";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email } = body;
+    const { name, email, designation, description } = body;
 
     // Validate input
-    if (!name || !email) {
+    if (!name || !email || !designation || !description) {
       return NextResponse.json(
-        { error: "Name and email are required" },
+        { error: "Name, email, designation, and description are required" },
         { status: 400 },
       );
     }
@@ -45,6 +45,8 @@ export async function POST(request: Request) {
           <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; margin-top: 20px;">
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Designation:</strong> ${designation}</p>
+            <p><strong>Description:</strong> ${description}</p>
           </div>
           <hr style="border: none; border-top: 1px solid #eee; margin-top: 30px;" />
           <p style="font-size: 12px; color: #888;">This email was sent from the subscription form on your website.</p>
