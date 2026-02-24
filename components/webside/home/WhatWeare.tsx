@@ -41,8 +41,12 @@ const WhatWeare = () => {
               {/* <h2 className="text-[#003399] font-bold tracking-widest uppercase text-3xl md:text-4xl">
                 {whoWeAreData.title}
               </h2> */}
-              <h3 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
-                We are changing the future of medicine together{" "}
+              <h3 className="text-3xl md:text-3xl font-black text-[#003051] leading-tight text-justify">
+                Enabling patients with a choice in how to take their medicine is
+                among the most powerful drivers of treatment outcomes.<br></br>{" "}
+                <span className="text-xl text-[#8dd9ff]">
+                  - Thomas von Erlach{" "}
+                </span>{" "}
                 {/* <span className="text-gray-900">Together.</span> */}
               </h3>
             </motion.div>
@@ -67,14 +71,14 @@ const WhatWeare = () => {
 
           {/* RIGHT SIDE - CONTENT */}
           <div className="lg:col-span-6 space-y-8 lg:space-y-12">
-            <div className="space-y-6">
+            {/* <div className="space-y-6">
               <motion.p
                 variants={fadeUp}
                 className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-2xl"
               >
                 {teamWork.description}
               </motion.p>
-            </div>
+            </div> */}
 
             {/* IMAGE SECTION */}
             <div className="relative group">
@@ -113,10 +117,10 @@ const WhatWeare = () => {
             </div>
 
             {/* CALL TO ACTION */}
-            <motion.div variants={fadeUp}>
+            <motion.div variants={fadeUp} className="flex justify-end">
               <Button
                 asChild
-                className="bg-primary text-white hover:bg-primary/80 px-8 sm:px-10 py-6 sm:py-8 rounded-none font-black text-lg sm:text-xl transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
+                className="bg-primary  text-white hover:bg-primary/80 px-8 sm:px-10 py-6 sm:py-8 rounded-none font-black text-lg sm:text-xl transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
               >
                 <a href={teamWork.button1Link}>
                   {teamWork.button1Text}

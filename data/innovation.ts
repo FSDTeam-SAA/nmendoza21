@@ -124,7 +124,7 @@ export const innovationPageData: InnovationPageData = {
         "Automation reduces variability and improves consistency in translational research workflows.",
       shortDescription:
         "Join global summits and symposiums to share findings, network with trends, and internal hub news curated by our experts. peers, and witness groundbreaking scientific reveals.",
-      image: "/images/automation.png",
+      image: "/Vivtex-14 (1).jpg",
       linkLabel: "View Details",
       link: "/news",
       date: "",
